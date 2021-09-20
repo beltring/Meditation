@@ -9,11 +9,42 @@
 /* Begin PBXBuildFile section */
 		3C6F4DD0ECE860EFAF297845 /* Pods_Meditation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEE0FCE9EB88EC14706D379 /* Pods_Meditation.framework */; };
 		CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6516F826F8550B009B4D6B /* AppDelegate.swift */; };
-		CE6516FD26F8550B009B4D6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6516FC26F8550B009B4D6B /* ViewController.swift */; };
-		CE65170026F8550B009B4D6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6516FE26F8550B009B4D6B /* Main.storyboard */; };
 		CE65170226F8550D009B4D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65170126F8550D009B4D6B /* Assets.xcassets */; };
 		CE65170526F8550D009B4D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */; };
 		CE65170D26F857DC009B4D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */; };
+		CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171726F86251009B4D6B /* RootNavigationViewController.swift */; };
+		CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */; };
+		CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171C26F862EB009B4D6B /* UIViewExtension.swift */; };
+		CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171E26F863F4009B4D6B /* TabBarViewController.swift */; };
+		CE65172126F863FF009B4D6B /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65172026F863FF009B4D6B /* TabBar.storyboard */; };
+		CE65172426F86763009B4D6B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65172326F86763009B4D6B /* WelcomeViewController.swift */; };
+		CE65172626F8676B009B4D6B /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65172526F8676B009B4D6B /* Welcome.storyboard */; };
+		CE65174326F894E9009B4D6B /* AlegreyaSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173526F894E8009B4D6B /* AlegreyaSans-Black.ttf */; };
+		CE65174426F894E9009B4D6B /* AlegreyaSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173626F894E8009B4D6B /* AlegreyaSans-ThinItalic.ttf */; };
+		CE65174526F894E9009B4D6B /* AlegreyaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173726F894E9009B4D6B /* AlegreyaSans-BoldItalic.ttf */; };
+		CE65174626F894E9009B4D6B /* AlegreyaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173826F894E9009B4D6B /* AlegreyaSans-Medium.ttf */; };
+		CE65174726F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173926F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf */; };
+		CE65174826F894E9009B4D6B /* AlegreyaSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173A26F894E9009B4D6B /* AlegreyaSans-BlackItalic.ttf */; };
+		CE65174926F894E9009B4D6B /* AlegreyaSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173B26F894E9009B4D6B /* AlegreyaSans-Italic.ttf */; };
+		CE65174A26F894E9009B4D6B /* AlegreyaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173C26F894E9009B4D6B /* AlegreyaSans-ExtraBoldItalic.ttf */; };
+		CE65174B26F894E9009B4D6B /* AlegreyaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173D26F894E9009B4D6B /* AlegreyaSans-ExtraBold.ttf */; };
+		CE65174C26F894E9009B4D6B /* AlegreyaSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173E26F894E9009B4D6B /* AlegreyaSans-LightItalic.ttf */; };
+		CE65174D26F894E9009B4D6B /* AlegreyaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65173F26F894E9009B4D6B /* AlegreyaSans-Regular.ttf */; };
+		CE65174E26F894E9009B4D6B /* AlegreyaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65174026F894E9009B4D6B /* AlegreyaSans-Bold.ttf */; };
+		CE65174F26F894E9009B4D6B /* AlegreyaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65174126F894E9009B4D6B /* AlegreyaSans-Light.ttf */; };
+		CE65175026F894E9009B4D6B /* AlegreyaSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65174226F894E9009B4D6B /* AlegreyaSans-Thin.ttf */; };
+		CE65175E26F8950D009B4D6B /* Alegreya-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175226F8950C009B4D6B /* Alegreya-ExtraBoldItalic.ttf */; };
+		CE65175F26F8950D009B4D6B /* Alegreya-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175326F8950C009B4D6B /* Alegreya-ExtraBold.ttf */; };
+		CE65176026F8950D009B4D6B /* Alegreya-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175426F8950C009B4D6B /* Alegreya-Black.ttf */; };
+		CE65176126F8950D009B4D6B /* Alegreya-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175526F8950C009B4D6B /* Alegreya-Medium.ttf */; };
+		CE65176226F8950D009B4D6B /* Alegreya-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175626F8950C009B4D6B /* Alegreya-Regular.ttf */; };
+		CE65176326F8950D009B4D6B /* Alegreya-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175726F8950C009B4D6B /* Alegreya-Italic.ttf */; };
+		CE65176426F8950D009B4D6B /* Alegreya-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175826F8950D009B4D6B /* Alegreya-SemiBold.ttf */; };
+		CE65176526F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175926F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf */; };
+		CE65176626F8950D009B4D6B /* Alegreya-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175A26F8950D009B4D6B /* Alegreya-BlackItalic.ttf */; };
+		CE65176726F8950D009B4D6B /* Alegreya-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175B26F8950D009B4D6B /* Alegreya-Bold.ttf */; };
+		CE65176826F8950D009B4D6B /* Alegreya-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175C26F8950D009B4D6B /* Alegreya-MediumItalic.ttf */; };
+		CE65176926F8950D009B4D6B /* Alegreya-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175D26F8950D009B4D6B /* Alegreya-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +52,43 @@
 		7CEE0FCE9EB88EC14706D379 /* Pods_Meditation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meditation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6516F526F8550B009B4D6B /* Meditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6516F826F8550B009B4D6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE6516FC26F8550B009B4D6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE6516FF26F8550B009B4D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE65170126F8550D009B4D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE65170426F8550D009B4D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE65170626F8550D009B4D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE65171726F86251009B4D6B /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
+		CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CE65171C26F862EB009B4D6B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CE65171E26F863F4009B4D6B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE65172026F863FF009B4D6B /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		CE65172326F86763009B4D6B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CE65172526F8676B009B4D6B /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		CE65173526F894E8009B4D6B /* AlegreyaSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Black.ttf"; sourceTree = "<group>"; };
+		CE65173626F894E8009B4D6B /* AlegreyaSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		CE65173726F894E9009B4D6B /* AlegreyaSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CE65173826F894E9009B4D6B /* AlegreyaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Medium.ttf"; sourceTree = "<group>"; };
+		CE65173926F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CE65173A26F894E9009B4D6B /* AlegreyaSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CE65173B26F894E9009B4D6B /* AlegreyaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Italic.ttf"; sourceTree = "<group>"; };
+		CE65173C26F894E9009B4D6B /* AlegreyaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		CE65173D26F894E9009B4D6B /* AlegreyaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE65173E26F894E9009B4D6B /* AlegreyaSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		CE65173F26F894E9009B4D6B /* AlegreyaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Regular.ttf"; sourceTree = "<group>"; };
+		CE65174026F894E9009B4D6B /* AlegreyaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Bold.ttf"; sourceTree = "<group>"; };
+		CE65174126F894E9009B4D6B /* AlegreyaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Light.ttf"; sourceTree = "<group>"; };
+		CE65174226F894E9009B4D6B /* AlegreyaSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSans-Thin.ttf"; sourceTree = "<group>"; };
+		CE65175226F8950C009B4D6B /* Alegreya-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		CE65175326F8950C009B4D6B /* Alegreya-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE65175426F8950C009B4D6B /* Alegreya-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Black.ttf"; sourceTree = "<group>"; };
+		CE65175526F8950C009B4D6B /* Alegreya-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Medium.ttf"; sourceTree = "<group>"; };
+		CE65175626F8950C009B4D6B /* Alegreya-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Regular.ttf"; sourceTree = "<group>"; };
+		CE65175726F8950C009B4D6B /* Alegreya-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Italic.ttf"; sourceTree = "<group>"; };
+		CE65175826F8950D009B4D6B /* Alegreya-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE65175926F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		CE65175A26F8950D009B4D6B /* Alegreya-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CE65175B26F8950D009B4D6B /* Alegreya-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Bold.ttf"; sourceTree = "<group>"; };
+		CE65175C26F8950D009B4D6B /* Alegreya-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CE65175D26F8950D009B4D6B /* Alegreya-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-BoldItalic.ttf"; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +118,6 @@
 				1667EF00AF5583705B2682F3 /* Pods-Meditation.debug.xcconfig */,
 				FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +142,158 @@
 		CE6516F726F8550B009B4D6B /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
-				CE6516F826F8550B009B4D6B /* AppDelegate.swift */,
-				CE6516FC26F8550B009B4D6B /* ViewController.swift */,
-				CE6516FE26F8550B009B4D6B /* Main.storyboard */,
-				CE65170126F8550D009B4D6B /* Assets.xcassets */,
-				CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */,
-				CE65170626F8550D009B4D6B /* Info.plist */,
 				CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */,
+				CE65170626F8550D009B4D6B /* Info.plist */,
+				CE65170E26F85E11009B4D6B /* Application */,
+				CE65171026F85E7F009B4D6B /* Models */,
+				CE65170F26F85E76009B4D6B /* Modules */,
+				CE65171126F85E88009B4D6B /* Resources */,
+				CE65171226F85E94009B4D6B /* Utils */,
 			);
 			path = Meditation;
+			sourceTree = "<group>";
+		};
+		CE65170E26F85E11009B4D6B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE6516F826F8550B009B4D6B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CE65170F26F85E76009B4D6B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE65171326F85EA6009B4D6B /* Launch */,
+				CE65171526F861F8009B4D6B /* Root */,
+				CE65171426F85EB8009B4D6B /* SignInUp */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE65171026F85E7F009B4D6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE65171126F85E88009B4D6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE65170126F8550D009B4D6B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE65171226F85E94009B4D6B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE65172726F874C4009B4D6B /* Fonts */,
+				CE65171926F86298009B4D6B /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE65171326F85EA6009B4D6B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CE65171426F85EB8009B4D6B /* SignInUp */ = {
+			isa = PBXGroup;
+			children = (
+				CE65172226F86710009B4D6B /* Welcome */,
+			);
+			path = SignInUp;
+			sourceTree = "<group>";
+		};
+		CE65171526F861F8009B4D6B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CE65171626F86201009B4D6B /* TabBar */,
+				CE65171726F86251009B4D6B /* RootNavigationViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CE65171626F86201009B4D6B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE65172026F863FF009B4D6B /* TabBar.storyboard */,
+				CE65171E26F863F4009B4D6B /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE65171926F86298009B4D6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */,
+				CE65171C26F862EB009B4D6B /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE65172226F86710009B4D6B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				CE65172526F8676B009B4D6B /* Welcome.storyboard */,
+				CE65172326F86763009B4D6B /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		CE65172726F874C4009B4D6B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE65175126F894F0009B4D6B /* Alegreya */,
+				CE65173426F894C2009B4D6B /* AlegreyaSans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE65173426F894C2009B4D6B /* AlegreyaSans */ = {
+			isa = PBXGroup;
+			children = (
+				CE65173526F894E8009B4D6B /* AlegreyaSans-Black.ttf */,
+				CE65173A26F894E9009B4D6B /* AlegreyaSans-BlackItalic.ttf */,
+				CE65174026F894E9009B4D6B /* AlegreyaSans-Bold.ttf */,
+				CE65173726F894E9009B4D6B /* AlegreyaSans-BoldItalic.ttf */,
+				CE65173D26F894E9009B4D6B /* AlegreyaSans-ExtraBold.ttf */,
+				CE65173C26F894E9009B4D6B /* AlegreyaSans-ExtraBoldItalic.ttf */,
+				CE65173B26F894E9009B4D6B /* AlegreyaSans-Italic.ttf */,
+				CE65174126F894E9009B4D6B /* AlegreyaSans-Light.ttf */,
+				CE65173E26F894E9009B4D6B /* AlegreyaSans-LightItalic.ttf */,
+				CE65173826F894E9009B4D6B /* AlegreyaSans-Medium.ttf */,
+				CE65173926F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf */,
+				CE65173F26F894E9009B4D6B /* AlegreyaSans-Regular.ttf */,
+				CE65174226F894E9009B4D6B /* AlegreyaSans-Thin.ttf */,
+				CE65173626F894E8009B4D6B /* AlegreyaSans-ThinItalic.ttf */,
+			);
+			path = AlegreyaSans;
+			sourceTree = "<group>";
+		};
+		CE65175126F894F0009B4D6B /* Alegreya */ = {
+			isa = PBXGroup;
+			children = (
+				CE65175426F8950C009B4D6B /* Alegreya-Black.ttf */,
+				CE65175A26F8950D009B4D6B /* Alegreya-BlackItalic.ttf */,
+				CE65175B26F8950D009B4D6B /* Alegreya-Bold.ttf */,
+				CE65175D26F8950D009B4D6B /* Alegreya-BoldItalic.ttf */,
+				CE65175326F8950C009B4D6B /* Alegreya-ExtraBold.ttf */,
+				CE65175226F8950C009B4D6B /* Alegreya-ExtraBoldItalic.ttf */,
+				CE65175726F8950C009B4D6B /* Alegreya-Italic.ttf */,
+				CE65175526F8950C009B4D6B /* Alegreya-Medium.ttf */,
+				CE65175C26F8950D009B4D6B /* Alegreya-MediumItalic.ttf */,
+				CE65175626F8950C009B4D6B /* Alegreya-Regular.ttf */,
+				CE65175826F8950D009B4D6B /* Alegreya-SemiBold.ttf */,
+				CE65175926F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf */,
+			);
+			path = Alegreya;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +356,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65176326F8950D009B4D6B /* Alegreya-Italic.ttf in Resources */,
+				CE65176926F8950D009B4D6B /* Alegreya-BoldItalic.ttf in Resources */,
+				CE65174926F894E9009B4D6B /* AlegreyaSans-Italic.ttf in Resources */,
+				CE65172126F863FF009B4D6B /* TabBar.storyboard in Resources */,
+				CE65176026F8950D009B4D6B /* Alegreya-Black.ttf in Resources */,
+				CE65174C26F894E9009B4D6B /* AlegreyaSans-LightItalic.ttf in Resources */,
+				CE65176826F8950D009B4D6B /* Alegreya-MediumItalic.ttf in Resources */,
+				CE65174526F894E9009B4D6B /* AlegreyaSans-BoldItalic.ttf in Resources */,
+				CE65176726F8950D009B4D6B /* Alegreya-Bold.ttf in Resources */,
+				CE65174F26F894E9009B4D6B /* AlegreyaSans-Light.ttf in Resources */,
+				CE65174A26F894E9009B4D6B /* AlegreyaSans-ExtraBoldItalic.ttf in Resources */,
+				CE65176226F8950D009B4D6B /* Alegreya-Regular.ttf in Resources */,
 				CE65170526F8550D009B4D6B /* LaunchScreen.storyboard in Resources */,
+				CE65175026F894E9009B4D6B /* AlegreyaSans-Thin.ttf in Resources */,
+				CE65174726F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf in Resources */,
+				CE65175E26F8950D009B4D6B /* Alegreya-ExtraBoldItalic.ttf in Resources */,
+				CE65174326F894E9009B4D6B /* AlegreyaSans-Black.ttf in Resources */,
+				CE65176526F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf in Resources */,
+				CE65176426F8950D009B4D6B /* Alegreya-SemiBold.ttf in Resources */,
+				CE65174D26F894E9009B4D6B /* AlegreyaSans-Regular.ttf in Resources */,
+				CE65174426F894E9009B4D6B /* AlegreyaSans-ThinItalic.ttf in Resources */,
+				CE65176126F8950D009B4D6B /* Alegreya-Medium.ttf in Resources */,
+				CE65174626F894E9009B4D6B /* AlegreyaSans-Medium.ttf in Resources */,
 				CE65170D26F857DC009B4D6B /* GoogleService-Info.plist in Resources */,
+				CE65174B26F894E9009B4D6B /* AlegreyaSans-ExtraBold.ttf in Resources */,
 				CE65170226F8550D009B4D6B /* Assets.xcassets in Resources */,
-				CE65170026F8550B009B4D6B /* Main.storyboard in Resources */,
+				CE65175F26F8950D009B4D6B /* Alegreya-ExtraBold.ttf in Resources */,
+				CE65172626F8676B009B4D6B /* Welcome.storyboard in Resources */,
+				CE65174E26F894E9009B4D6B /* AlegreyaSans-Bold.ttf in Resources */,
+				CE65174826F894E9009B4D6B /* AlegreyaSans-BlackItalic.ttf in Resources */,
+				CE65176626F8950D009B4D6B /* Alegreya-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,22 +439,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6516FD26F8550B009B4D6B /* ViewController.swift in Sources */,
+				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
+				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
+				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
+				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,
+				CE65172426F86763009B4D6B /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE6516FE26F8550B009B4D6B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE6516FF26F8550B009B4D6B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,7 +591,7 @@
 				INFOPLIST_FILE = Meditation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Welcome;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -395,7 +622,7 @@
 				INFOPLIST_FILE = Meditation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Welcome;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
