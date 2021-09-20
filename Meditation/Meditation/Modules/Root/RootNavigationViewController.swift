@@ -19,7 +19,7 @@ class RootNavigationViewController: UINavigationController {
         if false {
             vc = TabBarViewController.initial()
         } else {
-            vc = ViewController.initial()
+            vc = WelcomeViewController.initial()
         }
         
         setViewControllers([vc], animated: false)
