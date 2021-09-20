@@ -11,11 +11,17 @@ class RootNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func setRootController() {
         let vc: UIViewController
+        
+        if false {
+            vc = TabBarViewController.initial()
+        } else {
+            vc = ViewController.initial()
+        }
+        
+        setViewControllers([vc], animated: false)
     }
 }
