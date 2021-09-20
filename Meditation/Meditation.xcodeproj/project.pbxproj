@@ -14,6 +14,9 @@
 		CE65170226F8550D009B4D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65170126F8550D009B4D6B /* Assets.xcassets */; };
 		CE65170526F8550D009B4D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */; };
 		CE65170D26F857DC009B4D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */; };
+		CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171726F86251009B4D6B /* RootNavigationViewController.swift */; };
+		CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */; };
+		CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65171C26F862EB009B4D6B /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		CE65170426F8550D009B4D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE65170626F8550D009B4D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE65171726F86251009B4D6B /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
+		CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CE65171C26F862EB009B4D6B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,7 @@
 		CE65170F26F85E76009B4D6B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE65171526F861F8009B4D6B /* Root */,
 				CE65171326F85EA6009B4D6B /* Launch */,
 				CE65171426F85EB8009B4D6B /* Main */,
 			);
@@ -126,6 +133,7 @@
 		CE65171226F85E94009B4D6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CE65171926F86298009B4D6B /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,6 +153,31 @@
 				CE6516FE26F8550B009B4D6B /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		CE65171526F861F8009B4D6B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CE65171626F86201009B4D6B /* TabBar */,
+				CE65171726F86251009B4D6B /* RootNavigationViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CE65171626F86201009B4D6B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE65171926F86298009B4D6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */,
+				CE65171C26F862EB009B4D6B /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
+				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
+				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE6516FD26F8550B009B4D6B /* ViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,
 			);
