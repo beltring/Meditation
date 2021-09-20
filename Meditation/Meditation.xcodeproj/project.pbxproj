@@ -56,7 +56,6 @@
 				1667EF00AF5583705B2682F3 /* Pods-Meditation.debug.xcconfig */,
 				FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,71 @@
 		CE6516F726F8550B009B4D6B /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
-				CE6516F826F8550B009B4D6B /* AppDelegate.swift */,
-				CE6516FC26F8550B009B4D6B /* ViewController.swift */,
-				CE6516FE26F8550B009B4D6B /* Main.storyboard */,
-				CE65170126F8550D009B4D6B /* Assets.xcassets */,
-				CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */,
-				CE65170626F8550D009B4D6B /* Info.plist */,
 				CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */,
+				CE65170626F8550D009B4D6B /* Info.plist */,
+				CE65170E26F85E11009B4D6B /* Application */,
+				CE65171026F85E7F009B4D6B /* Models */,
+				CE65170F26F85E76009B4D6B /* Modules */,
+				CE65171126F85E88009B4D6B /* Resources */,
+				CE65171226F85E94009B4D6B /* Utils */,
 			);
 			path = Meditation;
+			sourceTree = "<group>";
+		};
+		CE65170E26F85E11009B4D6B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE6516F826F8550B009B4D6B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CE65170F26F85E76009B4D6B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE65171326F85EA6009B4D6B /* Launch */,
+				CE65171426F85EB8009B4D6B /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE65171026F85E7F009B4D6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE65171126F85E88009B4D6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE65170126F8550D009B4D6B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE65171226F85E94009B4D6B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE65171326F85EA6009B4D6B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CE65170326F8550D009B4D6B /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CE65171426F85EB8009B4D6B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE6516FC26F8550B009B4D6B /* ViewController.swift */,
+				CE6516FE26F8550B009B4D6B /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
