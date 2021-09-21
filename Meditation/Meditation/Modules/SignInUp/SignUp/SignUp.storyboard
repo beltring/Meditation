@@ -208,6 +208,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="Sg6-8J-Gli" id="5Vt-gM-e33"/>
+                        <outlet property="nameTextField" destination="wLO-4E-hz0" id="o7L-CF-FXh"/>
+                        <outlet property="passwordTextField" destination="n8G-hm-82j" id="FyS-pz-QwK"/>
                         <outlet property="signInLabel" destination="0ku-bM-gou" id="6LT-qp-iTF"/>
                         <outlet property="signUpButton" destination="c2o-fG-x4m" id="WUF-jI-xqK"/>
                     </connections>

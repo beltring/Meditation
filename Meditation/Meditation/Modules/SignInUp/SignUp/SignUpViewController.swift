@@ -5,12 +5,17 @@
 //  Created by User on 21.09.21.
 //
 
+import Firebase
+import SkyFloatingLabelTextField
 import UIKit
 
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInLabel: UILabel!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -19,6 +24,7 @@ class SignUpViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         setupButton()
         setupLabel()
+        setupTextFields()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,12 +44,19 @@ class SignUpViewController: UIViewController {
         signUpButton.backgroundColor = UIColor(named: "ButtonColor")
         signUpButton.setTitleColor(.white, for: .normal)
         signUpButton.layer.cornerRadius = 10
+        signUpButton.isEnabled = false
+        signUpButton.alpha = 0.7
     }
     
     private func setupLabel() {
         signInLabel.isUserInteractionEnabled = true
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.signInTap))
         signInLabel.addGestureRecognizer(labelTapGesture)
+    }
+    
+    private func setupTextFields() {
+        emailTextField.addTarget(self, action: #selector(isValidData(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(isValidData(_:)), for: .editingChanged)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -71,10 +84,44 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func tappedSignUp(_ sender: UIButton) {
-        print("SignUp")
+        guard let email = emailTextField.text, let password = passwordTextField.text else  { return }
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+            self?.presentAlert(message: authResult?.user.email)
+        }
     }
     
     @objc private func signInTap() {
         navigationController?.pushViewController(LoginViewController.initial(), animated: false)
+    }
+    
+    @objc private func isValidData(_ textField: UITextField) -> Bool {
+        guard let email = emailTextField.text else { return false }
+        guard let password = passwordTextField.text else { return false }
+        guard let name = nameTextField.text else { return false }
+        
+        if isValidEmail(email) && isValidPassword(password) && !name.isEmpty {
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1
+            return true
+        }
+        signUpButton.isEnabled = false
+        signUpButton.alpha = 0.7
+        
+        return false
+    }
+    
+    private func isValidPassword(_ password: String) -> Bool {
+        if password.count > 3 {
+            return true
+        }
+        
+        return false
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
 }
