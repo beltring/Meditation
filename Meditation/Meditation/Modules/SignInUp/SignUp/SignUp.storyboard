@@ -13,6 +13,9 @@
         <array key="Alegreya-Medium.ttf">
             <string>Alegreya-Medium</string>
         </array>
+        <array key="AlegreyaSans-Bold.ttf">
+            <string>AlegreyaSans-Bold</string>
+        </array>
         <array key="AlegreyaSans-Regular.ttf">
             <string>AlegreyaSans-Regular</string>
         </array>
@@ -51,11 +54,11 @@
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-fN-elD">
-                                <rect key="frame" x="35" y="318" width="344" height="142"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-fN-elD" userLabel="TextFieldsStackView">
+                                <rect key="frame" x="35" y="333" width="344" height="141"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-4E-hz0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="344" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-4E-hz0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="53"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -71,8 +74,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-8J-Gli" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="54" width="344" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-8J-Gli" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="63" width="344" height="34"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -89,7 +92,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8G-hm-82j" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="108" width="344" height="34"/>
+                                        <rect key="frame" x="0.0" y="107" width="344" height="34"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -122,37 +125,103 @@
                                     <action selector="tappedBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4pn-BU-FEG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сlick on the button if you want to add a photo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W9-Mn-q89">
+                                <rect key="frame" x="35" y="494" width="298" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="ugJ-JG-L3f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="22"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-9w-YGq">
+                                <rect key="frame" x="341" y="494" width="38" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="1fR-O0-j6x"/>
+                                    <constraint firstAttribute="width" constant="38" id="FIK-TS-imx"/>
+                                </constraints>
+                                <color key="tintColor" name="TextColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.square" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30" scale="large" weight="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-fG-x4m">
+                                <rect key="frame" x="35" y="577" width="344" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="8fF-Ti-Ga1"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SIGNUP"/>
+                                <connections>
+                                    <action selector="tappedSignUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cUN-Fn-yFf"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mlx-cn-lyb">
+                                <rect key="frame" x="79.5" y="648" width="255" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-ry-5vb">
+                                        <rect key="frame" x="0.0" y="0.0" width="194.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ku-bM-gou">
+                                        <rect key="frame" x="199.5" y="0.0" width="55.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Bold" family="Alegreya Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eob-9Q-LWw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4nk-ih-9BP"/>
                             <constraint firstItem="CXj-Oo-Xef" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="5c2-vT-9iO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hZH-9w-YGq" secondAttribute="trailing" constant="35" id="9c5-nX-ogq"/>
+                            <constraint firstItem="MKV-fN-elD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="Asc-nV-spd"/>
+                            <constraint firstItem="Mlx-cn-lyb" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="CF8-cu-342"/>
                             <constraint firstItem="eob-9Q-LWw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CJI-Rh-RwX"/>
+                            <constraint firstItem="hZH-9w-YGq" firstAttribute="top" secondItem="MKV-fN-elD" secondAttribute="bottom" constant="20" id="F5D-Xh-UvP"/>
+                            <constraint firstItem="4W9-Mn-q89" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="35" id="G7w-IN-hYz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c2o-fG-x4m" secondAttribute="trailing" constant="35" id="JC6-Mp-hAw"/>
                             <constraint firstItem="FZc-se-S3B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Jbq-ar-4CZ"/>
                             <constraint firstItem="s88-Qs-Eoj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Kp2-fT-HcA"/>
+                            <constraint firstItem="MKV-fN-elD" firstAttribute="top" secondItem="IJ0-eP-uwy" secondAttribute="bottom" constant="30" id="R5b-OT-hYg"/>
                             <constraint firstAttribute="trailing" secondItem="IJ0-eP-uwy" secondAttribute="trailing" constant="35" id="Req-sZ-wtD"/>
                             <constraint firstAttribute="bottom" secondItem="s88-Qs-Eoj" secondAttribute="bottom" id="TdI-rj-iRT"/>
                             <constraint firstItem="FZc-se-S3B" firstAttribute="top" secondItem="eob-9Q-LWw" secondAttribute="bottom" constant="5" id="Tfd-4W-jg7"/>
+                            <constraint firstItem="c2o-fG-x4m" firstAttribute="top" secondItem="4W9-Mn-q89" secondAttribute="bottom" constant="30" id="Uqp-Wb-iUN"/>
                             <constraint firstItem="IJ0-eP-uwy" firstAttribute="top" secondItem="CXj-Oo-Xef" secondAttribute="bottom" constant="5" id="Wqo-e8-SxE"/>
-                            <constraint firstItem="MKV-fN-elD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="hBk-ZG-2CQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MKV-fN-elD" secondAttribute="trailing" constant="35" id="XjA-dc-qYK"/>
+                            <constraint firstItem="hZH-9w-YGq" firstAttribute="leading" secondItem="4W9-Mn-q89" secondAttribute="trailing" constant="8" symbolic="YES" id="c9y-Zf-WVY"/>
+                            <constraint firstItem="Mlx-cn-lyb" firstAttribute="top" secondItem="c2o-fG-x4m" secondAttribute="bottom" constant="10" id="cbe-Ns-HXr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Mlx-cn-lyb" secondAttribute="bottom" constant="190" id="dIS-hN-D0K"/>
+                            <constraint firstItem="4W9-Mn-q89" firstAttribute="top" secondItem="MKV-fN-elD" secondAttribute="bottom" constant="20" id="fJ3-qT-tuC"/>
                             <constraint firstItem="s88-Qs-Eoj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mEV-Ug-VNM"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MKV-fN-elD" secondAttribute="trailing" constant="35" id="mf4-1T-V6Y"/>
                             <constraint firstItem="IJ0-eP-uwy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="p7n-Ym-prh"/>
+                            <constraint firstItem="c2o-fG-x4m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="sJ2-nQ-g98"/>
                             <constraint firstItem="CXj-Oo-Xef" firstAttribute="top" secondItem="FZc-se-S3B" secondAttribute="bottom" constant="10" id="vyo-ka-oyi"/>
-                            <constraint firstItem="MKV-fN-elD" firstAttribute="top" secondItem="IJ0-eP-uwy" secondAttribute="bottom" constant="15" id="x80-ej-T56"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signInLabel" destination="0ku-bM-gou" id="6LT-qp-iTF"/>
+                        <outlet property="signUpButton" destination="c2o-fG-x4m" id="WUF-jI-xqK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="33"/>
+            <point key="canvasLocation" x="95.652173913043484" y="32.8125"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="imgLoginBackground" width="375" height="224"/>
         <image name="imgLogo" width="375" height="439"/>
+        <image name="plus.square" catalog="system" width="128" height="114"/>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
