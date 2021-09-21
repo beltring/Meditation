@@ -170,6 +170,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="qiR-9x-dm8" id="EGf-dI-LGc"/>
+                        <outlet property="signUpLabel" destination="Zk3-04-HmR" id="PiC-hO-ZMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

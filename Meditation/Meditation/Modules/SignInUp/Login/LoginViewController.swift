@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         setupButton()
+        setupLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +38,12 @@ class LoginViewController: UIViewController {
         loginButton.backgroundColor = UIColor(named: "ButtonColor")
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.layer.cornerRadius = 10
+    }
+    
+    private func setupLabel() {
+        signUpLabel.isUserInteractionEnabled = true
+        let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.signUpTap))
+        signUpLabel.addGestureRecognizer(labelTapGesture)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -64,5 +72,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func tappedLogin(_ sender: UIButton) {
         print("Login")
+    }
+    
+    @objc private func signUpTap() {
+        print("SignUp")
     }
 }
