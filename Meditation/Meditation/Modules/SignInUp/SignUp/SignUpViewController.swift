@@ -1,25 +1,19 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  Meditation
 //
-//  Created by User on 20.09.21.
+//  Created by User on 21.09.21.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signUpLabel: UILabel!
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        setupButton()
-        setupLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,26 +26,14 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    
     // MARK: - Setup
-    private func setupButton() {
-        loginButton.titleLabel?.font = UIFont(name: "AlegreyaSans-Medium", size: 25)
-        loginButton.backgroundColor = UIColor(named: "ButtonColor")
-        loginButton.setTitleColor(.white, for: .normal)
-        loginButton.layer.cornerRadius = 10
-    }
-    
-    private func setupLabel() {
-        signUpLabel.isUserInteractionEnabled = true
-        let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.signUpTap))
-        signUpLabel.addGestureRecognizer(labelTapGesture)
-    }
-    
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo else {return}
         guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
         let keyboardFrame = keyboardSize.cgRectValue
         if self.view.frame.origin.y == 0 {
-            self.view.frame.origin.y -= (keyboardFrame.height - 60)
+            self.view.frame.origin.y -= (keyboardFrame.height - 100)
         }
     }
     
@@ -64,17 +46,8 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
-    // MARK: - Actions
+
     @IBAction func tappedBack(_ sender: UIButton) {
         navigationController?.popViewController(animated: false)
-    }
-    
-    @IBAction func tappedLogin(_ sender: UIButton) {
-        print("Login")
-    }
-    
-    @objc private func signUpTap() {
-        navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
     }
 }

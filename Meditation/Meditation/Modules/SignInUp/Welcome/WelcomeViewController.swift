@@ -45,7 +45,7 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func signUpTap() {
-        print("tapped")
+        navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
     }
     
     @IBAction private func loginTapped(_ sender: UIButton) {

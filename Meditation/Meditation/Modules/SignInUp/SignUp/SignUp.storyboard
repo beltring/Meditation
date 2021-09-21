@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alegreya-Medium.ttf">
+            <string>Alegreya-Medium</string>
+        </array>
+        <array key="AlegreyaSans-Regular.ttf">
+            <string>AlegreyaSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SignUpViewController" customModule="Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="s88-Qs-Eoj">
+                                <rect key="frame" x="0.0" y="671" width="414" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="aPJ-Kv-Zkk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FZc-se-S3B">
+                                <rect key="frame" x="15" y="99" width="81" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="2rF-LE-zWr"/>
+                                    <constraint firstAttribute="width" constant="81" id="vIW-Hh-Dvb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-Oo-Xef">
+                                <rect key="frame" x="35" y="204" width="97.5" height="41"/>
+                                <fontDescription key="fontDescription" name="Alegreya-Medium" family="Alegreya" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up now for free and start meditating, and explore Medic." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-eP-uwy">
+                                <rect key="frame" x="35" y="250" width="344" height="53"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="22"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-fN-elD">
+                                <rect key="frame" x="35" y="318" width="344" height="142"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-4E-hz0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="34"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-8J-Gli" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="54" width="344" height="34"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email Address"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8G-hm-82j" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="108" width="344" height="34"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" name="TextFieldColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eob-9Q-LWw">
+                                <rect key="frame" x="0.0" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cpq-Qd-Ovo"/>
+                                    <constraint firstAttribute="width" constant="50" id="zyX-ic-XnZ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
+                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4pn-BU-FEG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eob-9Q-LWw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4nk-ih-9BP"/>
+                            <constraint firstItem="CXj-Oo-Xef" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="5c2-vT-9iO"/>
+                            <constraint firstItem="eob-9Q-LWw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CJI-Rh-RwX"/>
+                            <constraint firstItem="FZc-se-S3B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Jbq-ar-4CZ"/>
+                            <constraint firstItem="s88-Qs-Eoj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Kp2-fT-HcA"/>
+                            <constraint firstAttribute="trailing" secondItem="IJ0-eP-uwy" secondAttribute="trailing" constant="35" id="Req-sZ-wtD"/>
+                            <constraint firstAttribute="bottom" secondItem="s88-Qs-Eoj" secondAttribute="bottom" id="TdI-rj-iRT"/>
+                            <constraint firstItem="FZc-se-S3B" firstAttribute="top" secondItem="eob-9Q-LWw" secondAttribute="bottom" constant="5" id="Tfd-4W-jg7"/>
+                            <constraint firstItem="IJ0-eP-uwy" firstAttribute="top" secondItem="CXj-Oo-Xef" secondAttribute="bottom" constant="5" id="Wqo-e8-SxE"/>
+                            <constraint firstItem="MKV-fN-elD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="hBk-ZG-2CQ"/>
+                            <constraint firstItem="s88-Qs-Eoj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mEV-Ug-VNM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MKV-fN-elD" secondAttribute="trailing" constant="35" id="mf4-1T-V6Y"/>
+                            <constraint firstItem="IJ0-eP-uwy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="p7n-Ym-prh"/>
+                            <constraint firstItem="CXj-Oo-Xef" firstAttribute="top" secondItem="FZc-se-S3B" secondAttribute="bottom" constant="10" id="vyo-ka-oyi"/>
+                            <constraint firstItem="MKV-fN-elD" firstAttribute="top" secondItem="IJ0-eP-uwy" secondAttribute="bottom" constant="15" id="x80-ej-T56"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="33"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="imgLoginBackground" width="375" height="224"/>
+        <image name="imgLogo" width="375" height="439"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldColor">
+            <color red="0.74509803921568629" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
