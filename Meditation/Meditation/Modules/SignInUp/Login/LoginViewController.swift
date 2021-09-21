@@ -13,7 +13,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar()
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,15 +27,26 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    private func setupNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(named: "BackgroundColor")
-        navigationController?.navigationBar.topItem?.title = ""
-        
-        navigationController?.navigationBar.tintColor = .white
-
-    }
-    
     @IBAction func tappedBack(_ sender: UIButton) {
         navigationController?.popViewController(animated: false)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        let keyboardFrame = keyboardSize.cgRectValue
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= (keyboardFrame.height - 50)
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
