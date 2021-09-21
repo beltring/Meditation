@@ -9,12 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        setupButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,8 +30,12 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    @IBAction func tappedBack(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+    // MARK: - Setup
+    private func setupButton() {
+        loginButton.titleLabel?.font = UIFont(name: "AlegreyaSans-Medium", size: 25)
+        loginButton.backgroundColor = UIColor(named: "ButtonColor")
+        loginButton.setTitleColor(.white, for: .normal)
+        loginButton.layer.cornerRadius = 10
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -48,5 +55,14 @@ class LoginViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    // MARK: - Actions
+    @IBAction func tappedBack(_ sender: UIButton) {
+        navigationController?.popViewController(animated: false)
+    }
+    
+    @IBAction func tappedLogin(_ sender: UIButton) {
+        print("Login")
     }
 }
