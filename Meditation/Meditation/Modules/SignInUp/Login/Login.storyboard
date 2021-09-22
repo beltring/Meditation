@@ -69,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-QH-VUs" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="35" y="359" width="344" height="34"/>
+                                <rect key="frame" x="35" y="359" width="344" height="44"/>
                                 <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -86,9 +86,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YfV-je-RRy" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="35" y="423" width="344" height="34"/>
+                                <rect key="frame" x="35" y="433" width="344" height="44"/>
                                 <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" name="TextFieldColor"/>
@@ -103,13 +103,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-2r-k8U">
-                                <rect key="frame" x="285.5" y="467" width="93.5" height="17"/>
+                                <rect key="frame" x="285.5" y="487" width="93.5" height="17"/>
                                 <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="14"/>
                                 <color key="textColor" name="TextFieldColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiR-9x-dm8">
-                                <rect key="frame" x="35" y="519" width="344" height="61"/>
+                                <rect key="frame" x="35" y="539" width="344" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="EQN-Io-0Mg"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-UG-d7J">
-                                <rect key="frame" x="86" y="600" width="242" height="24"/>
+                                <rect key="frame" x="86" y="620" width="242" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G71-1k-UrM">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="24"/>
@@ -169,7 +169,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="UlJ-QH-VUs" id="ym9-nP-4PC"/>
                         <outlet property="loginButton" destination="qiR-9x-dm8" id="EGf-dI-LGc"/>
+                        <outlet property="passwordTextField" destination="YfV-je-RRy" id="Kmg-B5-c89"/>
                         <outlet property="signUpLabel" destination="Zk3-04-HmR" id="PiC-hO-ZMv"/>
                     </connections>
                 </viewController>
@@ -178,6 +180,14 @@
             <point key="canvasLocation" x="95.652173913043484" y="32.8125"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="UlJ-QH-VUs">
+            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+        </designable>
+        <designable name="YfV-je-RRy">
+            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+        </designable>
+    </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
@@ -187,10 +197,10 @@
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextColor">
-            <color red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextFieldColor">
-            <color red="0.74509803921568629" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.74500000476837158" green="0.76099997758865356" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

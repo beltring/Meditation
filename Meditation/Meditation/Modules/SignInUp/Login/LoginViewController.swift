@@ -5,12 +5,16 @@
 //  Created by User on 20.09.21.
 //
 
+import Firebase
+import SkyFloatingLabelTextField
 import UIKit
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpLabel: UILabel!
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -51,7 +55,7 @@ class LoginViewController: UIViewController {
         guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
         let keyboardFrame = keyboardSize.cgRectValue
         if self.view.frame.origin.y == 0 {
-            self.view.frame.origin.y -= (keyboardFrame.height - 50)
+            self.view.frame.origin.y -= (keyboardFrame.height - 60)
         }
     }
     
@@ -71,10 +75,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedLogin(_ sender: UIButton) {
-        print("Login")
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else  { return }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+          guard let strongSelf = self else { return }
+            self?.presentAlert(message: authResult?.user.displayName)
+        }
     }
     
     @objc private func signUpTap() {
-        print("SignUp")
+        navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
     }
 }
