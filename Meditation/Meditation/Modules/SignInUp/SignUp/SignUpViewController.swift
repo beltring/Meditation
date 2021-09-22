@@ -6,16 +6,19 @@
 //
 
 import Firebase
+import Kingfisher
 import SkyFloatingLabelTextField
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInLabel: UILabel!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
+    
+    private var profileImage = UIImageView()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -31,7 +34,7 @@ class SignUpViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -77,7 +80,7 @@ class SignUpViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-
+    
     // MARK: - Actions
     @IBAction func tappedBack(_ sender: UIButton) {
         navigationController?.popViewController(animated: false)
@@ -86,14 +89,32 @@ class SignUpViewController: UIViewController {
     @IBAction func tappedSignUp(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else  { return }
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
-            self?.presentAlert(message: authResult?.user.email)
+            
+            if let error = error {
+                self?.presentAlert(title: "Error", message: error.localizedDescription)
+            }
+            
+            guard let result = authResult else { return }
+            
+            let changeRequest = result.user.createProfileChangeRequest()
+            changeRequest.displayName = self?.nameTextField.text!
+            changeRequest.photoURL = URL(string: "https://i.stack.imgur.com/l60Hf.png")
+            changeRequest.commitChanges { error in
+                guard let error = error else { return }
+                print("LOG Error: \(error.localizedDescription)")
+            }
         }
+    }
+    
+    @IBAction func tappedAdd(_ sender: UIButton) {
+        print("Add photo")
     }
     
     @objc private func signInTap() {
         navigationController?.pushViewController(LoginViewController.initial(), animated: false)
     }
     
+    // MARK: - Logic
     @objc private func isValidData(_ textField: UITextField) -> Bool {
         guard let email = emailTextField.text else { return false }
         guard let password = passwordTextField.text else { return false }

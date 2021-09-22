@@ -153,6 +153,7 @@
 				CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */,
 				CE65170626F8550D009B4D6B /* Info.plist */,
 				CE65170E26F85E11009B4D6B /* Application */,
+				CE75E78F26FA3444000F758D /* Helpers */,
 				CE65171026F85E7F009B4D6B /* Models */,
 				CE65170F26F85E76009B4D6B /* Modules */,
 				CE65171126F85E88009B4D6B /* Resources */,
@@ -189,6 +190,7 @@
 		CE65171126F85E88009B4D6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE65172726F874C4009B4D6B /* Fonts */,
 				CE65170126F8550D009B4D6B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -197,7 +199,6 @@
 		CE65171226F85E94009B4D6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CE65172726F874C4009B4D6B /* Fonts */,
 				CE65171926F86298009B4D6B /* Extensions */,
 			);
 			path = Utils;
@@ -322,6 +323,13 @@
 				CE65261F26F9C92A00161C8C /* SignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CE75E78F26FA3444000F758D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
