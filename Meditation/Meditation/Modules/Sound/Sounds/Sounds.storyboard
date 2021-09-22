@@ -9,31 +9,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Sounds View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MeditationTimeViewController" customModule="Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SoundsViewController" customModule="Meditation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediation TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-5Y-5Vr">
-                                <rect key="frame" x="123" y="413.5" width="168.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-7b-Ajr">
+                                <rect key="frame" x="164.5" y="413" width="85.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LfF-5Y-5Vr" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="98Q-un-zXs"/>
-                            <constraint firstItem="LfF-5Y-5Vr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="KnQ-4g-Vzp"/>
+                            <constraint firstItem="djl-7b-Ajr" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="B6u-JB-Ycy"/>
+                            <constraint firstItem="djl-7b-Ajr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="uwr-ox-qLE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="icHome" id="isj-av-qao">
-                        <color key="badgeColor" name="BackgroundColor"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="icSound" id="kdc-Fx-gu5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -42,7 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icHome" width="25" height="25"/>
+        <image name="icSound" width="22" height="20"/>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
