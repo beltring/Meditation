@@ -45,6 +45,10 @@
 		CE65176726F8950D009B4D6B /* Alegreya-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175B26F8950D009B4D6B /* Alegreya-Bold.ttf */; };
 		CE65176826F8950D009B4D6B /* Alegreya-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175C26F8950D009B4D6B /* Alegreya-MediumItalic.ttf */; };
 		CE65176926F8950D009B4D6B /* Alegreya-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE65175D26F8950D009B4D6B /* Alegreya-BoldItalic.ttf */; };
+		CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65176B26F8ACC4009B4D6B /* LoginViewController.swift */; };
+		CE65176E26F8ACD1009B4D6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65176D26F8ACD1009B4D6B /* Login.storyboard */; };
+		CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65261F26F9C92A00161C8C /* SignUpViewController.swift */; };
+		CE65262226F9C93500161C8C /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65262126F9C93500161C8C /* SignUp.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +93,10 @@
 		CE65175B26F8950D009B4D6B /* Alegreya-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-Bold.ttf"; sourceTree = "<group>"; };
 		CE65175C26F8950D009B4D6B /* Alegreya-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-MediumItalic.ttf"; sourceTree = "<group>"; };
 		CE65175D26F8950D009B4D6B /* Alegreya-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CE65176B26F8ACC4009B4D6B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE65176D26F8ACD1009B4D6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CE65261F26F9C92A00161C8C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE65262126F9C93500161C8C /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +153,7 @@
 				CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */,
 				CE65170626F8550D009B4D6B /* Info.plist */,
 				CE65170E26F85E11009B4D6B /* Application */,
+				CE75E78F26FA3444000F758D /* Helpers */,
 				CE65171026F85E7F009B4D6B /* Models */,
 				CE65170F26F85E76009B4D6B /* Modules */,
 				CE65171126F85E88009B4D6B /* Resources */,
@@ -181,6 +190,7 @@
 		CE65171126F85E88009B4D6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE65172726F874C4009B4D6B /* Fonts */,
 				CE65170126F8550D009B4D6B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -189,7 +199,6 @@
 		CE65171226F85E94009B4D6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CE65172726F874C4009B4D6B /* Fonts */,
 				CE65171926F86298009B4D6B /* Extensions */,
 			);
 			path = Utils;
@@ -206,6 +215,8 @@
 		CE65171426F85EB8009B4D6B /* SignInUp */ = {
 			isa = PBXGroup;
 			children = (
+				CE65261E26F9C91600161C8C /* SignUp */,
+				CE65176A26F8AC99009B4D6B /* Login */,
 				CE65172226F86710009B4D6B /* Welcome */,
 			);
 			path = SignInUp;
@@ -296,6 +307,31 @@
 			path = Alegreya;
 			sourceTree = "<group>";
 		};
+		CE65176A26F8AC99009B4D6B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE65176D26F8ACD1009B4D6B /* Login.storyboard */,
+				CE65176B26F8ACC4009B4D6B /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE65261E26F9C91600161C8C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				CE65262126F9C93500161C8C /* SignUp.storyboard */,
+				CE65261F26F9C92A00161C8C /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		CE75E78F26FA3444000F758D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65176E26F8ACD1009B4D6B /* Login.storyboard in Resources */,
 				CE65176326F8950D009B4D6B /* Alegreya-Italic.ttf in Resources */,
 				CE65176926F8950D009B4D6B /* Alegreya-BoldItalic.ttf in Resources */,
 				CE65174926F894E9009B4D6B /* AlegreyaSans-Italic.ttf in Resources */,
@@ -369,6 +406,7 @@
 				CE65174A26F894E9009B4D6B /* AlegreyaSans-ExtraBoldItalic.ttf in Resources */,
 				CE65176226F8950D009B4D6B /* Alegreya-Regular.ttf in Resources */,
 				CE65170526F8550D009B4D6B /* LaunchScreen.storyboard in Resources */,
+				CE65262226F9C93500161C8C /* SignUp.storyboard in Resources */,
 				CE65175026F894E9009B4D6B /* AlegreyaSans-Thin.ttf in Resources */,
 				CE65174726F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf in Resources */,
 				CE65175E26F8950D009B4D6B /* Alegreya-ExtraBoldItalic.ttf in Resources */,
@@ -439,7 +477,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
+				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,

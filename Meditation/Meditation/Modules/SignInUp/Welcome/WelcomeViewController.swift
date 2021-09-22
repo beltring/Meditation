@@ -43,7 +43,12 @@ class WelcomeViewController: UIViewController {
         signUpLabel.addGestureRecognizer(labelTapGesture)
     }
     
-    @objc func signUpTap() {
-        print("tapped")
+    // MARK: - Actions
+    @objc private func signUpTap() {
+        navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
+    }
+    
+    @IBAction private func loginTapped(_ sender: UIButton) {
+        navigationController?.pushViewController(LoginViewController.initial(), animated: false)
     }
 }
