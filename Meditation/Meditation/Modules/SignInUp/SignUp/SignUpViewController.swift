@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
         setupButton()
         setupLabel()
         setupTextFields()
+        setupSwipe()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +61,12 @@ class SignUpViewController: UIViewController {
     private func setupTextFields() {
         emailTextField.addTarget(self, action: #selector(isValidData(_:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(isValidData(_:)), for: .editingChanged)
+    }
+    
+    private func setupSwipe() {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(tappedBack(_:)))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

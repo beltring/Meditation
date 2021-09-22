@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         
         setupButton()
         setupLabel()
+        setupSwipe()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +49,12 @@ class LoginViewController: UIViewController {
         signUpLabel.isUserInteractionEnabled = true
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.signUpTap))
         signUpLabel.addGestureRecognizer(labelTapGesture)
+    }
+    
+    private func setupSwipe() {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(tappedBack(_:)))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -78,8 +85,12 @@ class LoginViewController: UIViewController {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else  { return }
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-          guard let strongSelf = self else { return }
-            self?.presentAlert(message: authResult?.user.displayName)
+            if let error = error {
+                self?.presentAlert(title: "Error", message: error.localizedDescription)
+            }
+            
+            guard let result = authResult else { return }
+            self?.presentAlert(message: result.user.displayName)
         }
     }
     
