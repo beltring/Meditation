@@ -16,10 +16,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="OYc-Nz-vaY" kind="relationship" relationship="viewControllers" id="8xc-eO-eEk"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xh-mC-QT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729" y="-210"/>
+        </scene>
+        <!--MeditationTime-->
+        <scene sceneID="gvb-yq-8ed">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MeditationTime" id="OYc-Nz-vaY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="AME-Tr-2OL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3a-ji-ikR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="-248"/>
         </scene>
     </scenes>
 </document>

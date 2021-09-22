@@ -49,6 +49,8 @@
 		CE65176E26F8ACD1009B4D6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65176D26F8ACD1009B4D6B /* Login.storyboard */; };
 		CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65261F26F9C92A00161C8C /* SignUpViewController.swift */; };
 		CE65262226F9C93500161C8C /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65262126F9C93500161C8C /* SignUp.storyboard */; };
+		CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D90426FB0DDB004073EA /* MeditationTimeViewController.swift */; };
+		CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		CE65176D26F8ACD1009B4D6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CE65261F26F9C92A00161C8C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE65262126F9C93500161C8C /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		CE69D90426FB0DDB004073EA /* MeditationTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimeViewController.swift; sourceTree = "<group>"; };
+		CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeditationTime.storyboard; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,7 @@
 		CE65170F26F85E76009B4D6B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE69D90226FB0CBF004073EA /* Main */,
 				CE65171326F85EA6009B4D6B /* Launch */,
 				CE65171526F861F8009B4D6B /* Root */,
 				CE65171426F85EB8009B4D6B /* SignInUp */,
@@ -325,6 +330,23 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		CE69D90226FB0CBF004073EA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE69D90326FB0D69004073EA /* MeditationTime */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE69D90326FB0D69004073EA /* MeditationTime */ = {
+			isa = PBXGroup;
+			children = (
+				CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */,
+				CE69D90426FB0DDB004073EA /* MeditationTimeViewController.swift */,
+			);
+			path = MeditationTime;
+			sourceTree = "<group>";
+		};
 		CE75E78F26FA3444000F758D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +433,7 @@
 				CE65174726F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf in Resources */,
 				CE65175E26F8950D009B4D6B /* Alegreya-ExtraBoldItalic.ttf in Resources */,
 				CE65174326F894E9009B4D6B /* AlegreyaSans-Black.ttf in Resources */,
+				CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */,
 				CE65176526F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf in Resources */,
 				CE65176426F8950D009B4D6B /* Alegreya-SemiBold.ttf in Resources */,
 				CE65174D26F894E9009B4D6B /* AlegreyaSans-Regular.ttf in Resources */,
@@ -483,6 +506,7 @@
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,
+				CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,
 				CE65172426F86763009B4D6B /* WelcomeViewController.swift in Sources */,
 			);
