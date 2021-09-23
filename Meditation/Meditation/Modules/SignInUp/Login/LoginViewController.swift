@@ -89,8 +89,8 @@ class LoginViewController: UIViewController {
                 self?.presentAlert(title: "Error", message: error.localizedDescription)
             }
             
-            guard let result = authResult else { return }
-            self?.presentAlert(message: result.user.displayName)
+            let rootVC = TabBarViewController.initial()
+            self?.navigationController?.setViewControllers([rootVC], animated: true)
         }
     }
     

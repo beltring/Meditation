@@ -16,7 +16,7 @@ class RootNavigationViewController: UINavigationController {
     func setRootController() {
         let vc: UIViewController
         
-        if false {
+        if true {
             vc = TabBarViewController.initial()
         } else {
             vc = WelcomeViewController.initial()
