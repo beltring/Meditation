@@ -20,6 +20,7 @@
                     <connections>
                         <segue destination="OYc-Nz-vaY" kind="relationship" relationship="viewControllers" id="8xc-eO-eEk"/>
                         <segue destination="Wbn-t1-zUh" kind="relationship" relationship="viewControllers" id="dqg-rp-zBF"/>
+                        <segue destination="yX8-kT-FgP" kind="relationship" relationship="viewControllers" id="K7y-M3-KyR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xh-mC-QT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -46,10 +47,22 @@
             </objects>
             <point key="canvasLocation" x="-6" y="-144"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="Dtn-To-crM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="yX8-kT-FgP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icUser" selectedImage="icUserSelect" id="YwL-17-unp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAn-zF-GhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="-77"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icHome" width="25" height="25"/>
         <image name="icSound" width="22" height="20"/>
+        <image name="icUser" width="18" height="22"/>
+        <image name="icUserSelect" width="21.5" height="27"/>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
