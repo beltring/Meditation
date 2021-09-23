@@ -92,6 +92,7 @@ start trying meditation.</string>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="startNowButton" destination="738-UV-gL8" id="qCU-5R-uun"/>
+                        <outlet property="timeLabel" destination="ZV4-Zd-BoK" id="lUg-jW-iFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
