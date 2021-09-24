@@ -57,6 +57,10 @@
 		CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */; };
 		CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */; };
 		CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */; };
+		CE73846626FDBB44003EB91F /* MeditationProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73846526FDBB44003EB91F /* MeditationProgramsView.swift */; };
+		CE73846826FDBB60003EB91F /* MeditationPrograms.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73846726FDBB60003EB91F /* MeditationPrograms.xib */; };
+		CE73846E26FDC702003EB91F /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73846C26FDC702003EB91F /* ProgramCollectionViewCell.swift */; };
+		CE73846F26FDC702003EB91F /* ProgramCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73846D26FDC702003EB91F /* ProgramCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +117,10 @@
 		CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
+		CE73846526FDBB44003EB91F /* MeditationProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationProgramsView.swift; sourceTree = "<group>"; };
+		CE73846726FDBB60003EB91F /* MeditationPrograms.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationPrograms.xib; sourceTree = "<group>"; };
+		CE73846C26FDC702003EB91F /* ProgramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE73846D26FDC702003EB91F /* ProgramCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramCollectionViewCell.xib; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +182,7 @@
 				CE65170F26F85E76009B4D6B /* Modules */,
 				CE65171126F85E88009B4D6B /* Resources */,
 				CE65171226F85E94009B4D6B /* Utils */,
+				CE73846426FDBAF7003EB91F /* Views */,
 			);
 			path = Meditation;
 			sourceTree = "<group>";
@@ -393,8 +402,27 @@
 			children = (
 				CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */,
 				CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */,
+				CE73846926FDC6C2003EB91F /* Cell */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		CE73846426FDBAF7003EB91F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE73846526FDBB44003EB91F /* MeditationProgramsView.swift */,
+				CE73846726FDBB60003EB91F /* MeditationPrograms.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE73846926FDC6C2003EB91F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE73846C26FDC702003EB91F /* ProgramCollectionViewCell.swift */,
+				CE73846D26FDC702003EB91F /* ProgramCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CE75E78F26FA3444000F758D /* Helpers */ = {
@@ -484,6 +512,7 @@
 				CE65175026F894E9009B4D6B /* AlegreyaSans-Thin.ttf in Resources */,
 				CE65174726F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf in Resources */,
 				CE65175E26F8950D009B4D6B /* Alegreya-ExtraBoldItalic.ttf in Resources */,
+				CE73846826FDBB60003EB91F /* MeditationPrograms.xib in Resources */,
 				CE65174326F894E9009B4D6B /* AlegreyaSans-Black.ttf in Resources */,
 				CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */,
 				CE65176526F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf in Resources */,
@@ -494,6 +523,7 @@
 				CE65174626F894E9009B4D6B /* AlegreyaSans-Medium.ttf in Resources */,
 				CE69D90D26FB59DE004073EA /* Sounds.storyboard in Resources */,
 				CE65170D26F857DC009B4D6B /* GoogleService-Info.plist in Resources */,
+				CE73846F26FDC702003EB91F /* ProgramCollectionViewCell.xib in Resources */,
 				CE65174B26F894E9009B4D6B /* AlegreyaSans-ExtraBold.ttf in Resources */,
 				CE65170226F8550D009B4D6B /* Assets.xcassets in Resources */,
 				CE65175F26F8950D009B4D6B /* Alegreya-ExtraBold.ttf in Resources */,
@@ -558,9 +588,11 @@
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
+				CE73846E26FDC702003EB91F /* ProgramCollectionViewCell.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */,
+				CE73846626FDBB44003EB91F /* MeditationProgramsView.swift in Sources */,
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,
 				CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,
