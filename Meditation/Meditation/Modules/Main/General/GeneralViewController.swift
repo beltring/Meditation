@@ -15,10 +15,13 @@ class GeneralViewController: UIViewController {
     @IBOutlet weak var anxiousButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    private var dataSource = [Program]()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        prepareDataSource()
     }
     
     // MARK: - Setup
@@ -27,13 +30,18 @@ class GeneralViewController: UIViewController {
         tableView.dataSource = self
         ProgramTableViewCell.registerCellNib(in: tableView)
     }
+    
+    private func prepareDataSource() {
+        dataSource.append(Program(title: "Meditation 101", description: "Techniques, Benefits, and a Beginner’s How-To", image: UIImage(named: "imgMeditation101")))
+        dataSource.append(Program(title: "Cardio Meditation", description: "Basics of Yoga for Beginners or Experienced Professionals", image: UIImage(named: "imgCardioMeditation")))
+    }
 }
 
 // MARK: - Extensions
 // MARK: - UITableViewDataSource
 extension GeneralViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return dataSource.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -41,6 +49,8 @@ extension GeneralViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ProgramTableViewCell.dequeueReusableCell(in: tableView, for: indexPath)
+        let program = dataSource[indexPath.section]
+        cell.configure(name: program.title, description: program.description, image: program.image)
         return cell
     }
 }

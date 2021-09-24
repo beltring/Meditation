@@ -11,5 +11,5 @@ import UIKit
 struct Program {
     let title: String
     let description: String
-    let image: UIImage
+    let image: UIImage?
 }

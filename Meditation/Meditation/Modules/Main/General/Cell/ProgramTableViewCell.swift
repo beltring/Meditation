@@ -17,7 +17,7 @@ class ProgramTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(name: String, description: String, image: UIImage) {
+    func configure(name: String, description: String, image: UIImage?) {
         programNameLabel.text = name
         descriptionLabel.text = description
         programImage.image = image
