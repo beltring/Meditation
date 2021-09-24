@@ -86,7 +86,7 @@ start trying meditation.</string>
                             <constraint firstItem="ZV4-Zd-BoK" firstAttribute="top" secondItem="S2x-36-V7V" secondAttribute="bottom" constant="20" id="vyf-Nh-FKX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icHome" id="isj-av-qao">
+                    <tabBarItem key="tabBarItem" title="" image="icHome" selectedImage="icHomeSelect" id="isj-av-qao">
                         <color key="badgeColor" name="BackgroundColor"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -101,7 +101,8 @@ start trying meditation.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="icHome" width="25" height="25"/>
+        <image name="icHome" width="22" height="23.5"/>
+        <image name="icHomeSelect" width="35.5" height="37"/>
         <image name="imgMeditating" width="283" height="217.5"/>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

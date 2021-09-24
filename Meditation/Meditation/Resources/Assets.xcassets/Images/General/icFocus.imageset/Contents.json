@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Home (18).png",
+      "filename" : "Focus.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Home (19).png",
+      "filename" : "Focus (1).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Home (20).png",
+      "filename" : "Focus (2).png",
       "idiom" : "universal",
       "scale" : "3x"
     }

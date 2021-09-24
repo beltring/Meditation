@@ -55,6 +55,8 @@
 		CE69D90D26FB59DE004073EA /* Sounds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90C26FB59DE004073EA /* Sounds.storyboard */; };
 		CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */; };
 		CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */; };
+		CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */; };
+		CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +111,8 @@
 		CE69D90C26FB59DE004073EA /* Sounds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sounds.storyboard; sourceTree = "<group>"; };
 		CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -343,6 +347,7 @@
 		CE69D90226FB0CBF004073EA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE6ACE4A26FCA2B700D38FF1 /* General */,
 				CE69D90326FB0D69004073EA /* MeditationTime */,
 			);
 			path = Main;
@@ -381,6 +386,15 @@
 				CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE6ACE4A26FCA2B700D38FF1 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */,
+				CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		CE75E78F26FA3444000F758D /* Helpers */ = {
@@ -454,6 +468,7 @@
 				CE65176326F8950D009B4D6B /* Alegreya-Italic.ttf in Resources */,
 				CE65176926F8950D009B4D6B /* Alegreya-BoldItalic.ttf in Resources */,
 				CE65174926F894E9009B4D6B /* AlegreyaSans-Italic.ttf in Resources */,
+				CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */,
 				CE65172126F863FF009B4D6B /* TabBar.storyboard in Resources */,
 				CE65176026F8950D009B4D6B /* Alegreya-Black.ttf in Resources */,
 				CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */,
@@ -541,6 +556,7 @@
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
+				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,

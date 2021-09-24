@@ -57,7 +57,7 @@ class MeditationTimeViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func tappedStartNow(_ sender: UIButton) {
-        print("Tapped start")
+        tabBarController?.viewControllers![0] = GeneralViewController.initial()
     }
     
     @objc private func timeLabelTap() {
