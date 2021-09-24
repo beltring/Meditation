@@ -15,14 +15,12 @@ class ProgramTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.layer.masksToBounds = true
-        self.contentView.layer.cornerRadius = 13
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(name: String, description: String, image: UIImage) {
+        programNameLabel.text = name
+        descriptionLabel.text = description
+        programImage.image = image
     }
     
 }

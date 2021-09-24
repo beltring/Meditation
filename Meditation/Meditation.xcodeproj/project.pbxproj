@@ -60,6 +60,7 @@
 		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
+		CE73847B26FDF717003EB91F /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847A26FDF717003EB91F /* Program.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		CE73847A26FDF717003EB91F /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +210,7 @@
 		CE65171026F85E7F009B4D6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE73847A26FDF717003EB91F /* Program.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
+				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,

@@ -15,14 +15,22 @@ class GeneralViewController: UIViewController {
     @IBOutlet weak var anxiousButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+    }
+    
+    // MARK: - Setup
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         ProgramTableViewCell.registerCellNib(in: tableView)
     }
 }
 
+// MARK: - Extensions
+// MARK: - UITableViewDataSource
 extension GeneralViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -37,6 +45,7 @@ extension GeneralViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension GeneralViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 25
