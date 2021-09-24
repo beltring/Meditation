@@ -219,6 +219,7 @@
                         <outlet property="focusButton" destination="Rxs-Tg-uJX" id="prp-cU-oxJ"/>
                         <outlet property="relaxButton" destination="JSH-ek-IQs" id="w0T-C2-mD1"/>
                         <outlet property="tableView" destination="zg2-3U-zsM" id="rmd-hH-0mA"/>
+                        <outlet property="welcomeLabel" destination="yor-n9-Oxc" id="mW0-sk-qxd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

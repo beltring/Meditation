@@ -5,10 +5,12 @@
 //  Created by Pavel Boltromyuk on 23.09.21.
 //
 
+import Firebase
 import UIKit
 
 class GeneralViewController: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var calmButton: UIButton!
     @IBOutlet weak var relaxButton: UIButton!
     @IBOutlet weak var focusButton: UIButton!
@@ -16,12 +18,15 @@ class GeneralViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var dataSource = [Program]()
+    private var user: User!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         prepareDataSource()
+        getUser()
+        setupWelcomeLabel()
     }
     
     // MARK: - Setup
@@ -34,6 +39,20 @@ class GeneralViewController: UIViewController {
     private func prepareDataSource() {
         dataSource.append(Program(title: "Meditation 101", description: "Techniques, Benefits, and a Beginner’s How-To", image: UIImage(named: "imgMeditation101")))
         dataSource.append(Program(title: "Cardio Meditation", description: "Basics of Yoga for Beginners or Experienced Professionals", image: UIImage(named: "imgCardioMeditation")))
+    }
+    
+    private func setupWelcomeLabel() {
+        if let name = user.displayName {
+            welcomeLabel.text = "Welcome back, \(name)!"
+        } else {
+            welcomeLabel.text = "Welcome back!"
+        }
+        
+    }
+    
+    // MARK: - API calls
+    private func getUser() {
+        user = Auth.auth().currentUser
     }
 }
 
