@@ -191,31 +191,24 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y7u-zO-T5U">
-                                <rect key="frame" x="25" y="277.5" width="364" height="535.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-3U-zsM">
+                                <rect key="frame" x="25" y="257.5" width="364" height="555.5"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dmd-Zb-nQL">
-                                    <size key="itemSize" width="364" height="179"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nsI-cQ-hl5" secondAttribute="trailing" constant="25" id="49h-3G-4GM"/>
                             <constraint firstItem="LqC-Vg-B9k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="FTw-04-7Ol"/>
+                            <constraint firstItem="zg2-3U-zsM" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Kil-DM-NUW"/>
                             <constraint firstItem="nsI-cQ-hl5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="RaW-FM-eKu"/>
                             <constraint firstItem="LqC-Vg-B9k" firstAttribute="top" secondItem="nsI-cQ-hl5" secondAttribute="bottom" constant="25" id="SaN-Z8-ozm"/>
-                            <constraint firstItem="y7u-zO-T5U" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="UPw-Kz-2yJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zg2-3U-zsM" secondAttribute="trailing" constant="25" id="asN-e4-lgX"/>
+                            <constraint firstItem="zg2-3U-zsM" firstAttribute="top" secondItem="LqC-Vg-B9k" secondAttribute="bottom" constant="5" id="d1U-ED-HCz"/>
                             <constraint firstItem="nsI-cQ-hl5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="e3S-MT-bYw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LqC-Vg-B9k" secondAttribute="trailing" constant="25" id="huc-EA-oq7"/>
-                            <constraint firstItem="y7u-zO-T5U" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="mQk-VH-E29"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="y7u-zO-T5U" secondAttribute="trailing" constant="25" id="mri-U9-ADd"/>
-                            <constraint firstItem="y7u-zO-T5U" firstAttribute="top" secondItem="LqC-Vg-B9k" secondAttribute="bottom" constant="25" id="ukU-lA-xqP"/>
+                            <constraint firstItem="zg2-3U-zsM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="tfW-6K-XTU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icHome" selectedImage="icHomeSelect" id="b1c-0K-Tpn"/>
@@ -225,6 +218,7 @@
                         <outlet property="calmButton" destination="fqk-qi-hBw" id="HFJ-Xh-IIY"/>
                         <outlet property="focusButton" destination="Rxs-Tg-uJX" id="prp-cU-oxJ"/>
                         <outlet property="relaxButton" destination="JSH-ek-IQs" id="w0T-C2-mD1"/>
+                        <outlet property="tableView" destination="zg2-3U-zsM" id="rmd-hH-0mA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
