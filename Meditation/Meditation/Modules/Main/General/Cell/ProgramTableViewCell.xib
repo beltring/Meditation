@@ -90,6 +90,7 @@
                 <outlet property="descriptionLabel" destination="wcE-hh-1Tu" id="gfa-Ha-1rB"/>
                 <outlet property="programImage" destination="aJW-Kx-qzY" id="78F-qW-ZIN"/>
                 <outlet property="programNameLabel" destination="juM-dk-5gO" id="9c9-pX-h0J"/>
+                <outlet property="watchButton" destination="Z2u-ka-xDb" id="hUX-6Z-FNf"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="53.571428571428569"/>
         </tableViewCell>
@@ -101,7 +102,7 @@
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ProgramTextColor">
-            <color red="0.14509803921568626" green="0.20000000000000001" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

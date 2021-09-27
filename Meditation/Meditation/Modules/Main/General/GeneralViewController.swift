@@ -5,11 +5,13 @@
 //  Created by Pavel Boltromyuk on 23.09.21.
 //
 
+import CodableFirebase
 import Firebase
+import FirebaseDatabase
 import UIKit
 
 class GeneralViewController: UIViewController {
-
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var calmButton: UIButton!
     @IBOutlet weak var relaxButton: UIButton!
@@ -19,24 +21,20 @@ class GeneralViewController: UIViewController {
     
     private var dataSource = [Program]()
     private var user: User!
+    private var ref = Database.database().reference()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        prepareDataSource()
         getUser()
         setupWelcomeLabel()
+        dataSource = ProgramConstants.getPrograms()
     }
     
     // MARK: - Setup
     private func setupTableView() {
         ProgramTableViewCell.registerCellNib(in: tableView)
-    }
-    
-    private func prepareDataSource() {
-        dataSource.append(Program(title: "Meditation 101", description: "Techniques, Benefits, and a Beginner’s How-To", image: UIImage(named: "imgMeditation101")))
-        dataSource.append(Program(title: "Cardio Meditation", description: "Basics of Yoga for Beginners or Experienced Professionals", image: UIImage(named: "imgCardioMeditation")))
     }
     
     private func setupWelcomeLabel() {
@@ -46,6 +44,12 @@ class GeneralViewController: UIViewController {
             welcomeLabel.text = "Welcome back!"
         }
         
+    }
+    
+    // MARK: - Actions
+    @objc private func tappedWatchNow(sender: UIButton) {
+        let url = URL(string: dataSource[sender.tag].urlString)
+        presentSafariViewController(url: url)
     }
     
     // MARK: - API calls
@@ -66,6 +70,8 @@ extension GeneralViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ProgramTableViewCell.dequeueReusableCell(in: tableView, for: indexPath)
+        cell.watchButton.addTarget(self, action: #selector(tappedWatchNow(sender: )), for: .touchUpInside)
+        cell.watchButton.tag = indexPath.section
         let program = dataSource[indexPath.section]
         cell.configure(name: program.title, description: program.description, image: program.image)
         return cell
@@ -90,26 +96,26 @@ extension GeneralViewController: UITableViewDelegate {
         let shapeLayerTop = CAShapeLayer()
         shapeLayerTop.frame = cell.bounds
         shapeLayerTop.path = maskPathTop.cgPath
-
+        
         //Bottom Left Right Corners
         let maskPathBottom = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 10, height: 10))
         let shapeLayerBottom = CAShapeLayer()
         shapeLayerBottom.frame = cell.bounds
         shapeLayerBottom.path = maskPathBottom.cgPath
-
+        
         //All Corners
         let maskPathAll = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.topLeft, .topRight, .bottomRight, .bottomLeft], cornerRadii: CGSize(width: 10, height: 10))
         let shapeLayerAll = CAShapeLayer()
         shapeLayerAll.frame = cell.bounds
         shapeLayerAll.path = maskPathAll.cgPath
-
+        
         if (indexPath.row == 0 && indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1)
         {
             cell.layer.mask = shapeLayerAll
         }
-     else if (indexPath.row == 0)
+        else if (indexPath.row == 0)
         {
-        cell.layer.mask = shapeLayerTop
+            cell.layer.mask = shapeLayerTop
         }
         else if (indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1)
         {
