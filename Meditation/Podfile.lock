@@ -479,10 +479,10 @@ PODS:
   - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
-  - Firebase/Analytics
-  - Firebase/Auth
-  - Firebase/Firestore
-  - Kingfisher (~> 7.0)
+  - Firebase/Analytics (= 8.6.0)
+  - Firebase/Auth (= 8.6.0)
+  - Firebase/Firestore (= 8.6.0)
+  - Kingfisher (= 7.0)
   - SkyFloatingLabelTextField (= 3.8)
 
 SPEC REPOS:
@@ -530,6 +530,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: b2488202fce08e2ffcd5470aec9e2904c54dbd21
+PODFILE CHECKSUM: bdfcae5e004db1d8e58448b298191db13b30bdb8
 
 COCOAPODS: 1.11.2

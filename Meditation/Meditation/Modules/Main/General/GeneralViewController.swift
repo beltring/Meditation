@@ -31,8 +31,6 @@ class GeneralViewController: UIViewController {
     
     // MARK: - Setup
     private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
         ProgramTableViewCell.registerCellNib(in: tableView)
     }
     

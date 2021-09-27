@@ -29,9 +29,6 @@ class MeditationTimeViewController: UIViewController {
     // MARK: - Setup
     private func setupButton() {
         startNowButton.titleLabel?.font = UIFont(name: "AlegreyaSans-Medium", size: 25)
-        startNowButton.backgroundColor = UIColor(named: "ButtonColor")
-        startNowButton.setTitleColor(.white, for: .normal)
-        startNowButton.layer.cornerRadius = 10
     }
     
     private func setupNavBar() {
@@ -50,7 +47,6 @@ class MeditationTimeViewController: UIViewController {
     }
     
     private func setupLabel() {
-        timeLabel.isUserInteractionEnabled = true
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.timeLabelTap))
         timeLabel.addGestureRecognizer(labelTapGesture)
     }
