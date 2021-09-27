@@ -17,18 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S52-d0-agn">
-                                <rect key="frame" x="163.5" y="409.5" width="87" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-vn-1WP">
+                                <rect key="frame" x="168.5" y="413" width="77.5" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign out"/>
+                                <connections>
+                                    <action selector="tappedSignOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xOn-h0-jcG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="S52-d0-agn" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="4yJ-vl-Lwb"/>
-                            <constraint firstItem="S52-d0-agn" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="KhG-wr-Pax"/>
+                            <constraint firstItem="BOP-vn-1WP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fe7-yt-2cR"/>
+                            <constraint firstItem="BOP-vn-1WP" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ifn-Hu-v7l"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icUser" selectedImage="icUserSelect" id="8Wa-4t-SL5"/>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alegreya-Medium.ttf">
+            <string>Alegreya-Medium</string>
+        </array>
+        <array key="AlegreyaSans-Regular.ttf">
+            <string>AlegreyaSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--General View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="GeneralViewController" customModule="Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nsI-cQ-hl5" userLabel="Header Stack View">
+                                <rect key="frame" x="25" y="74" width="364" height="69.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back, Afreen!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yor-n9-Oxc">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="41"/>
+                                        <fontDescription key="fontDescription" name="Alegreya-Medium" family="Alegreya" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling today ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vky-DB-pp5">
+                                        <rect key="frame" x="0.0" y="43" width="364" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="22"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-Vg-B9k" userLabel="Feelings Stack View">
+                                <rect key="frame" x="25" y="168.5" width="364" height="84"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30Q-j6-ESp">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqk-qi-hBw">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="65"/>
+                                                <color key="backgroundColor" name="IconBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="OkO-dk-Fgs"/>
+                                                </constraints>
+                                                <color key="tintColor" name="BackgroundColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icCalm"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-yy-cI3">
+                                                <rect key="frame" x="18.5" y="70" width="24.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="RbO-yy-cI3" firstAttribute="centerX" secondItem="fqk-qi-hBw" secondAttribute="centerX" id="44c-d4-hcc"/>
+                                            <constraint firstItem="fqk-qi-hBw" firstAttribute="top" secondItem="30Q-j6-ESp" secondAttribute="top" id="QH3-zW-Wle"/>
+                                            <constraint firstItem="fqk-qi-hBw" firstAttribute="leading" secondItem="30Q-j6-ESp" secondAttribute="leading" id="dce-7q-0Vn"/>
+                                            <constraint firstAttribute="width" constant="61" id="fhL-vr-b9X"/>
+                                            <constraint firstAttribute="trailing" secondItem="fqk-qi-hBw" secondAttribute="trailing" id="gRV-10-gfs"/>
+                                            <constraint firstAttribute="height" constant="84" id="hYV-8f-Ush"/>
+                                            <constraint firstItem="RbO-yy-cI3" firstAttribute="top" secondItem="fqk-qi-hBw" secondAttribute="bottom" constant="5" id="jaF-Am-Mxg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QnU-0N-8he">
+                                        <rect key="frame" x="101" y="0.0" width="61" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSH-ek-IQs">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="65"/>
+                                                <color key="backgroundColor" name="IconBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="gyo-C6-nqk"/>
+                                                </constraints>
+                                                <color key="tintColor" name="BackgroundColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icRelax"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtq-cx-nWB">
+                                                <rect key="frame" x="18" y="70" width="25.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JSH-ek-IQs" secondAttribute="trailing" id="8gX-IO-4TA"/>
+                                            <constraint firstAttribute="width" constant="61" id="DgV-jq-RI6"/>
+                                            <constraint firstItem="mtq-cx-nWB" firstAttribute="centerX" secondItem="JSH-ek-IQs" secondAttribute="centerX" id="Hfa-Zl-3q9"/>
+                                            <constraint firstItem="mtq-cx-nWB" firstAttribute="top" secondItem="JSH-ek-IQs" secondAttribute="bottom" constant="5" id="VG0-Z5-50H"/>
+                                            <constraint firstAttribute="height" constant="84" id="ehc-aB-MFP"/>
+                                            <constraint firstItem="JSH-ek-IQs" firstAttribute="top" secondItem="QnU-0N-8he" secondAttribute="top" id="mgH-AJ-9Et"/>
+                                            <constraint firstItem="JSH-ek-IQs" firstAttribute="leading" secondItem="QnU-0N-8he" secondAttribute="leading" id="xqZ-tg-hxI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFN-jR-zjq">
+                                        <rect key="frame" x="202" y="0.0" width="61" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxs-Tg-uJX">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="65"/>
+                                                <color key="backgroundColor" name="IconBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="nGx-gu-w4O"/>
+                                                </constraints>
+                                                <color key="tintColor" name="BackgroundColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icFocus"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQ0-f5-Gs4">
+                                                <rect key="frame" x="17.5" y="70" width="26" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Rxs-Tg-uJX" secondAttribute="trailing" id="3f0-8k-mKC"/>
+                                            <constraint firstItem="xQ0-f5-Gs4" firstAttribute="top" secondItem="Rxs-Tg-uJX" secondAttribute="bottom" constant="5" id="CKK-SE-EhY"/>
+                                            <constraint firstItem="Rxs-Tg-uJX" firstAttribute="top" secondItem="xFN-jR-zjq" secondAttribute="top" id="RYi-sY-J7y"/>
+                                            <constraint firstAttribute="height" constant="84" id="X0B-TV-rZr"/>
+                                            <constraint firstAttribute="width" constant="61" id="X1x-Ud-TSa"/>
+                                            <constraint firstItem="Rxs-Tg-uJX" firstAttribute="leading" secondItem="xFN-jR-zjq" secondAttribute="leading" id="ahQ-uK-qRQ"/>
+                                            <constraint firstItem="xQ0-f5-Gs4" firstAttribute="centerX" secondItem="Rxs-Tg-uJX" secondAttribute="centerX" id="ruv-pw-JKs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-zg-wZC">
+                                        <rect key="frame" x="303" y="0.0" width="61" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khd-oM-uyB">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="65"/>
+                                                <color key="backgroundColor" name="IconBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="IDP-ma-aOd"/>
+                                                </constraints>
+                                                <color key="tintColor" name="BackgroundColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icAnxious"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anxious" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEz-sS-7hT">
+                                                <rect key="frame" x="11.5" y="70" width="38" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="QEz-sS-7hT" firstAttribute="top" secondItem="khd-oM-uyB" secondAttribute="bottom" constant="5" id="4Ce-yG-A8h"/>
+                                            <constraint firstAttribute="width" constant="61" id="5pB-eF-p4X"/>
+                                            <constraint firstItem="khd-oM-uyB" firstAttribute="leading" secondItem="jaS-zg-wZC" secondAttribute="leading" id="95W-ew-cTx"/>
+                                            <constraint firstItem="khd-oM-uyB" firstAttribute="top" secondItem="jaS-zg-wZC" secondAttribute="top" id="KVp-t3-5qe"/>
+                                            <constraint firstAttribute="height" constant="84" id="diQ-Cp-ROb"/>
+                                            <constraint firstAttribute="trailing" secondItem="khd-oM-uyB" secondAttribute="trailing" id="i9s-Mg-5fl"/>
+                                            <constraint firstItem="QEz-sS-7hT" firstAttribute="centerX" secondItem="khd-oM-uyB" secondAttribute="centerX" id="tyH-qV-Q7p"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-3U-zsM">
+                                <rect key="frame" x="25" y="257.5" width="364" height="555.5"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="tJI-mH-d0F"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="IAh-oa-Lyq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nsI-cQ-hl5" secondAttribute="trailing" constant="25" id="49h-3G-4GM"/>
+                            <constraint firstItem="LqC-Vg-B9k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="FTw-04-7Ol"/>
+                            <constraint firstItem="zg2-3U-zsM" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Kil-DM-NUW"/>
+                            <constraint firstItem="nsI-cQ-hl5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="RaW-FM-eKu"/>
+                            <constraint firstItem="LqC-Vg-B9k" firstAttribute="top" secondItem="nsI-cQ-hl5" secondAttribute="bottom" constant="25" id="SaN-Z8-ozm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zg2-3U-zsM" secondAttribute="trailing" constant="25" id="asN-e4-lgX"/>
+                            <constraint firstItem="zg2-3U-zsM" firstAttribute="top" secondItem="LqC-Vg-B9k" secondAttribute="bottom" constant="5" id="d1U-ED-HCz"/>
+                            <constraint firstItem="nsI-cQ-hl5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="e3S-MT-bYw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LqC-Vg-B9k" secondAttribute="trailing" constant="25" id="huc-EA-oq7"/>
+                            <constraint firstItem="zg2-3U-zsM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="tfW-6K-XTU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icHome" selectedImage="icHomeSelect" id="b1c-0K-Tpn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="anxiousButton" destination="khd-oM-uyB" id="RTD-aZ-wFn"/>
+                        <outlet property="calmButton" destination="fqk-qi-hBw" id="HFJ-Xh-IIY"/>
+                        <outlet property="focusButton" destination="Rxs-Tg-uJX" id="prp-cU-oxJ"/>
+                        <outlet property="relaxButton" destination="JSH-ek-IQs" id="w0T-C2-mD1"/>
+                        <outlet property="tableView" destination="zg2-3U-zsM" id="rmd-hH-0mA"/>
+                        <outlet property="welcomeLabel" destination="yor-n9-Oxc" id="mW0-sk-qxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="29.464285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icAnxious" width="38" height="45"/>
+        <image name="icCalm" width="35.5" height="35"/>
+        <image name="icFocus" width="35" height="35"/>
+        <image name="icHome" width="22" height="23.5"/>
+        <image name="icHomeSelect" width="35.5" height="37"/>
+        <image name="icRelax" width="35" height="33"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="IconBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

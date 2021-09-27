@@ -53,8 +53,15 @@
 		CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */; };
 		CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D90A26FB59D6004073EA /* SoundsViewController.swift */; };
 		CE69D90D26FB59DE004073EA /* Sounds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90C26FB59DE004073EA /* Sounds.storyboard */; };
+		CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A037D2701B7DE00A02ECA /* Constants.swift */; };
 		CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */; };
 		CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */; };
+		CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */; };
+		CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */; };
+		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
+		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
+		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
+		CE73847B26FDF717003EB91F /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847A26FDF717003EB91F /* Program.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,8 +114,15 @@
 		CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeditationTime.storyboard; sourceTree = "<group>"; };
 		CE69D90A26FB59D6004073EA /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
 		CE69D90C26FB59DE004073EA /* Sounds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sounds.storyboard; sourceTree = "<group>"; };
+		CE6A037D2701B7DE00A02ECA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
+		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
+		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		CE73847A26FDF717003EB91F /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +212,7 @@
 		CE65171026F85E7F009B4D6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE73847A26FDF717003EB91F /* Program.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				CE65171926F86298009B4D6B /* Extensions */,
+				CE6A037D2701B7DE00A02ECA /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -258,6 +274,7 @@
 		CE65171926F86298009B4D6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE73847826FDD976003EB91F /* UITableViewExtension.swift */,
 				CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */,
 				CE65171C26F862EB009B4D6B /* UIViewExtension.swift */,
 			);
@@ -343,6 +360,7 @@
 		CE69D90226FB0CBF004073EA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE6ACE4A26FCA2B700D38FF1 /* General */,
 				CE69D90326FB0D69004073EA /* MeditationTime */,
 			);
 			path = Main;
@@ -381,6 +399,25 @@
 				CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE6ACE4A26FCA2B700D38FF1 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */,
+				CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */,
+				CE73846926FDC6C2003EB91F /* Cell */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		CE73846926FDC6C2003EB91F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */,
+				CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CE75E78F26FA3444000F758D /* Helpers */ = {
@@ -454,6 +491,7 @@
 				CE65176326F8950D009B4D6B /* Alegreya-Italic.ttf in Resources */,
 				CE65176926F8950D009B4D6B /* Alegreya-BoldItalic.ttf in Resources */,
 				CE65174926F894E9009B4D6B /* AlegreyaSans-Italic.ttf in Resources */,
+				CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */,
 				CE65172126F863FF009B4D6B /* TabBar.storyboard in Resources */,
 				CE65176026F8950D009B4D6B /* Alegreya-Black.ttf in Resources */,
 				CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */,
@@ -469,6 +507,7 @@
 				CE65175026F894E9009B4D6B /* AlegreyaSans-Thin.ttf in Resources */,
 				CE65174726F894E9009B4D6B /* AlegreyaSans-MediumItalic.ttf in Resources */,
 				CE65175E26F8950D009B4D6B /* Alegreya-ExtraBoldItalic.ttf in Resources */,
+				CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */,
 				CE65174326F894E9009B4D6B /* AlegreyaSans-Black.ttf in Resources */,
 				CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */,
 				CE65176526F8950D009B4D6B /* Alegreya-SemiBoldItalic.ttf in Resources */,
@@ -538,11 +577,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */,
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
+				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
+				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
+				CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
+				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */,
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,

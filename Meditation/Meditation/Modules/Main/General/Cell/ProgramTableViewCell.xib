@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alegreya-Medium.ttf">
+            <string>Alegreya-Medium</string>
+        </array>
+        <array key="AlegreyaSans-Medium.ttf">
+            <string>AlegreyaSans-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProgramTableViewCell" customModule="Meditation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Meditation 101" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juM-dk-5gO">
+                        <rect key="frame" x="16" y="20" width="150" height="34.5"/>
+                        <fontDescription key="fontDescription" name="Alegreya-Medium" family="Alegreya" pointSize="25"/>
+                        <color key="textColor" name="ProgramTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Techniques, Benefits, and a Beginner’s How-To" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcE-hh-1Tu">
+                        <rect key="frame" x="16" y="54.5" width="150" height="36"/>
+                        <fontDescription key="fontDescription" name="AlegreyaSans-Medium" family="Alegreya Sans" pointSize="15"/>
+                        <color key="textColor" name="ProgramTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMeditation101" translatesAutoresizingMaskIntoConstraints="NO" id="aJW-Kx-qzY">
+                        <rect key="frame" x="174" y="20" width="130" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="I7X-gy-MIu"/>
+                            <constraint firstAttribute="height" constant="130" id="xJe-OO-8nY"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-ka-xDb">
+                        <rect key="frame" x="16" y="100.5" width="130" height="39"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="Hh5-q7-hIx"/>
+                            <constraint firstAttribute="height" constant="39" id="PAh-Jy-GkT"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icPlay" imagePlacement="trailing" imagePadding="8">
+                            <attributedString key="attributedTitle">
+                                <fragment content="watch now">
+                                    <attributes>
+                                        <font key="NSFont" size="15" name="AlegreyaSans-Medium"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </buttonConfiguration>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Z2u-ka-xDb" firstAttribute="top" secondItem="wcE-hh-1Tu" secondAttribute="bottom" constant="10" id="6El-Va-LeC"/>
+                    <constraint firstItem="juM-dk-5gO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Bzu-bd-ZRV"/>
+                    <constraint firstItem="Z2u-ka-xDb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Fin-5M-81Q"/>
+                    <constraint firstItem="juM-dk-5gO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Fri-DE-tZg"/>
+                    <constraint firstItem="aJW-Kx-qzY" firstAttribute="leading" secondItem="wcE-hh-1Tu" secondAttribute="trailing" constant="8" symbolic="YES" id="L3m-Wz-m0M"/>
+                    <constraint firstItem="aJW-Kx-qzY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="SMM-BB-B4d"/>
+                    <constraint firstAttribute="bottom" secondItem="aJW-Kx-qzY" secondAttribute="bottom" constant="20" symbolic="YES" id="TvN-Vf-vnB"/>
+                    <constraint firstItem="wcE-hh-1Tu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="WRf-gg-V0i"/>
+                    <constraint firstItem="wcE-hh-1Tu" firstAttribute="top" secondItem="juM-dk-5gO" secondAttribute="bottom" id="hwR-wS-QmJ"/>
+                    <constraint firstAttribute="trailing" secondItem="aJW-Kx-qzY" secondAttribute="trailing" constant="16" id="z4G-3S-HOt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="wcE-hh-1Tu" id="gfa-Ha-1rB"/>
+                <outlet property="programImage" destination="aJW-Kx-qzY" id="78F-qW-ZIN"/>
+                <outlet property="programNameLabel" destination="juM-dk-5gO" id="9c9-pX-h0J"/>
+                <outlet property="watchButton" destination="Z2u-ka-xDb" id="hUX-6Z-FNf"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="53.571428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icPlay" width="13" height="13"/>
+        <image name="imgMeditation101" width="166" height="111"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ProgramTextColor">
+            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

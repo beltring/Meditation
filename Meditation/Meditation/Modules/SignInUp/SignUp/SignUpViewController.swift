@@ -45,15 +45,9 @@ class SignUpViewController: UIViewController {
     // MARK: - Setup
     private func setupButton() {
         signUpButton.titleLabel?.font = UIFont(name: "AlegreyaSans-Medium", size: 25)
-        signUpButton.backgroundColor = UIColor(named: "ButtonColor")
-        signUpButton.setTitleColor(.white, for: .normal)
-        signUpButton.layer.cornerRadius = 10
-        signUpButton.isEnabled = false
-        signUpButton.alpha = 0.7
     }
     
     private func setupLabel() {
-        signInLabel.isUserInteractionEnabled = true
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.signInTap))
         signInLabel.addGestureRecognizer(labelTapGesture)
     }
