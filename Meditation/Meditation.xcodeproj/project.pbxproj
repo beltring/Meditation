@@ -56,6 +56,7 @@
 		CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A037D2701B7DE00A02ECA /* Constants.swift */; };
 		CE6A03842701D75000A02ECA /* SoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A03822701D75000A02ECA /* SoundTableViewCell.swift */; };
 		CE6A03852701D75000A02ECA /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6A03832701D75000A02ECA /* SoundTableViewCell.xib */; };
+		CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A03882701F2FB00A02ECA /* Sound.swift */; };
 		CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */; };
 		CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */; };
 		CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */; };
@@ -119,6 +120,7 @@
 		CE6A037D2701B7DE00A02ECA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE6A03822701D75000A02ECA /* SoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewCell.swift; sourceTree = "<group>"; };
 		CE6A03832701D75000A02ECA /* SoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
+		CE6A03882701F2FB00A02ECA /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				CE73847A26FDF717003EB91F /* Program.swift */,
+				CE6A03882701F2FB00A02ECA /* Sound.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
+				CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */,
 				CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,

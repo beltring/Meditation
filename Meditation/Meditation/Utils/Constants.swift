@@ -21,3 +21,20 @@ struct ProgramConstants {
         return programs
     }
 }
+
+
+struct SoundConstants {
+    static func getSounds() -> [Sound] {
+        let sound1 = Sound(title: "Longer Way To Go", image: UIImage(named: "sound1"), countListening: 3, duration: "3:26")
+        let sound2 = Sound(title: "Spatium", image: UIImage(named: "sound2"), countListening: 32222, duration: "3:43")
+        let sound3 = Sound(title: "Passion", image: UIImage(named: "sound3"), countListening: 3111, duration: "4:13")
+        let sound4 = Sound(title: "Beautiful Dreamer", image: UIImage(named: "sound4"), countListening: 355, duration: "0:53")
+        let sound5 = Sound(title: "Melancholy Tune", image: UIImage(named: "sound5"), countListening: 35555, duration: "2:51")
+        let sound6 = Sound(title: "Tropical Aura", image: UIImage(named: "sound6"), countListening: 3234234, duration: "3:28")
+        let sound7 = Sound(title: "Haven of the Faeries", image: UIImage(named: "sound3"), countListening: 34767, duration: "02:34")
+        
+        var sounds = [Sound]()
+        sounds += [sound1, sound2, sound3, sound4, sound5, sound6, sound7]
+        return sounds
+    }
+}

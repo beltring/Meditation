@@ -11,10 +11,13 @@ class SoundsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var dataSource = [Sound]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         SoundTableViewCell.registerCellNib(in: tableView)
+        dataSource = SoundConstants.getSounds()
     }
 
 }
@@ -23,7 +26,7 @@ class SoundsViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension SoundsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +35,8 @@ extension SoundsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = SoundTableViewCell.dequeueReusableCell(in: tableView, for: indexPath)
+        let sound = dataSource[indexPath.section]
+        cell.configure(title: sound.title, image: sound.image, count: sound.countListening, duration: sound.duration)
         return cell
     }
 }
