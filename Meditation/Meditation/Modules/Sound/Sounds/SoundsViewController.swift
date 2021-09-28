@@ -5,6 +5,7 @@
 //  Created by Pavel Boltromyuk on 22.09.21.
 //
 
+import AVFoundation
 import UIKit
 
 class SoundsViewController: UIViewController {
@@ -51,5 +52,10 @@ extension SoundsViewController: UITableViewDelegate {
         let headerView = UIView()
         headerView.backgroundColor = UIColor(named: "BackgroundColor")
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Select row")
+    
     }
 }

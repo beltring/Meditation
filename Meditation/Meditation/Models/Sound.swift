@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-struct Sound {
+struct Sound: Codable {
     let title: String
-    let image: UIImage?
+    let imageUrl: String
     let countListening: Int
     let duration: String
+    let storageUrl: String
 }

@@ -65,6 +65,8 @@
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
 		CE73847B26FDF717003EB91F /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847A26FDF717003EB91F /* Program.swift */; };
+		CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51BF27032DC6006F290F /* MeditationType.swift */; };
+		CE7A51C227032F42006F290F /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51C127032F42006F290F /* Meditation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,8 @@
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		CE73847A26FDF717003EB91F /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		CE7A51BF27032DC6006F290F /* MeditationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationType.swift; sourceTree = "<group>"; };
+		CE7A51C127032F42006F290F /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +224,8 @@
 			children = (
 				CE73847A26FDF717003EB91F /* Program.swift */,
 				CE6A03882701F2FB00A02ECA /* Sound.swift */,
+				CE7A51BF27032DC6006F290F /* MeditationType.swift */,
+				CE7A51C127032F42006F290F /* Meditation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -596,9 +602,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */,
+				CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */,
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
+				CE7A51C227032F42006F290F /* Meditation.swift in Sources */,
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
@@ -763,6 +771,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -794,6 +803,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
