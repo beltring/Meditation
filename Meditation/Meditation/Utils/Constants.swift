@@ -5,6 +5,8 @@
 //  Created by Pavel Boltromyuk on 27.09.21.
 //
 
+import CodableFirebase
+import FirebaseFirestore
 import Foundation
 import UIKit
 
@@ -23,18 +25,23 @@ struct ProgramConstants {
 }
 
 
-struct SoundConstants {
-    static func getSounds() -> [Sound] {
-        let sound1 = Sound(title: "Longer Way To Go", image: UIImage(named: "sound1"), countListening: 3, duration: "3:26")
-        let sound2 = Sound(title: "Spatium", image: UIImage(named: "sound2"), countListening: 32222, duration: "3:43")
-        let sound3 = Sound(title: "Passion", image: UIImage(named: "sound3"), countListening: 3111, duration: "4:13")
-        let sound4 = Sound(title: "Beautiful Dreamer", image: UIImage(named: "sound4"), countListening: 355, duration: "0:53")
-        let sound5 = Sound(title: "Melancholy Tune", image: UIImage(named: "sound5"), countListening: 35555, duration: "2:51")
-        let sound6 = Sound(title: "Tropical Aura", image: UIImage(named: "sound6"), countListening: 3234234, duration: "3:28")
-        let sound7 = Sound(title: "Haven of the Faeries", image: UIImage(named: "sound3"), countListening: 34767, duration: "02:34")
-        
-        var sounds = [Sound]()
-        sounds += [sound1, sound2, sound3, sound4, sound5, sound6, sound7]
-        return sounds
-    }
-}
+//struct SoundConstants {
+//    static func getSounds() -> [Sound] {
+//        let sound1 = Sound(title: "Longer Way To Go", imageUrl: "", countListening: 3, duration: "3:26", storageUrl: "")
+//        let sound2 = Sound(title: "Spatium", imageUrl: "", countListening: 32222, duration: "3:43", storageUrl: "")
+//        let sound3 = Sound(title: "Passion", imageUrl: "", countListening: 3111, duration: "4:13", storageUrl: "")
+//        let sound4 = Sound(title: "Beautiful Dreamer", imageUrl: "", countListening: 355, duration: "0:53", storageUrl: "")
+//        let sound5 = Sound(title: "Melancholy Tune", imageUrl: "", countListening: 35555, duration: "2:51", storageUrl: "")
+//        let sound6 = Sound(title: "Tropical Aura", imageUrl: "", countListening: 3234234, duration: "3:28", storageUrl: "")
+//        let sound7 = Sound(title: "Haven of the Faeries", imageUrl: "", countListening: 34767, duration: "02:34", storageUrl: "")
+//        let sound8 = Sound(title: "Haven of the Faeries", imageUrl: "", countListening: 34767, duration: "02:34", storageUrl: "")
+//        let sound9 = Sound(title: "Haven of the Faeries", imageUrl: "", countListening: 34767, duration: "02:34", storageUrl: "")
+//        let sound10 = Sound(title: "Haven of the Faeries", imageUrl: "", countListening: 34767, duration: "02:34", storageUrl: "")
+//        let sound11 = Sound(title: "Haven of the Faeries", imageUrl: "", countListening: 34767, duration: "02:34", storageUrl: "")
+//        
+//        var sounds = [Sound]()
+//        sounds += [sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10, sound11]
+//        let meditation = Meditation(type: .relax, sounds: sounds)
+//        return sounds
+//    }
+//}

@@ -13,5 +13,5 @@ struct Sound: Codable {
     let imageUrl: String
     let countListening: Int
     let duration: String
-    let storageUrl: String
+    let url: String
 }

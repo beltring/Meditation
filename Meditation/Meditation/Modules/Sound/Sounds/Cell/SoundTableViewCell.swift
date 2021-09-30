@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class SoundTableViewCell: UITableViewCell {
 
@@ -19,10 +20,19 @@ class SoundTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(title: String, image: UIImage?, count: Int, duration: String) {
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        soundImage.image = nil
+        title.text = ""
+        listeningLabel.text = ""
+        duration.text = ""
+    }
+    
+    func configure(title: String, imageUrl: String, count: Int, duration: String) {
         self.title.text = title
-        soundImage.image = image
         listeningLabel.text = "\(count) Listening"
         self.duration.text = "\(duration) min"
+        guard let url = URL(string: imageUrl) else { return }
+        soundImage.kf.setImage(with: url)
     }
 }

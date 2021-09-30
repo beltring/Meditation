@@ -6,28 +6,30 @@
 //
 
 import AVFoundation
+import CodableFirebase
+import FirebaseFirestore
+import FirebaseStorage
 import UIKit
 
 class SoundsViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
-    private var dataSource = [Sound]()
+    var meditation: Meditation!
+    var player:AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         SoundTableViewCell.registerCellNib(in: tableView)
-        dataSource = SoundConstants.getSounds()
     }
-
 }
 
 // MARK: - Extensions
 // MARK: - UITableViewDataSource
 extension SoundsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSource.count
+        return meditation.sounds.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,8 +38,8 @@ extension SoundsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = SoundTableViewCell.dequeueReusableCell(in: tableView, for: indexPath)
-        let sound = dataSource[indexPath.section]
-        cell.configure(title: sound.title, image: sound.image, count: sound.countListening, duration: sound.duration)
+        let sound = meditation.sounds[indexPath.section]
+        cell.configure(title: sound.title, imageUrl: sound.imageUrl, count: sound.countListening, duration: sound.duration)
         return cell
     }
 }
@@ -45,6 +47,10 @@ extension SoundsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension SoundsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
     }
     
@@ -56,6 +62,11 @@ extension SoundsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Select row")
-    
+        let sound = meditation.sounds[indexPath.section]
+        guard let soundUrl = URL(string: sound.url) else { return }
+        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
+        player?.volume = 2.0
+        player?.prepareToPlay()
+        player?.play()
     }
 }

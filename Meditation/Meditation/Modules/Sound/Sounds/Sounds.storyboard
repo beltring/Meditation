@@ -57,7 +57,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aBj-bR-o2K">
-                                <rect key="frame" x="38" y="294" width="338" height="524"/>
+                                <rect key="frame" x="38" y="294" width="338" height="519"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
                                 <connections>
@@ -95,7 +95,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aBj-bR-o2K" secondAttribute="trailing" constant="38" id="WUr-70-oXF"/>
                             <constraint firstItem="V8R-7d-TYQ" firstAttribute="top" secondItem="TU9-ox-MZd" secondAttribute="top" constant="35" id="ayH-YX-gYg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TU9-ox-MZd" secondAttribute="trailing" constant="20" id="iwv-i1-mVd"/>
-                            <constraint firstItem="aBj-bR-o2K" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="5" id="nbX-62-TJs"/>
+                            <constraint firstItem="aBj-bR-o2K" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="mIa-Wq-ub5"/>
                             <constraint firstItem="aBj-bR-o2K" firstAttribute="top" secondItem="TU9-ox-MZd" secondAttribute="bottom" constant="20" id="w0U-UD-jaK"/>
                             <constraint firstItem="Lym-SV-faW" firstAttribute="top" secondItem="p1x-Tr-0e3" secondAttribute="bottom" constant="25" id="y75-Oa-PkB"/>
                         </constraints>

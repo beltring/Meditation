@@ -19,6 +19,8 @@ target 'Meditation' do
 
   pod 'Firebase/Firestore', '8.6.0'
 
+  pod 'Firebase/Storage', '8.6.0'
+
   pod 'Kingfisher', '7.0'
 
   pod 'SkyFloatingLabelTextField', '3.8'
