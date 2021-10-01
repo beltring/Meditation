@@ -18,10 +18,33 @@ class SoundsViewController: UIViewController {
     var meditation: Meditation!
     var player:AVAudioPlayer?
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         SoundTableViewCell.registerCellNib(in: tableView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    // MARK: - Actions
+    @IBAction func tappedPlayNow(_ sender: UIButton) {
+        navigationController?.pushViewController(SoundViewController.initial(), animated: false)
+//        let sound = meditation.sounds[0]
+//        guard let soundUrl = URL(string: sound.url) else { return }
+//        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
+//        player?.volume = 2.0
+//        player?.prepareToPlay()
+//        player?.play()
+//        print(player?.duration)
     }
 }
 
@@ -68,5 +91,6 @@ extension SoundsViewController: UITableViewDelegate {
         player?.volume = 2.0
         player?.prepareToPlay()
         player?.play()
+        print(player?.duration)
     }
 }

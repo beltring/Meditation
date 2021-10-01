@@ -17,7 +17,7 @@ class SoundTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        soundImage.kf.indicatorType = .activity
     }
     
     override func prepareForReuse() {

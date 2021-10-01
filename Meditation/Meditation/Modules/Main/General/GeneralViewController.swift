@@ -61,7 +61,8 @@ class GeneralViewController: UIViewController {
                 switch self.meditation.type {
                 case .relax:
                     print("relax")
-                    let sounds = self.tabBarController?.viewControllers?[1] as! SoundsViewController
+                    let nav = self.tabBarController?.viewControllers?[1] as! UINavigationController
+                    let sounds = nav.viewControllers.first as! SoundsViewController
                     sounds.meditation = self.meditation
                     self.tabBarController?.selectedIndex = 1
                 default:
