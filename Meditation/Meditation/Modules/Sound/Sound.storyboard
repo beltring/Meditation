@@ -35,8 +35,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                    <imageReference key="image" image="icBack" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pso-F0-N5Q"/>
@@ -173,8 +173,8 @@
     </scenes>
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="icBack" width="24" height="24"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
         <image name="shuffle" catalog="system" width="128" height="95"/>

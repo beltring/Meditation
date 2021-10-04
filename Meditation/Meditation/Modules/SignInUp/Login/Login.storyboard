@@ -41,9 +41,9 @@
                                     <constraint firstAttribute="height" constant="50" id="KIe-0d-w9P"/>
                                     <constraint firstAttribute="width" constant="50" id="pe5-b8-fws"/>
                                 </constraints>
-                                <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
-                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePadding="2">
+                                    <imageReference key="image" image="icBack" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="tappedBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Z9i-p8-8Ig"/>
@@ -196,7 +196,7 @@
     </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="icBack" width="50" height="50"/>
         <image name="imgLoginBackground" width="375" height="224"/>
         <image name="imgLogo" width="375" height="439"/>
         <namedColor name="BackgroundColor">
