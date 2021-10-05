@@ -69,22 +69,10 @@ class GeneralViewController: UIViewController {
             if let document = document {
                 guard let self = self else { return }
                 self.meditation = try! FirestoreDecoder().decode(Meditation.self, from: document.data()!)
-                switch self.meditation.type {
-                case .relax:
-                    print("relax")
-                    let nav = self.tabBarController?.viewControllers?[1] as! UINavigationController
-                    let sounds = nav.viewControllers.first as! SoundsViewController
-                    sounds.meditation = self.meditation
-                    self.tabBarController?.selectedIndex = 1
-                case .calm:
-                    print("calm")
-                    let nav = self.tabBarController?.viewControllers?[1] as! UINavigationController
-                    let sounds = nav.viewControllers.first as! SoundsViewController
-                    sounds.meditation = self.meditation
-                    self.tabBarController?.selectedIndex = 1
-                default:
-                    print("default")
-                }
+                let nav = self.tabBarController?.viewControllers?[1] as! UINavigationController
+                let sounds = nav.viewControllers.first as! SoundsViewController
+                sounds.meditation = self.meditation
+                self.tabBarController?.selectedIndex = 1
             } else {
                 print("Document does not exist")
             }

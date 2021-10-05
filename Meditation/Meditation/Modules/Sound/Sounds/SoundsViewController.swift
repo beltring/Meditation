@@ -37,7 +37,9 @@ class SoundsViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func tappedPlayNow(_ sender: UIButton) {
-        navigationController?.pushViewController(SoundViewController.initial(), animated: false)
+        let vc = SoundViewController.initial()
+        vc.meditation = meditation
+        navigationController?.pushViewController(vc, animated: false)
 //        let sound = meditation.sounds[0]
 //        guard let soundUrl = URL(string: sound.url) else { return }
 //        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
@@ -85,12 +87,16 @@ extension SoundsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Select row")
-        let sound = meditation.sounds[indexPath.section]
-        guard let soundUrl = URL(string: sound.url) else { return }
-        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
-        player?.volume = 2.0
-        player?.prepareToPlay()
-        player?.play()
-        print(player?.duration)
+        let vc = SoundViewController.initial()
+        vc.meditation = meditation
+        vc.currentSong = indexPath.section
+        navigationController?.pushViewController(vc, animated: false)
+//        let sound = meditation.sounds[indexPath.section]
+//        guard let soundUrl = URL(string: sound.url) else { return }
+//        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
+//        player?.volume = 2.0
+//        player?.prepareToPlay()
+//        player?.play()
+//        print(player?.duration)
     }
 }

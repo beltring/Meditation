@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgRelaxSounds" translatesAutoresizingMaskIntoConstraints="NO" id="TU9-ox-MZd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPaintingForest" translatesAutoresizingMaskIntoConstraints="NO" id="TU9-ox-MZd">
                                 <rect key="frame" x="20" y="123" width="374" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="1a5-OI-RIM"/>
@@ -137,7 +137,7 @@
         <image name="icBlackPlay" width="12.5" height="13"/>
         <image name="icSound" width="22" height="20"/>
         <image name="icSoundSelect" width="27" height="25"/>
-        <image name="imgRelaxSounds" width="341" height="197"/>
+        <image name="imgPaintingForest" width="65" height="65"/>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
