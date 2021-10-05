@@ -26,6 +26,7 @@ class SoundViewController: UIViewController {
     private var player: AVAudioPlayer?
     private var isPlaying = true
     private var isRepeating = false
+    private var isShuffle = false
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -80,6 +81,8 @@ class SoundViewController: UIViewController {
             currentSong = 0
         } else if isRepeating {
             currentSong -= 1
+        } else if isShuffle {
+            currentSong = Int.random(in: 0..<meditation.sounds.count)
         }
 
         play()
@@ -91,6 +94,8 @@ class SoundViewController: UIViewController {
             currentSong = 0
         } else if isRepeating {
             currentSong += 1
+        } else if isShuffle {
+            currentSong = Int.random(in: 0..<meditation.sounds.count)
         }
 
         play()
@@ -106,6 +111,12 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction func tappedShuffle(_ sender: UIButton) {
+        isShuffle.toggle()
+        if isShuffle {
+            shuffleButton.tintColor = .white
+        } else {
+            shuffleButton.tintColor = UIColor(named: "TextColor")
+        }
     }
     
     @IBAction func tappedBack(_ sender: UIButton) {
@@ -136,6 +147,8 @@ extension SoundViewController: AVAudioPlayerDelegate {
             currentSong = 0
         } else if isRepeating {
             currentSong -= 1
+        } else if isShuffle {
+            currentSong = Int.random(in: 0..<meditation.sounds.count)
         }
 
         play()
