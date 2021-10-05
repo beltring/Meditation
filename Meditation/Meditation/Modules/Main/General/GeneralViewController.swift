@@ -22,6 +22,7 @@ class GeneralViewController: UIViewController {
     private var dataSource = [Program]()
     private var user: User!
     private var ref = Database.database().reference()
+    private var meditation: Meditation!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -50,6 +51,32 @@ class GeneralViewController: UIViewController {
     @objc private func tappedWatchNow(sender: UIButton) {
         let url = URL(string: dataSource[sender.tag].urlString)
         presentSafariViewController(url: url)
+    }
+    
+    @IBAction func tappedType(_ sender: UIButton) {
+        var type = ""
+        switch sender.tag {
+        case 1:
+            type = "relax"
+        case 2:
+            type = "focus"
+        case 3:
+            type = "anxious"
+        default:
+            type = "calm"
+        }
+        Firestore.firestore().collection("meditations").document(type).getDocument { [weak self] document, error in
+            if let document = document {
+                guard let self = self else { return }
+                self.meditation = try! FirestoreDecoder().decode(Meditation.self, from: document.data()!)
+                let nav = self.tabBarController?.viewControllers?[1] as! UINavigationController
+                let sounds = nav.viewControllers.first as! SoundsViewController
+                sounds.meditation = self.meditation
+                self.tabBarController?.selectedIndex = 1
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
     
     // MARK: - API calls
