@@ -61,7 +61,7 @@ class SoundViewController: UIViewController {
         guard let url = URL(string: sound.imageUrl) else { return}
         soundImage.kf.setImage(with: url)
         nameLabel.text = sound.title
-        typeLabel.text = meditation.type.rawValue.uppercased() + " sounds"
+        typeLabel.text = meditation.type.rawValue.capitalized + " sounds"
     }
     
     // MARK: - Actions
