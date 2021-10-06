@@ -9,11 +9,15 @@ import AVFoundation
 import CodableFirebase
 import FirebaseFirestore
 import FirebaseStorage
+import Kingfisher
 import UIKit
 
 class SoundsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var meditationImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var meditation: Meditation!
     var player:AVAudioPlayer?
@@ -28,6 +32,8 @@ class SoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        setup()
+        tableView.reloadData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,18 +41,32 @@ class SoundsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    // MARK: - Setup
+    private func setup() {
+        guard let url = URL(string: meditation.imageUrl) else { return }
+        meditationImage.kf.setImage(with: url)
+        titleLabel.text = meditation.type.rawValue.capitalized + " Sounds"
+        descriptionLabel.text = meditation.description
+    }
+    
     // MARK: - Actions
     @IBAction func tappedPlayNow(_ sender: UIButton) {
         let vc = SoundViewController.initial()
         vc.meditation = meditation
         navigationController?.pushViewController(vc, animated: false)
-//        let sound = meditation.sounds[0]
-//        guard let soundUrl = URL(string: sound.url) else { return }
-//        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
-//        player?.volume = 2.0
-//        player?.prepareToPlay()
-//        player?.play()
-//        print(player?.duration)
+    }
+    
+    // MARK: - API calls
+    private func getMeditation() {
+        Firestore.firestore().collection("meditations").document("calm").getDocument { [weak self] document, error in
+            if let document = document {
+                guard let self = self else { return }
+                self.meditation = try! FirestoreDecoder().decode(Meditation.self, from: document.data()!)
+                self.setup()
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
 }
 

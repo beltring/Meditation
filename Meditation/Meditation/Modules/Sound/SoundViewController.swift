@@ -19,6 +19,7 @@ class SoundViewController: UIViewController {
     @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var musicSlider: UISlider!
     
     var currentSong: Int = 0
     var meditation: Meditation!
@@ -35,6 +36,7 @@ class SoundViewController: UIViewController {
         play()
         setupPlayButton()
         setupSound()
+        musicSlider.value = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,8 +86,8 @@ class SoundViewController: UIViewController {
         } else if isShuffle {
             currentSong = Int.random(in: 0..<meditation.sounds.count)
         }
-
-        play()
+        
+        musicSlider.value = 0
     }
     
     @IBAction func tappedPrev(_ sender: UIButton) {
@@ -97,7 +99,8 @@ class SoundViewController: UIViewController {
         } else if isShuffle {
             currentSong = Int.random(in: 0..<meditation.sounds.count)
         }
-
+        
+        musicSlider.value = 0
         play()
     }
     
@@ -123,6 +126,12 @@ class SoundViewController: UIViewController {
         navigationController?.popViewController(animated: false)
     }
     
+    @IBAction func sliderAction(_ sender: UISlider) {
+        player?.stop()
+        player?.currentTime = TimeInterval(musicSlider.value)
+        player?.play()
+    }
+    
     // MARK: - Logic
     private func play() {
         let sound = meditation.sounds[currentSong]
@@ -131,9 +140,15 @@ class SoundViewController: UIViewController {
         player?.prepareToPlay()
         player?.play()
         player?.delegate = self
+        musicSlider.maximumValue = Float(player!.duration)
+        _ = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateMusicSlider), userInfo: nil, repeats: true)
         isPlaying = true
         setupPlayButton()
         setupSound()
+    }
+    
+    @objc private func updateMusicSlider(){
+        musicSlider.value = Float(player!.currentTime)
     }
 }
 
@@ -150,7 +165,7 @@ extension SoundViewController: AVAudioPlayerDelegate {
         } else if isShuffle {
             currentSong = Int.random(in: 0..<meditation.sounds.count)
         }
-
+        
         play()
     }
 }
