@@ -338,7 +338,6 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
-  - AMPopTip (4.4.0)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -489,11 +488,11 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - PKHUD (5.3.0)
   - PromisesObjC (2.0.0)
   - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
-  - AMPopTip (= 4.4.0)
   - CodableFirebase (= 0.2.0)
   - Firebase/Analytics (= 8.6.0)
   - Firebase/Auth (= 8.6.0)
@@ -501,12 +500,12 @@ DEPENDENCIES:
   - Firebase/Firestore (= 8.6.0)
   - Firebase/Storage (= 8.6.0)
   - Kingfisher (= 7.0)
+  - PKHUD (~> 5.0)
   - SkyFloatingLabelTextField (= 3.8)
 
 SPEC REPOS:
   trunk:
     - abseil
-    - AMPopTip
     - BoringSSL-GRPC
     - CodableFirebase
     - Firebase
@@ -527,12 +526,12 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
+    - PKHUD
     - PromisesObjC
     - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
-  AMPopTip: 093366c8dab16a2d0bf46c73d5837b6a2a603774
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   CodableFirebase: 4b865f58c583a6c0ef8c81c6b12c6bf15ebd9181
   Firebase: 21ac9f28b09a8bdfc005f34c984fca84e7e8786d
@@ -553,9 +552,10 @@ SPEC CHECKSUMS:
   Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: d3302e05c3ba123c33d1fe8d95f47f4f63fbb9e0
+PODFILE CHECKSUM: aec8f6ccfe7d83b36ab00ad560b7fe7d8c5a8e7e
 
 COCOAPODS: 1.11.2

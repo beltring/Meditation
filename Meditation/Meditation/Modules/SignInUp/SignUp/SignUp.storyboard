@@ -43,22 +43,22 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-Oo-Xef">
-                                <rect key="frame" x="35" y="204" width="97.5" height="41"/>
+                                <rect key="frame" x="35" y="204" width="108" height="35"/>
                                 <fontDescription key="fontDescription" name="Alegreya-Medium" family="Alegreya" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up now for free and start meditating, and explore Medic." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-eP-uwy">
-                                <rect key="frame" x="35" y="250" width="344" height="53"/>
+                                <rect key="frame" x="35" y="244" width="344" height="51.5"/>
                                 <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="22"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-fN-elD" userLabel="TextFieldsStackView">
-                                <rect key="frame" x="35" y="333" width="344" height="152.5"/>
+                                <rect key="frame" x="35" y="325.5" width="344" height="150.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-4E-hz0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="344" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="43.5"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -75,7 +75,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-8J-Gli" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="54" width="344" height="44"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="344" height="43.5"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -92,7 +92,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8G-hm-82j" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="108" width="344" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="107" width="344" height="43.5"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
@@ -126,7 +126,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сlick on the button if you want to add a photo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W9-Mn-q89">
-                                <rect key="frame" x="35" y="505.5" width="298" height="53"/>
+                                <rect key="frame" x="35" y="496" width="298" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="ugJ-JG-L3f"/>
                                 </constraints>
@@ -135,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-9w-YGq">
-                                <rect key="frame" x="341" y="505.5" width="38" height="53"/>
+                                <rect key="frame" x="341" y="496" width="38" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="1fR-O0-j6x"/>
                                     <constraint firstAttribute="width" constant="38" id="FIK-TS-imx"/>
@@ -150,7 +150,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-fG-x4m">
-                                <rect key="frame" x="35" y="588.5" width="344" height="61"/>
+                                <rect key="frame" x="35" y="579" width="344" height="61"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="8fF-Ti-Ga1"/>
@@ -168,16 +168,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mlx-cn-lyb">
-                                <rect key="frame" x="79.5" y="659.5" width="255" height="24"/>
+                                <rect key="frame" x="57.5" y="650" width="299" height="23.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-ry-5vb">
-                                        <rect key="frame" x="0.0" y="0.0" width="194.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ku-bM-gou">
-                                        <rect key="frame" x="199.5" y="0.0" width="55.5" height="24"/>
+                                        <rect key="frame" x="237" y="0.0" width="62" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AlegreyaSans-Bold" family="Alegreya Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -231,13 +231,13 @@
     </scenes>
     <designables>
         <designable name="Sg6-8J-Gli">
-            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+            <size key="intrinsicContentSize" width="344" height="43.483671874999999"/>
         </designable>
         <designable name="n8G-hm-82j">
-            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+            <size key="intrinsicContentSize" width="344" height="43.483671874999999"/>
         </designable>
         <designable name="wLO-4E-hz0">
-            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+            <size key="intrinsicContentSize" width="344" height="43.483671874999999"/>
         </designable>
     </designables>
     <resources>
