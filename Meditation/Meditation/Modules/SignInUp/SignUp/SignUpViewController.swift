@@ -92,7 +92,7 @@ class SignUpViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
             
             if let error = error {
-                self?.presentAlert(title: "Error", message: error.localizedDescription)
+                self?.presentAlert(title: "Error", message: error.localizedDescription, cancelTitle: "Ok")
             }
             
             guard let result = authResult else { return }
@@ -104,6 +104,8 @@ class SignUpViewController: UIViewController {
                 guard let error = error else { return }
                 print("LOG Error: \(error.localizedDescription)")
             }
+            let rootVC = TabBarViewController.initial()
+            self?.navigationController?.setViewControllers([rootVC], animated: true)
         }
     }
     

@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alegreya-Medium.ttf">
+            <string>Alegreya-Medium</string>
+        </array>
+        <array key="AlegreyaSans-Regular.ttf">
+            <string>AlegreyaSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -26,16 +34,57 @@
                                     <action selector="tappedSignOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xOn-h0-jcG"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9D-8v-Qhh">
+                                <rect key="frame" x="132" y="74" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6xW-rW-Lic"/>
+                                    <constraint firstAttribute="width" constant="150" id="IWv-q8-xyu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hsp-Ze-aZ7">
+                                <rect key="frame" x="57" y="234" width="300" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afreen Khan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-pq-riQ">
+                                        <rect key="frame" x="59.5" y="0.0" width="181.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="Alegreya-Medium" family="Alegreya" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test@mail.ru" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7T-ul-buz">
+                                        <rect key="frame" x="99" y="48" width="102" height="24"/>
+                                        <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="20"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="d68-K6-KAu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="q9D-8v-Qhh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="4Y7-Gi-uUQ"/>
+                            <constraint firstItem="hsp-Ze-aZ7" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="KIz-44-zFH"/>
                             <constraint firstItem="BOP-vn-1WP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fe7-yt-2cR"/>
+                            <constraint firstItem="q9D-8v-Qhh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fh8-PM-J30"/>
+                            <constraint firstItem="hsp-Ze-aZ7" firstAttribute="top" secondItem="q9D-8v-Qhh" secondAttribute="bottom" constant="10" id="i9O-pE-RCO"/>
                             <constraint firstItem="BOP-vn-1WP" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ifn-Hu-v7l"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icUser" selectedImage="icUserSelect" id="8Wa-4t-SL5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="o7T-ul-buz" id="q0c-Zm-joC"/>
+                        <outlet property="nameLabel" destination="K5G-pq-riQ" id="0sD-GS-6do"/>
+                        <outlet property="profileImage" destination="q9D-8v-Qhh" id="mBc-Ua-iSP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,6 +96,9 @@
         <image name="icUserSelect" width="21.5" height="27"/>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
