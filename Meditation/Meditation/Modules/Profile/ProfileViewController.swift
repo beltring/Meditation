@@ -39,4 +39,8 @@ class ProfileViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+//    @objc private func tappedEdit() {
+//        print("Edit")
+//    }
 }
