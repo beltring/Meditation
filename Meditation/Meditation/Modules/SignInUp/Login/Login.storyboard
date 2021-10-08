@@ -102,7 +102,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-2r-k8U">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-2r-k8U">
                                 <rect key="frame" x="246.5" y="443" width="93.5" height="17"/>
                                 <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="14"/>
                                 <color key="textColor" name="TextFieldColor"/>
@@ -176,6 +176,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="UlJ-QH-VUs" id="ym9-nP-4PC"/>
+                        <outlet property="forgotLabel" destination="8hP-2r-k8U" id="lcA-pX-8tc"/>
                         <outlet property="loginButton" destination="qiR-9x-dm8" id="EGf-dI-LGc"/>
                         <outlet property="passwordTextField" destination="YfV-je-RRy" id="Kmg-B5-c89"/>
                         <outlet property="signUpLabel" destination="Zk3-04-HmR" id="PiC-hO-ZMv"/>
@@ -196,7 +197,7 @@
     </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="icBack" width="50" height="50"/>
+        <image name="icBack" width="24" height="24"/>
         <image name="imgLoginBackground" width="375" height="224"/>
         <image name="imgLogo" width="375" height="439"/>
         <namedColor name="BackgroundColor">

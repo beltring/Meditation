@@ -61,6 +61,9 @@
 		CE6ACE4226FC50F000D38FF1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */; };
 		CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */; };
 		CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */; };
+		CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF05D271031F100E29B77 /* EditProfileViewController.swift */; };
+		CE6FF060271031FF00E29B77 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */; };
+		CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70329D270EC7EA0005F294 /* StorageService.swift */; };
 		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
@@ -129,6 +132,9 @@
 		CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE6ACE4B26FCA2CC00D38FF1 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
+		CE6FF05D271031F100E29B77 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		CE70329D270EC7EA0005F294 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -424,6 +430,7 @@
 		CE6ACE3E26FC50D400D38FF1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CE6FF05C271031D700E29B77 /* Edit */,
 				CE6ACE4126FC50F000D38FF1 /* Profile.storyboard */,
 				CE6ACE3F26FC50E500D38FF1 /* ProfileViewController.swift */,
 			);
@@ -440,6 +447,15 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		CE6FF05C271031D700E29B77 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */,
+				CE6FF05D271031F100E29B77 /* EditProfileViewController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 		CE73846926FDC6C2003EB91F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +468,7 @@
 		CE75E78F26FA3444000F758D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CE70329D270EC7EA0005F294 /* StorageService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -555,6 +572,7 @@
 				CE65172626F8676B009B4D6B /* Welcome.storyboard in Resources */,
 				CE65174E26F894E9009B4D6B /* AlegreyaSans-Bold.ttf in Resources */,
 				CE65174826F894E9009B4D6B /* AlegreyaSans-BlackItalic.ttf in Resources */,
+				CE6FF060271031FF00E29B77 /* EditProfile.storyboard in Resources */,
 				CE65176626F8950D009B4D6B /* Alegreya-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +635,8 @@
 				CE7A51C227032F42006F290F /* Meditation.swift in Sources */,
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
+				CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */,
+				CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */,
 				CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */,

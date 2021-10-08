@@ -5,7 +5,6 @@
 //  Created by Pavel Boltromyuk on 24.09.21.
 //
 
-import AMPopTip
 import UIKit
 
 class ProgramTableViewCell: UITableViewCell {

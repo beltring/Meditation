@@ -6,9 +6,11 @@
 //
 
 import Firebase
+import FirebaseStorage
 import Kingfisher
 import SkyFloatingLabelTextField
 import UIKit
+import PKHUD
 
 class SignUpViewController: UIViewController {
     
@@ -18,8 +20,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
     
-    private var profileImage = UIImageView()
-    
+    private var profileImage: UIImage?
+    private var user: User!
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,26 +92,41 @@ class SignUpViewController: UIViewController {
     
     @IBAction func tappedSignUp(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else  { return }
+        guard let image = profileImage else {
+            presentAlert(title: "Warning", message: "Please add a photo", cancelTitle: "Ok")
+            return
+        }
+        HUD.show(.progress)
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
             
             if let error = error {
-                self?.presentAlert(title: "Error", message: error.localizedDescription)
+                self?.presentAlert(title: "Error", message: error.localizedDescription, cancelTitle: "Ok")
             }
             
             guard let result = authResult else { return }
             
-            let changeRequest = result.user.createProfileChangeRequest()
-            changeRequest.displayName = self?.nameTextField.text!
-            changeRequest.photoURL = URL(string: "https://i.stack.imgur.com/l60Hf.png")
-            changeRequest.commitChanges { error in
-                guard let error = error else { return }
-                print("LOG Error: \(error.localizedDescription)")
+            let storageRef = Storage.storage().reference().child("users/\(result.user.uid)")
+            StorageService.shared.uploadImage(image, at: storageRef) { [weak self] url in
+                self?.user = result.user
+                let changeRequest = result.user.createProfileChangeRequest()
+                changeRequest.displayName = self?.nameTextField.text!
+                changeRequest.photoURL = url
+                changeRequest.commitChanges { error in
+                    guard let error = error else { return }
+                    print("LOG Error: \(error.localizedDescription)")
+                }
+                HUD.hide()
+                let rootVC = TabBarViewController.initial()
+                self?.navigationController?.setViewControllers([rootVC], animated: true)
             }
         }
     }
     
     @IBAction func tappedAdd(_ sender: UIButton) {
-        print("Add photo")
+        let photoPicker = UIImagePickerController()
+        photoPicker.delegate = self
+        photoPicker.sourceType = .photoLibrary
+        present(photoPicker, animated: true, completion: nil)
     }
     
     @objc private func signInTap() {
@@ -145,5 +163,13 @@ class SignUpViewController: UIViewController {
         
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
+    }
+}
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        profileImage = image
+
+        dismiss(animated: true)
     }
 }

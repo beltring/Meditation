@@ -7,8 +7,6 @@ target 'Meditation' do
 
   # Pods for Meditation
 
-  pod 'AMPopTip', '4.4.0'
-
   pod 'CodableFirebase', '0.2.0'
 
   pod 'Firebase/Analytics', '8.6.0'
@@ -22,6 +20,8 @@ target 'Meditation' do
   pod 'Firebase/Storage', '8.6.0'
 
   pod 'Kingfisher', '7.0'
+
+  pod 'PKHUD', '~> 5.0'
 
   pod 'SkyFloatingLabelTextField', '3.8'
 

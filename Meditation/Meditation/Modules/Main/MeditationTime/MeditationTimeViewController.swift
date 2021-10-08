@@ -22,8 +22,8 @@ class MeditationTimeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
-        setupNavBar()
         setupLabel()
+        setupNavBar()
     }
     
     // MARK: - Setup
@@ -31,24 +31,15 @@ class MeditationTimeViewController: UIViewController {
         startNowButton.titleLabel?.font = UIFont(name: "AlegreyaSans-Medium", size: 25)
     }
     
-    private func setupNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(named: "BackgroundColor")
-        navigationController?.title = "Test"
-        navigationController?.navigationBar.isTranslucent = false
-        let logo = UIImage(named: "imgLogo")
-        let imageView = UIImageView(image: logo)
-        let bannerWidth = navigationController?.navigationBar.frame.size.width
-        let bannerHeight = navigationController?.navigationBar.frame.size.height
-        let bannerX = bannerWidth! / 2 - (logo?.size.width)! / 2
-        let bannerY = bannerHeight! / 2 - (logo?.size.height)! / 2
-        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth!, height: bannerHeight!)
-        imageView.contentMode = .scaleAspectFit
-        navigationController?.navigationBar.topItem?.titleView = imageView
-    }
-    
     private func setupLabel() {
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.timeLabelTap))
         timeLabel.addGestureRecognizer(labelTapGesture)
+    }
+    
+    private func setupNavBar() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        let controller = tabBarController as? TabBarViewController
+        controller?.setupNavBar()
     }
     
     // MARK: - Actions
