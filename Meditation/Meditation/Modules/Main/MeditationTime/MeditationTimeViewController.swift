@@ -23,6 +23,7 @@ class MeditationTimeViewController: UIViewController {
         super.viewDidLoad()
         setupButton()
         setupLabel()
+        setupNavBar()
     }
     
     // MARK: - Setup
@@ -33,6 +34,12 @@ class MeditationTimeViewController: UIViewController {
     private func setupLabel() {
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.timeLabelTap))
         timeLabel.addGestureRecognizer(labelTapGesture)
+    }
+    
+    private func setupNavBar() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        let controller = tabBarController as? TabBarViewController
+        controller?.setupNavBar()
     }
     
     // MARK: - Actions

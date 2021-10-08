@@ -21,6 +21,17 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         user = Auth.auth().currentUser
+        setupInformation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("appear")
+        super.viewWillAppear(animated)
+        setupInformation()
+    }
+    
+    // MARK: - Setup
+    private func setupInformation() {
         profileImage.kf.setImage(with: user.photoURL)
         nameLabel.text = user.displayName
         emailLabel.text = user.email
@@ -40,7 +51,4 @@ class ProfileViewController: UIViewController {
         }
     }
     
-//    @objc private func tappedEdit() {
-//        print("Edit")
-//    }
 }

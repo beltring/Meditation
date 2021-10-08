@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="47e-N3-I3M">
-                                <rect key="frame" x="72" y="84" width="270" height="270"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="47e-N3-I3M">
+                                <rect key="frame" x="72" y="144" width="270" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="Q0j-OT-kkh"/>
                                     <constraint firstAttribute="width" constant="270" id="m12-EQ-4I9"/>
@@ -35,30 +35,110 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сlick on the icon to change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt4-U5-ejM">
-                                <rect key="frame" x="104.5" y="362" width="205.5" height="24"/>
+                                <rect key="frame" x="104.5" y="422" width="205.5" height="24"/>
                                 <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RO-t6-gUX" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="35" y="496" width="344" height="44"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" name="TextFieldColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" name="TextFieldColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" name="TextFieldColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIG-Xq-SuD">
+                                <rect key="frame" x="35" y="604" width="344" height="61"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="VE7-73-X9S"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="EDIT"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedEdit:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eMZ-bh-crD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2f-Ti-k40" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="35" y="550" width="344" height="44"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Regular" family="Alegreya Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" name="TextFieldColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" name="TextFieldColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" name="TextFieldColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="47e-N3-I3M" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="J7O-sL-8nv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="u2f-Ti-k40" secondAttribute="trailing" constant="35" id="2UA-zy-FVi"/>
+                            <constraint firstItem="cIG-Xq-SuD" firstAttribute="top" secondItem="u2f-Ti-k40" secondAttribute="bottom" constant="10" id="NSe-ZN-jod"/>
                             <constraint firstItem="Xt4-U5-ejM" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="SOA-7f-3sf"/>
                             <constraint firstItem="Xt4-U5-ejM" firstAttribute="top" secondItem="47e-N3-I3M" secondAttribute="bottom" constant="8" symbolic="YES" id="SV7-rF-G2U"/>
+                            <constraint firstItem="cIG-Xq-SuD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="T0i-g8-Yp8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cIG-Xq-SuD" secondAttribute="trailing" constant="35" id="bU5-Gp-RQ5"/>
+                            <constraint firstItem="47e-N3-I3M" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="fjd-Us-18w"/>
                             <constraint firstItem="47e-N3-I3M" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="gVJ-EZ-F9g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3RO-t6-gUX" secondAttribute="trailing" constant="35" id="iKw-SR-vQx"/>
+                            <constraint firstItem="u2f-Ti-k40" firstAttribute="top" secondItem="3RO-t6-gUX" secondAttribute="bottom" constant="10" id="lwS-31-fHm"/>
+                            <constraint firstItem="u2f-Ti-k40" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="mvX-1P-dkB"/>
+                            <constraint firstItem="3RO-t6-gUX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="uEh-fC-1BS"/>
+                            <constraint firstItem="3RO-t6-gUX" firstAttribute="top" secondItem="Xt4-U5-ejM" secondAttribute="bottom" constant="50" id="uTQ-qa-bTM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="u2f-Ti-k40" id="qrX-Hu-E3e"/>
+                        <outlet property="nameTextField" destination="3RO-t6-gUX" id="qWv-8A-NaQ"/>
+                        <outlet property="profileImage" destination="47e-N3-I3M" id="bGa-9v-L0E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="3RO-t6-gUX">
+            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+        </designable>
+        <designable name="u2f-Ti-k40">
+            <size key="intrinsicContentSize" width="344" height="44.113671874999994"/>
+        </designable>
+    </designables>
     <resources>
         <namedColor name="BackgroundColor">
             <color red="0.14399999380111694" green="0.20100000500679016" blue="0.20499999821186066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonColor">
+            <color red="0.48600000143051147" green="0.60399997234344482" blue="0.57300001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldColor">
+            <color red="0.74500000476837158" green="0.76099997758865356" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
