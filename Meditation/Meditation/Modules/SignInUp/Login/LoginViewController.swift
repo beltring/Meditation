@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var forgotLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -23,7 +24,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         setupButton()
-        setupLabel()
+        setupLabels()
         setupSwipe()
     }
     
@@ -42,9 +43,11 @@ class LoginViewController: UIViewController {
         loginButton.titleLabel?.font = UIFont(name: "AlegreyaSans-Medium", size: 25)
     }
     
-    private func setupLabel() {
+    private func setupLabels() {
         let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.signUpTap))
+        let forgotTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.forgotPasswordTapped))
         signUpLabel.addGestureRecognizer(labelTapGesture)
+        forgotLabel.addGestureRecognizer(forgotTapGesture)
     }
     
     private func setupSwipe() {
@@ -92,5 +95,29 @@ class LoginViewController: UIViewController {
     
     @objc private func signUpTap() {
         navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
+    }
+    
+    @objc private func forgotPasswordTapped() {
+        let forgotPasswordAlert = UIAlertController(title: "Forgot password?", message: "Enter email address", preferredStyle: .alert)
+        forgotPasswordAlert.addTextField { (textField) in
+            textField.placeholder = "Enter email address"
+        }
+        forgotPasswordAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        forgotPasswordAlert.addAction(UIAlertAction(title: "Reset Password", style: .default, handler: { (action) in
+            let resetEmail = forgotPasswordAlert.textFields?.first?.text
+            Auth.auth().sendPasswordReset(withEmail: resetEmail!, completion: { (error) in
+                if error != nil{
+                    let resetFailedAlert = UIAlertController(title: "Reset Failed", message: "Error: \(String(describing: error?.localizedDescription))", preferredStyle: .alert)
+                    resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(resetFailedAlert, animated: true, completion: nil)
+                }else {
+                    let resetEmailSentAlert = UIAlertController(title: "Reset email sent successfully", message: "Check your email", preferredStyle: .alert)
+                    resetEmailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(resetEmailSentAlert, animated: true, completion: nil)
+                }
+            })
+        }))
+        //PRESENT ALERT
+        self.present(forgotPasswordAlert, animated: true, completion: nil)
     }
 }
