@@ -21,7 +21,7 @@ class SoundViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var musicSlider: UISlider!
     
-    var currentSong: Int = 0
+//    var currentSong: Int = 0
     var meditation: Meditation!
     private let playerService = PlayerService.shared
     
@@ -29,8 +29,8 @@ class SoundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        play()
         setupPlayButton()
+        play()
         setupSound()
         musicSlider.value = 0
     }
@@ -55,11 +55,17 @@ class SoundViewController: UIViewController {
     }
     
     private func setupSound() {
-        let sound = meditation.sounds[currentSong]
+        let index = playerService.lastSongIndex
+        let sound = meditation.sounds[index]
         guard let url = URL(string: sound.imageUrl) else { return}
         soundImage.kf.setImage(with: url)
         nameLabel.text = sound.title
         typeLabel.text = meditation.type.rawValue.capitalized + " sounds"
+        if playerService.lastSliderValue != 0 {
+            playerService.player?.stop()
+            playerService.player?.currentTime = TimeInterval(playerService.lastSliderValue)
+            playerService.player?.play()
+        }
     }
     
     private func setupPlayer() {
@@ -78,32 +84,36 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction func tappedNext(_ sender: UIButton) {
-        currentSong += 1
-        if currentSong == meditation.sounds.count {
-            currentSong = 0
+        var index = playerService.lastSongIndex
+        index += 1
+        if index == meditation.sounds.count {
+            index = 0
         } else if playerService.isRepeating {
-            currentSong -= 1
+            index -= 1
         } else if playerService.isShuffle {
-            currentSong = Int.random(in: 0..<meditation.sounds.count)
+            index = Int.random(in: 0..<meditation.sounds.count)
         }
         
-        playerService.lastSongIndex = currentSong
+        playerService.lastSongIndex = index
         musicSlider.value = 0
+        playerService.lastSliderValue = 0
         play()
     }
     
     @IBAction func tappedPrev(_ sender: UIButton) {
-        currentSong -= 1
-        if currentSong == -1 {
-            currentSong = 0
+        var index = playerService.lastSongIndex
+        index -= 1
+        if index == -1 {
+            index = 0
         } else if playerService.isRepeating {
-            currentSong += 1
+            index += 1
         } else if playerService.isShuffle {
-            currentSong = Int.random(in: 0..<meditation.sounds.count)
+            index = Int.random(in: 0..<meditation.sounds.count)
         }
-        
-        playerService.lastSongIndex = currentSong
+
+        playerService.lastSongIndex = index
         musicSlider.value = 0
+        playerService.lastSliderValue = 0
         play()
     }
     
@@ -126,6 +136,8 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction func tappedBack(_ sender: UIButton) {
+        let vc = navigationController?.viewControllers.first as! SoundsViewController
+        vc.setupBottomView()
         navigationController?.popViewController(animated: false)
     }
     
@@ -137,7 +149,8 @@ class SoundViewController: UIViewController {
     
     // MARK: - Logic
     private func play() {
-        let sound = meditation.sounds[currentSong]
+        let index = playerService.lastSongIndex
+        let sound = meditation.sounds[index]
         guard let soundUrl = URL(string: sound.url) else { return }
         playerService.play(url: soundUrl)
         playerService.player?.delegate = self
@@ -148,25 +161,28 @@ class SoundViewController: UIViewController {
     }
     
     @objc private func updateMusicSlider(){
-        musicSlider.value = Float(playerService.player!.currentTime)
+        let time = Float(playerService.player!.currentTime)
+        musicSlider.value = time
+        playerService.lastSliderValue = time
     }
 }
 
 extension SoundViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        var index = playerService.lastSongIndex
         if flag {
-            currentSong += 1
+            index += 1
         }
         
-        if currentSong == meditation.sounds.count {
-            currentSong = 0
+        if index == meditation.sounds.count {
+            index = 0
         } else if playerService.isRepeating {
-            currentSong -= 1
+            index -= 1
         } else if playerService.isShuffle {
-            currentSong = Int.random(in: 0..<meditation.sounds.count)
+            index = Int.random(in: 0..<meditation.sounds.count)
         }
         
-        playerService.lastSongIndex = currentSong
+        playerService.lastSongIndex = index
         play()
     }
 }

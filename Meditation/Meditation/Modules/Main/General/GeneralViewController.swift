@@ -9,6 +9,7 @@ import CodableFirebase
 import Firebase
 import FirebaseDatabase
 import UIKit
+import PKHUD
 
 class GeneralViewController: UIViewController {
     
@@ -27,6 +28,7 @@ class GeneralViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        HUD.show(.progress)
         getPrograms()
         setupTableView()
         getUser()
@@ -93,6 +95,7 @@ class GeneralViewController: UIViewController {
                     let program = try! FirestoreDecoder().decode(Program.self, from: document.data())
                     self.dataSource.append(program)
                     self.tableView.reloadData()
+                    HUD.hide()
                 } 
             } else {
                 print("Document does not exist")

@@ -16,6 +16,7 @@ class PlayerService: NSObject {
     var isRepeating = false
     var isShuffle = false
     var lastSongIndex = 0
+    var lastSliderValue: Float = 0.0
     
     private override init() {
         super.init()
