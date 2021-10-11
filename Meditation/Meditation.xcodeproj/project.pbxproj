@@ -63,6 +63,7 @@
 		CE6ACE4E26FCA2D600D38FF1 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */; };
 		CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF05D271031F100E29B77 /* EditProfileViewController.swift */; };
 		CE6FF060271031FF00E29B77 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */; };
+		CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF0612710896100E29B77 /* ValidationService.swift */; };
 		CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70329D270EC7EA0005F294 /* StorageService.swift */; };
 		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
@@ -134,6 +135,7 @@
 		CE6ACE4D26FCA2D600D38FF1 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
 		CE6FF05D271031F100E29B77 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		CE6FF0612710896100E29B77 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		CE70329D270EC7EA0005F294 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				CE70329D270EC7EA0005F294 /* StorageService.swift */,
+				CE6FF0612710896100E29B77 /* ValidationService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */,
 				CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */,
+				CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,

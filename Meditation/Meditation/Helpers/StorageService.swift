@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseStorage
 
-struct StorageService {
+class StorageService {
     static let shared = StorageService()
     private init() {}
     

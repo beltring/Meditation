@@ -49,7 +49,7 @@ class GeneralViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func tappedWatchNow(sender: UIButton) {
-        let url = URL(string: dataSource[sender.tag].urlString)
+        let url = URL(string: dataSource[sender.tag].videoUrl)
         presentSafariViewController(url: url)
     }
     
@@ -100,7 +100,7 @@ extension GeneralViewController: UITableViewDataSource {
         cell.watchButton.addTarget(self, action: #selector(tappedWatchNow(sender: )), for: .touchUpInside)
         cell.watchButton.tag = indexPath.section
         let program = dataSource[indexPath.section]
-        cell.configure(name: program.title, description: program.description, image: program.image)
+        cell.configure(name: program.title, description: program.description, image: program.photoUrl)
         return cell
     }
 }

@@ -139,7 +139,7 @@ class SignUpViewController: UIViewController {
         guard let password = passwordTextField.text else { return false }
         guard let name = nameTextField.text else { return false }
         
-        if isValidEmail(email) && isValidPassword(password) && !name.isEmpty {
+        if ValidationService.shared.isValidEmail(email) && ValidationService.shared.isValidPassword(password) && !name.isEmpty {
             signUpButton.isEnabled = true
             signUpButton.alpha = 1
             return true
@@ -148,21 +148,6 @@ class SignUpViewController: UIViewController {
         signUpButton.alpha = 0.7
         
         return false
-    }
-    
-    private func isValidPassword(_ password: String) -> Bool {
-        if password.count > 3 {
-            return true
-        }
-        
-        return false
-    }
-    
-    private func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
     }
 }
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

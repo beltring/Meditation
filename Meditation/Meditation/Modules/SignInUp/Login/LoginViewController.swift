@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
                 }
             })
         }))
-        //PRESENT ALERT
+        
         self.present(forgotPasswordAlert, animated: true, completion: nil)
     }
 }
