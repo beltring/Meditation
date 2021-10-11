@@ -68,6 +68,7 @@
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
 		CE73847B26FDF717003EB91F /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847A26FDF717003EB91F /* Program.swift */; };
+		CE748F1327141E1A0076B571 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE748F1227141E1A0076B571 /* PlayerService.swift */; };
 		CE79E9512706EE9500E4B0D3 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79E9502706EE9500E4B0D3 /* SoundViewController.swift */; };
 		CE79E9532706EEA000E4B0D3 /* Sound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79E9522706EEA000E4B0D3 /* Sound.storyboard */; };
 		CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51BF27032DC6006F290F /* MeditationType.swift */; };
@@ -139,6 +140,7 @@
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		CE73847A26FDF717003EB91F /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		CE748F1227141E1A0076B571 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
 		CE79E9502706EE9500E4B0D3 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		CE79E9522706EEA000E4B0D3 /* Sound.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sound.storyboard; sourceTree = "<group>"; };
 		CE7A51BF27032DC6006F290F /* MeditationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationType.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			children = (
 				CE70329D270EC7EA0005F294 /* StorageService.swift */,
 				CE6FF0612710896100E29B77 /* ValidationService.swift */,
+				CE748F1227141E1A0076B571 /* PlayerService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */,
 				CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
+				CE748F1327141E1A0076B571 /* PlayerService.swift in Sources */,
 				CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */,
 				CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
