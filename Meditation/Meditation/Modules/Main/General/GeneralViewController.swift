@@ -27,10 +27,11 @@ class GeneralViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPrograms()
         setupTableView()
         getUser()
         setupWelcomeLabel()
-        dataSource = ProgramConstants.getPrograms()
+        //        dataSource = ProgramConstants.getPrograms()
     }
     
     // MARK: - Setup
@@ -83,6 +84,21 @@ class GeneralViewController: UIViewController {
     private func getUser() {
         user = Auth.auth().currentUser
     }
+    
+    private func getPrograms() {
+        Firestore.firestore().collection("programs").getDocuments { [weak self] query, error in
+            if let querySnapshot = query {
+                guard let self = self else { return }
+                for document in querySnapshot.documents {
+                    let program = try! FirestoreDecoder().decode(Program.self, from: document.data())
+                    self.dataSource.append(program)
+                    self.tableView.reloadData()
+                } 
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
 }
 
 // MARK: - Extensions
@@ -100,7 +116,7 @@ extension GeneralViewController: UITableViewDataSource {
         cell.watchButton.addTarget(self, action: #selector(tappedWatchNow(sender: )), for: .touchUpInside)
         cell.watchButton.tag = indexPath.section
         let program = dataSource[indexPath.section]
-        cell.configure(name: program.title, description: program.description, image: program.photoUrl)
+        cell.configure(name: program.title, description: program.description, imageUrl: program.programPhotoUrl)
         return cell
     }
 }

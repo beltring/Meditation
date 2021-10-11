@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-struct Program {
+struct Program: Codable {
     let title: String
     let description: String
-    let image: UIImage?
-    let urlString: String
+    let programPhotoUrl: String
+    let videoUrl: String
 }

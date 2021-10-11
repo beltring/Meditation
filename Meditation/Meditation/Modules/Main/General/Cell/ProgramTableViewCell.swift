@@ -5,6 +5,7 @@
 //  Created by Pavel Boltromyuk on 24.09.21.
 //
 
+import Kingfisher
 import UIKit
 
 class ProgramTableViewCell: UITableViewCell {
@@ -17,12 +18,14 @@ class ProgramTableViewCell: UITableViewCell {
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        programImage.kf.indicatorType = .activity
     }
     
     // MARK: - Setup
-    func configure(name: String, description: String, image: UIImage?) {
+    func configure(name: String, description: String, imageUrl: String) {
         programNameLabel.text = name
         descriptionLabel.text = description
-        programImage.image = image
+        guard let url = URL(string: imageUrl) else { return }
+        programImage.kf.setImage(with: url)
     }
 }

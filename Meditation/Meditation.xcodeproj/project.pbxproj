@@ -53,7 +53,6 @@
 		CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */; };
 		CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D90A26FB59D6004073EA /* SoundsViewController.swift */; };
 		CE69D90D26FB59DE004073EA /* Sounds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90C26FB59DE004073EA /* Sounds.storyboard */; };
-		CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A037D2701B7DE00A02ECA /* Constants.swift */; };
 		CE6A03842701D75000A02ECA /* SoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A03822701D75000A02ECA /* SoundTableViewCell.swift */; };
 		CE6A03852701D75000A02ECA /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6A03832701D75000A02ECA /* SoundTableViewCell.xib */; };
 		CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A03882701F2FB00A02ECA /* Sound.swift */; };
@@ -125,7 +124,6 @@
 		CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeditationTime.storyboard; sourceTree = "<group>"; };
 		CE69D90A26FB59D6004073EA /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
 		CE69D90C26FB59DE004073EA /* Sounds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sounds.storyboard; sourceTree = "<group>"; };
-		CE6A037D2701B7DE00A02ECA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE6A03822701D75000A02ECA /* SoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewCell.swift; sourceTree = "<group>"; };
 		CE6A03832701D75000A02ECA /* SoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
 		CE6A03882701F2FB00A02ECA /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				CE65171926F86298009B4D6B /* Extensions */,
-				CE6A037D2701B7DE00A02ECA /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -642,7 +639,6 @@
 				CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */,
-				CE6A037E2701B7DE00A02ECA /* Constants.swift in Sources */,
 				CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
