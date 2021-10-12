@@ -21,20 +21,16 @@ class SoundViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var musicSlider: UISlider!
     
-    var currentSong: Int = 0
+//    var currentSong: Int = 0
     var meditation: Meditation!
-    
-    private var player: AVAudioPlayer?
-    private var isPlaying = true
-    private var isRepeating = false
-    private var isShuffle = false
+    private let playerService = PlayerService.shared
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        play()
         setupPlayButton()
+        play()
         setupSound()
         musicSlider.value = 0
     }
@@ -51,7 +47,7 @@ class SoundViewController: UIViewController {
     
     // MARK: - Setup
     private func setupPlayButton() {
-        if isPlaying {
+        if playerService.isPlaying {
             playButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
         } else {
             playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
@@ -59,54 +55,71 @@ class SoundViewController: UIViewController {
     }
     
     private func setupSound() {
-        let sound = meditation.sounds[currentSong]
+        let index = playerService.lastSongIndex
+        let sound = meditation.sounds[index]
         guard let url = URL(string: sound.imageUrl) else { return}
         soundImage.kf.setImage(with: url)
         nameLabel.text = sound.title
         typeLabel.text = meditation.type.rawValue.capitalized + " sounds"
+        if playerService.lastSliderValue != 0 {
+            playerService.player?.stop()
+            playerService.player?.currentTime = TimeInterval(playerService.lastSliderValue)
+            playerService.player?.play()
+        }
+    }
+    
+    private func setupPlayer() {
+        
     }
     
     // MARK: - Actions
     @IBAction func tappedPlay(_ sender: UIButton) {
-        if isPlaying {
-            player?.pause()
+        if playerService.isPlaying {
+            playerService.player?.pause()
         } else {
-            player?.play()
+            playerService.player?.play()
         }
-        isPlaying.toggle()
+        playerService.isPlaying.toggle()
         setupPlayButton()
     }
     
     @IBAction func tappedNext(_ sender: UIButton) {
-        currentSong += 1
-        if currentSong == meditation.sounds.count {
-            currentSong = 0
-        } else if isRepeating {
-            currentSong -= 1
-        } else if isShuffle {
-            currentSong = Int.random(in: 0..<meditation.sounds.count)
+        var index = playerService.lastSongIndex
+        index += 1
+        if index == meditation.sounds.count {
+            index = 0
+        } else if playerService.isRepeating {
+            index -= 1
+        } else if playerService.isShuffle {
+            index = Int.random(in: 0..<meditation.sounds.count)
         }
         
+        playerService.lastSongIndex = index
         musicSlider.value = 0
+        playerService.lastSliderValue = 0
+        play()
     }
     
     @IBAction func tappedPrev(_ sender: UIButton) {
-        currentSong -= 1
-        if currentSong == -1 {
-            currentSong = 0
-        } else if isRepeating {
-            currentSong += 1
-        } else if isShuffle {
-            currentSong = Int.random(in: 0..<meditation.sounds.count)
+        var index = playerService.lastSongIndex
+        index -= 1
+        if index == -1 {
+            index = 0
+        } else if playerService.isRepeating {
+            index += 1
+        } else if playerService.isShuffle {
+            index = Int.random(in: 0..<meditation.sounds.count)
         }
-        
+
+        playerService.lastSongIndex = index
         musicSlider.value = 0
+        playerService.lastSliderValue = 0
         play()
     }
     
     @IBAction func tappedRepeat(_ sender: UIButton) {
-        isRepeating.toggle()
-        if isRepeating {
+        playerService.isRepeating.toggle()
+        if playerService.isRepeating {
             repeatButton.tintColor = .white
         } else {
             repeatButton.tintColor = UIColor(named: "TextColor")
@@ -114,8 +127,8 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction func tappedShuffle(_ sender: UIButton) {
-        isShuffle.toggle()
-        if isShuffle {
+        playerService.isShuffle.toggle()
+        if playerService.isShuffle {
             shuffleButton.tintColor = .white
         } else {
             shuffleButton.tintColor = UIColor(named: "TextColor")
@@ -123,49 +136,53 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction func tappedBack(_ sender: UIButton) {
+        let vc = navigationController?.viewControllers.first as! SoundsViewController
+        vc.setupBottomView()
         navigationController?.popViewController(animated: false)
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
-        player?.stop()
-        player?.currentTime = TimeInterval(musicSlider.value)
-        player?.play()
+        playerService.player?.stop()
+        playerService.player?.currentTime = TimeInterval(musicSlider.value)
+        playerService.player?.play()
     }
     
     // MARK: - Logic
     private func play() {
-        let sound = meditation.sounds[currentSong]
+        let index = playerService.lastSongIndex
+        let sound = meditation.sounds[index]
         guard let soundUrl = URL(string: sound.url) else { return }
-        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
-        player?.prepareToPlay()
-        player?.play()
-        player?.delegate = self
-        musicSlider.maximumValue = Float(player!.duration)
+        playerService.play(url: soundUrl)
+        playerService.player?.delegate = self
+        musicSlider.maximumValue = Float(playerService.player!.duration)
         _ = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateMusicSlider), userInfo: nil, repeats: true)
-        isPlaying = true
         setupPlayButton()
         setupSound()
     }
     
     @objc private func updateMusicSlider(){
-        musicSlider.value = Float(player!.currentTime)
+        let time = Float(playerService.player!.currentTime)
+        musicSlider.value = time
+        playerService.lastSliderValue = time
     }
 }
 
 extension SoundViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        var index = playerService.lastSongIndex
         if flag {
-            currentSong += 1
+            index += 1
         }
         
-        if currentSong == meditation.sounds.count {
-            currentSong = 0
-        } else if isRepeating {
-            currentSong -= 1
-        } else if isShuffle {
-            currentSong = Int.random(in: 0..<meditation.sounds.count)
+        if index == meditation.sounds.count {
+            index = 0
+        } else if playerService.isRepeating {
+            index -= 1
+        } else if playerService.isShuffle {
+            index = Int.random(in: 0..<meditation.sounds.count)
         }
         
+        playerService.lastSongIndex = index
         play()
     }
 }
