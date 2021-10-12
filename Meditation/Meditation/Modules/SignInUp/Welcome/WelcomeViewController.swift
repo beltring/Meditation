@@ -9,8 +9,8 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signUpLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var signUpLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

@@ -10,9 +10,9 @@ import UIKit
 
 class ProgramTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var programNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var programImage: UIImageView!
+    @IBOutlet private weak var programNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var programImage: UIImageView!
     @IBOutlet weak var watchButton: UIButton!
     
     // MARK: - Lifecycle

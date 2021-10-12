@@ -13,12 +13,12 @@ import PKHUD
 
 class GeneralViewController: UIViewController {
     
-    @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var calmButton: UIButton!
-    @IBOutlet weak var relaxButton: UIButton!
-    @IBOutlet weak var focusButton: UIButton!
-    @IBOutlet weak var anxiousButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var calmButton: UIButton!
+    @IBOutlet private weak var relaxButton: UIButton!
+    @IBOutlet private weak var focusButton: UIButton!
+    @IBOutlet private weak var anxiousButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView!
     
     private var dataSource = [Program]()
     private var user: User!

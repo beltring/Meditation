@@ -11,17 +11,16 @@ import UIKit
 
 class SoundViewController: UIViewController {
     
-    @IBOutlet weak var soundImage: UIImageView!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var prevButton: UIButton!
-    @IBOutlet weak var repeatButton: UIButton!
-    @IBOutlet weak var shuffleButton: UIButton!
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var musicSlider: UISlider!
+    @IBOutlet private weak var soundImage: UIImageView!
+    @IBOutlet private weak var playButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var prevButton: UIButton!
+    @IBOutlet private weak var repeatButton: UIButton!
+    @IBOutlet private weak var shuffleButton: UIButton!
+    @IBOutlet private weak var typeLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var musicSlider: UISlider!
     
-//    var currentSong: Int = 0
     var meditation: Meditation!
     private let playerService = PlayerService.shared
     
@@ -68,12 +67,8 @@ class SoundViewController: UIViewController {
         }
     }
     
-    private func setupPlayer() {
-        
-    }
-    
     // MARK: - Actions
-    @IBAction func tappedPlay(_ sender: UIButton) {
+    @IBAction private func tappedPlay(_ sender: UIButton) {
         if playerService.isPlaying {
             playerService.player?.pause()
         } else {
@@ -83,7 +78,7 @@ class SoundViewController: UIViewController {
         setupPlayButton()
     }
     
-    @IBAction func tappedNext(_ sender: UIButton) {
+    @IBAction private func tappedNext(_ sender: UIButton) {
         var index = playerService.lastSongIndex
         index += 1
         if index == meditation.sounds.count {
@@ -100,7 +95,7 @@ class SoundViewController: UIViewController {
         play()
     }
     
-    @IBAction func tappedPrev(_ sender: UIButton) {
+    @IBAction private func tappedPrev(_ sender: UIButton) {
         var index = playerService.lastSongIndex
         index -= 1
         if index == -1 {
@@ -117,7 +112,7 @@ class SoundViewController: UIViewController {
         play()
     }
     
-    @IBAction func tappedRepeat(_ sender: UIButton) {
+    @IBAction private func tappedRepeat(_ sender: UIButton) {
         playerService.isRepeating.toggle()
         if playerService.isRepeating {
             repeatButton.tintColor = .white
@@ -126,7 +121,7 @@ class SoundViewController: UIViewController {
         }
     }
     
-    @IBAction func tappedShuffle(_ sender: UIButton) {
+    @IBAction private func tappedShuffle(_ sender: UIButton) {
         playerService.isShuffle.toggle()
         if playerService.isShuffle {
             shuffleButton.tintColor = .white
@@ -135,13 +130,13 @@ class SoundViewController: UIViewController {
         }
     }
     
-    @IBAction func tappedBack(_ sender: UIButton) {
+    @IBAction private func tappedBack(_ sender: UIButton) {
         let vc = navigationController?.viewControllers.first as! SoundsViewController
         vc.setupBottomView()
         navigationController?.popViewController(animated: false)
     }
     
-    @IBAction func sliderAction(_ sender: UISlider) {
+    @IBAction private func sliderAction(_ sender: UISlider) {
         playerService.player?.stop()
         playerService.player?.currentTime = TimeInterval(musicSlider.value)
         playerService.player?.play()
@@ -167,6 +162,8 @@ class SoundViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+// MARK: - AVAudioPlayerDelegate
 extension SoundViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         var index = playerService.lastSongIndex

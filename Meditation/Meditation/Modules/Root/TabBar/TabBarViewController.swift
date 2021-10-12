@@ -53,9 +53,11 @@ class TabBarViewController: UITabBarController {
         }
     }
     
+    // MARK: - Actions
     @objc private func tappedEdit() {
         present(EditProfileViewController.initial(), animated: true, completion: nil)
     }
+    
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         setupItems(item)
     }

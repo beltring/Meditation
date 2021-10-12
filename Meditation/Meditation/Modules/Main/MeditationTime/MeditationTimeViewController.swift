@@ -11,8 +11,8 @@ import UIKit
 
 class MeditationTimeViewController: UIViewController {
     
-    @IBOutlet weak var startNowButton: UIButton!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet private weak var startNowButton: UIButton!
+    @IBOutlet private weak var timeLabel: UILabel!
     
     var toolBar = UIToolbar()
     var datePicker  = UIDatePicker()

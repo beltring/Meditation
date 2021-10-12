@@ -11,9 +11,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet private weak var profileImage: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
     
     private var user: User!
     
@@ -25,7 +25,6 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("appear")
         super.viewWillAppear(animated)
         setupInformation()
     }
@@ -38,7 +37,7 @@ class ProfileViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func tappedSignOut(_ sender: UIButton) {
+    @IBAction private func tappedSignOut(_ sender: UIButton) {
         do
         {
             try Auth.auth().signOut()

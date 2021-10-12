@@ -10,10 +10,10 @@ import FirebaseStorage
 
 class SoundTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var soundImage: UIImageView!
-    @IBOutlet weak var listeningLabel: UILabel!
-    @IBOutlet weak var duration: UILabel!
+    @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var soundImage: UIImageView!
+    @IBOutlet private weak var listeningLabel: UILabel!
+    @IBOutlet private weak var duration: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

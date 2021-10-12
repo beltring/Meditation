@@ -11,11 +11,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signUpLabel: UILabel!
-    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
-    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
-    @IBOutlet weak var forgotLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var signUpLabel: UILabel!
+    @IBOutlet private weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var passwordTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var forgotLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

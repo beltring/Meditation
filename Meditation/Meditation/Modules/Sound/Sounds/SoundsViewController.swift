@@ -14,15 +14,15 @@ import UIKit
 
 class SoundsViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var meditationImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var currentSongLabel: UILabel!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var heartButton: UIButton!
-    @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var durationSlider: UISlider!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var meditationImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var currentSongLabel: UILabel!
+    @IBOutlet private weak var playButton: UIButton!
+    @IBOutlet private weak var heartButton: UIButton!
+    @IBOutlet private weak var bottomView: UIView!
+    @IBOutlet private weak var durationSlider: UISlider!
     
     var meditation: Meditation!
     private let playerService = PlayerService.shared
@@ -109,6 +109,7 @@ class SoundsViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: false)
     }
     
+    // MARK: - Logic
     @objc private func updateMusicSlider(){
         let time = Float(playerService.player!.currentTime)
         durationSlider.value = time
@@ -164,7 +165,6 @@ extension SoundsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Select row")
         let vc = SoundViewController.initial()
         vc.meditation = meditation
         playerService.lastSongIndex = indexPath.section

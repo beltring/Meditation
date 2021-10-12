@@ -14,11 +14,11 @@ import PKHUD
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var signInLabel: UILabel!
-    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
-    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
-    @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var signUpButton: UIButton!
+    @IBOutlet private weak var signInLabel: UILabel!
+    @IBOutlet private weak var passwordTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var nameTextField: SkyFloatingLabelTextField!
     
     private var profileImage: UIImage?
     private var user: User!
@@ -150,6 +150,9 @@ class SignUpViewController: UIViewController {
         return false
     }
 }
+
+// MARK: - Extensions
+// MARK: - UIImagePickerControllerDelegate&UINavigationControllerDelegate
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }

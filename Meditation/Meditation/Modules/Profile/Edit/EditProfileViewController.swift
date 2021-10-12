@@ -14,12 +14,13 @@ import UIKit
 
 class EditProfileViewController: UIViewController {
 
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
-    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var profileImage: UIImageView!
+    @IBOutlet private weak var nameTextField: SkyFloatingLabelTextField!
+    @IBOutlet private weak var emailTextField: SkyFloatingLabelTextField!
     
     private var user: User!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +31,7 @@ class EditProfileViewController: UIViewController {
         setupImage()
     }
     
+    // MARK: - Setup
     private func setupImage() {
         let imageTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.tappedImage))
         profileImage.addGestureRecognizer(imageTapGesture)
@@ -53,21 +55,23 @@ class EditProfileViewController: UIViewController {
         }
     }
 
+    // MARK: - Actions
     @IBAction func tappedEdit(_ sender: UIButton) {
         HUD.show(.progress)
         let storageRef = Storage.storage().reference().child("users/\(user.uid)")
         StorageService.shared.uploadImage(profileImage.image!, at: storageRef) { [weak self] url in
             guard let self = self else { return }
-            if self.isValidEmail(self.emailTextField.text!) {
-                self.user.updateEmail(to: self.emailTextField.text!) { error in
+            guard let email = self.emailTextField.text else { return }
+            if ValidationService.shared.isValidEmail(email) {
+                self.user.updateEmail(to: email) { error in
                     if error == nil {
                         self.presentAlert(title: "Error", message: "The mail change operation is confidential and requires recent authentication. Log in again before repeating this request.", cancelTitle: "Ok")
                     }
                 }
             }
             let changeRequest = self.user.createProfileChangeRequest()
-            if !self.nameTextField.text!.isEmpty {
-                changeRequest.displayName = self.nameTextField.text!
+            if !email.isEmpty {
+                changeRequest.displayName = email
             }
             changeRequest.photoURL = url
             changeRequest.commitChanges { error in
@@ -79,25 +83,20 @@ class EditProfileViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @objc private func tappedImage() {
         let photoPicker = UIImagePickerController()
         photoPicker.delegate = self
         photoPicker.sourceType = .photoLibrary
         present(photoPicker, animated: true, completion: nil)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-    
-    private func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
-    }
 }
 
+// MARK: - Extensions
+// MARK: - UIImagePickerControllerDelegate&UINavigationControllerDelegate
 extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let selectedImage = info[.originalImage] as? UIImage else { return }
