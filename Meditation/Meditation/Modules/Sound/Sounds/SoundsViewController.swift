@@ -34,6 +34,7 @@ class SoundsViewController: UIViewController {
         let viewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.tappedView))
         bottomView.addGestureRecognizer(viewTapGesture)
         playerService.lastSongIndex = 0
+        durationSlider.value = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
