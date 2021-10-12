@@ -54,6 +54,9 @@ class SoundsViewController: UIViewController {
     func setupBottomView() {
         currentSongLabel.text = meditation.sounds[playerService.lastSongIndex].title
         durationSlider.setThumbImage(UIImage(), for: .normal)
+        guard let duration = playerService.player?.duration else { return }
+        durationSlider.maximumValue = Float(duration)
+        _ = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateMusicSlider), userInfo: nil, repeats: true)
     }
     
     private func setup() {
@@ -103,6 +106,11 @@ class SoundsViewController: UIViewController {
         let vc = SoundViewController.initial()
         vc.meditation = meditation
         navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    @objc private func updateMusicSlider(){
+        let time = Float(playerService.player!.currentTime)
+        durationSlider.value = time
     }
     
     // MARK: - API calls

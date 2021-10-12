@@ -107,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qQx-qW-ZTO">
-                                        <rect key="frame" x="-2" y="-14" width="348" height="31"/>
+                                        <rect key="frame" x="-2" y="-14" width="418" height="31"/>
                                         <color key="minimumTrackTintColor" name="ButtonColor"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting Forest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK2-aG-Eqz">
@@ -135,17 +135,17 @@
                                 </subviews>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="qQx-qW-ZTO" firstAttribute="leading" secondItem="bNS-4x-mQt" secondAttribute="leading" id="5DH-ri-eVz"/>
+                                    <constraint firstItem="qQx-qW-ZTO" firstAttribute="top" secondItem="bNS-4x-mQt" secondAttribute="top" constant="-14" id="0In-jS-knq"/>
                                     <constraint firstItem="cqD-a1-9bE" firstAttribute="centerY" secondItem="bNS-4x-mQt" secondAttribute="centerY" constant="5" id="5mo-EL-sS8"/>
                                     <constraint firstAttribute="trailing" secondItem="Wg8-hM-DRS" secondAttribute="trailing" constant="20" id="6Ja-DH-nO9"/>
+                                    <constraint firstItem="qQx-qW-ZTO" firstAttribute="leading" secondItem="bNS-4x-mQt" secondAttribute="leading" id="7j5-6r-6lk"/>
                                     <constraint firstItem="Wg8-hM-DRS" firstAttribute="centerY" secondItem="bNS-4x-mQt" secondAttribute="centerY" constant="5" id="GEY-r4-lXg"/>
-                                    <constraint firstItem="Wg8-hM-DRS" firstAttribute="leading" secondItem="qQx-qW-ZTO" secondAttribute="trailing" id="PEK-Ue-e6D"/>
                                     <constraint firstAttribute="height" constant="60" id="PRO-iw-pa6"/>
-                                    <constraint firstItem="qQx-qW-ZTO" firstAttribute="top" secondItem="bNS-4x-mQt" secondAttribute="top" constant="-14" id="SoP-mK-VPH"/>
                                     <constraint firstItem="xK2-aG-Eqz" firstAttribute="centerY" secondItem="cqD-a1-9bE" secondAttribute="centerY" id="d4r-zr-m6N"/>
                                     <constraint firstItem="xK2-aG-Eqz" firstAttribute="leading" secondItem="cqD-a1-9bE" secondAttribute="trailing" constant="10" id="ixp-om-dNh"/>
                                     <constraint firstItem="cqD-a1-9bE" firstAttribute="leading" secondItem="bNS-4x-mQt" secondAttribute="leading" constant="20" id="ndg-SU-Zqb"/>
                                     <constraint firstItem="Wg8-hM-DRS" firstAttribute="leading" secondItem="xK2-aG-Eqz" secondAttribute="trailing" constant="20" id="u2g-EF-ChL"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQx-qW-ZTO" secondAttribute="trailing" id="zXO-pd-ixm"/>
                                 </constraints>
                             </view>
                         </subviews>
