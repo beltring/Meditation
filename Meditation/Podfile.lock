@@ -338,6 +338,14 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - AppCenter (4.3.0):
+    - AppCenter/Analytics (= 4.3.0)
+    - AppCenter/Crashes (= 4.3.0)
+  - AppCenter/Analytics (4.3.0):
+    - AppCenter/Core
+  - AppCenter/Core (4.3.0)
+  - AppCenter/Crashes (4.3.0):
+    - AppCenter/Core
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -493,6 +501,7 @@ PODS:
   - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
+  - AppCenter
   - CodableFirebase (= 0.2.0)
   - Firebase/Analytics (= 8.6.0)
   - Firebase/Auth (= 8.6.0)
@@ -506,6 +515,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - abseil
+    - AppCenter
     - BoringSSL-GRPC
     - CodableFirebase
     - Firebase
@@ -532,6 +542,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   CodableFirebase: 4b865f58c583a6c0ef8c81c6b12c6bf15ebd9181
   Firebase: 21ac9f28b09a8bdfc005f34c984fca84e7e8786d
@@ -556,6 +567,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: aec8f6ccfe7d83b36ab00ad560b7fe7d8c5a8e7e
+PODFILE CHECKSUM: a8bc6940a609a9e6751e58efaffaf016c7e676c4
 
 COCOAPODS: 1.11.2

@@ -61,7 +61,8 @@ class EditProfileViewController: UIViewController {
         let storageRef = Storage.storage().reference().child("users/\(user.uid)")
         StorageService.shared.uploadImage(profileImage.image!, at: storageRef) { [weak self] url in
             guard let self = self else { return }
-            guard let email = self.emailTextField.text else { return }
+            let email = self.emailTextField.text ?? ""
+            let name = self.nameTextField.text ?? ""
             if ValidationService.shared.isValidEmail(email) {
                 self.user.updateEmail(to: email) { error in
                     if error == nil {
@@ -70,8 +71,8 @@ class EditProfileViewController: UIViewController {
                 }
             }
             let changeRequest = self.user.createProfileChangeRequest()
-            if !email.isEmpty {
-                changeRequest.displayName = email
+            if !name.isEmpty {
+                changeRequest.displayName = name
             }
             changeRequest.photoURL = url
             changeRequest.commitChanges { error in

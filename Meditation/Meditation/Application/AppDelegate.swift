@@ -5,6 +5,9 @@
 //  Created by User on 20.09.21.
 //
 
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 import AVFoundation
 import Firebase
 import UIKit
@@ -34,6 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Configure the audio session initially.
         setUpAudioSession()
+        
+        AppCenter.start(withAppSecret: "c57100a2-d0e6-44ab-ada9-37285ae838ab", services:[
+          Analytics.self,
+          Crashes.self
+        ])
         
         return true
     }
