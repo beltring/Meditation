@@ -7,6 +7,8 @@ target 'Meditation' do
 
   # Pods for Meditation
 
+  pod 'AppCenter'
+
   pod 'CodableFirebase', '0.2.0'
 
   pod 'Firebase/Analytics', '8.6.0'
