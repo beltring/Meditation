@@ -74,7 +74,6 @@
 		CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51BF27032DC6006F290F /* MeditationType.swift */; };
 		CE7A51C227032F42006F290F /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51C127032F42006F290F /* Meditation.swift */; };
 		CE82C59E2716BFDE00E7DF7F /* UserProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */; };
-		CE82C5A02716DAE800E7DF7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C59F2716DAE800E7DF7F /* Constants.swift */; };
 		CE93544727182E150032A11C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93544627182E150032A11C /* StringExtension.swift */; };
 		CE93544927183D730032A11C /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93544827183D730032A11C /* FloatExtension.swift */; };
 		CE93544B27185D8F0032A11C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93544A27185D8F0032A11C /* FirestoreService.swift */; };
@@ -151,7 +150,6 @@
 		CE7A51BF27032DC6006F290F /* MeditationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationType.swift; sourceTree = "<group>"; };
 		CE7A51C127032F42006F290F /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProperties.swift; sourceTree = "<group>"; };
-		CE82C59F2716DAE800E7DF7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE93544627182E150032A11C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		CE93544827183D730032A11C /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		CE93544A27185D8F0032A11C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				CE65171926F86298009B4D6B /* Extensions */,
-				CE82C59F2716DAE800E7DF7F /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -652,7 +649,6 @@
 				CE93544B27185D8F0032A11C /* FirestoreService.swift in Sources */,
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
 				CE82C59E2716BFDE00E7DF7F /* UserProperties.swift in Sources */,
-				CE82C5A02716DAE800E7DF7F /* Constants.swift in Sources */,
 				CE7A51C227032F42006F290F /* Meditation.swift in Sources */,
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,

@@ -52,16 +52,4 @@ class PlayerService {
         time += 1
         UserDefaults.standard.set(time, forKey: "meditationTime")
     }
-    
-//    // MARK: - API calls
-//    private func getProperties() {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        Firestore.firestore().collection("properties").document(uid).getDocument { [weak self] document, error in
-//            if let data = document?.data() {
-//                self?.userProperties = try! FirestoreDecoder().decode(UserProperties.self, from: data)
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
-//    }
 }

@@ -18,7 +18,7 @@ class FirestoreService {
     
     func createProperties(time: String) {
         guard let uid = user?.uid else { return }
-        let model = UserProperties(timeLimit: time.convertToSeconds(), currentMeditationTime: 0, lastTime: 0, likeSongs: [], isContinue: false)
+        let model = UserProperties(timeLimit: time.convertToSeconds(), currentMeditationTime: 0, likeSongs: [], isContinue: false)
         let docData = try! FirestoreEncoder().encode(model)
         Firestore.firestore().collection("properties").document(uid).setData(docData) { error in
             if let error = error {

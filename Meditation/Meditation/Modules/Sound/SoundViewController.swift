@@ -27,6 +27,7 @@ class SoundViewController: UIViewController {
     var meditation: Meditation!
     private var userProperties: UserProperties!
     private let playerService = PlayerService.shared
+    private var timer: Timer!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -171,7 +172,7 @@ class SoundViewController: UIViewController {
         playerService.play(url: soundUrl)
         playerService.player?.delegate = self
         musicSlider.maximumValue = Float(playerService.player!.duration)
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateMusicSlider), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateMusicSlider), userInfo: nil, repeats: true)
         playerService.startTimer()
         setupPlayButton()
         setupSound()
@@ -179,31 +180,34 @@ class SoundViewController: UIViewController {
     
     @objc private func updateMusicSlider(){
         let time = Float(playerService.player!.currentTime)
-//        userProperties.currentMeditationTime -= userProperties.lastTime
-//        userProperties.lastTime = time
-//        userProperties.currentMeditationTime += time
         musicSlider.value = time
         playerService.lastSliderValue = time
         checkMeditationTime()
     }
     
     private func checkMeditationTime() {
-        if userProperties.currentMeditationTime >= userProperties.timeLimit && !userProperties.isContinue {
+        let time = UserDefaults.standard.float(forKey: "meditationTime")
+        if time >= userProperties.timeLimit && !userProperties.isContinue {
+            timer.invalidate()
             playerService.player?.pause()
             playerService.isPlaying = false
+            playerService.stopTimer()
             setupPlayButton()
+            userProperties.currentMeditationTime = time
             FirestoreService.shared.createProperties(properties: userProperties)
             presentAlert(title: "Warning", message: "You used the time limit.Do you want to continue?", cancelTitle: "Cancel", cancelStyle: .default, cancelHandler: { [weak self] _ in
                 self?.playerService.player?.stop()
-                self?.playerService.stopTimer()
                 let vc = self?.navigationController?.viewControllers.first as! SoundsViewController
                 vc.setupBottomView()
                 self?.navigationController?.popViewController(animated: false)
             }, otherActions: [UIAlertAction(title: "Continue", style: .default, handler: { [weak self] _ in
-                self?.playerService.isPlaying.toggle()
-                self?.setupPlayButton()
-                self?.playerService.player?.play()
-                self?.userProperties.isContinue = true
+                guard let self = self else { return }
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateMusicSlider), userInfo: nil, repeats: true)
+                self.playerService.isPlaying.toggle()
+                self.setupPlayButton()
+                self.playerService.player?.play()
+                self.playerService.startTimer()
+                self.userProperties.isContinue = true
             })])
         }
     }

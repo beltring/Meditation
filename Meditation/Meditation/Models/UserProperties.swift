@@ -10,7 +10,6 @@ import Foundation
 struct UserProperties: Codable {
     var timeLimit: Float
     var currentMeditationTime: Float
-    var lastTime: Float
     var likeSongs: [Int]
     var isContinue: Bool
 }
