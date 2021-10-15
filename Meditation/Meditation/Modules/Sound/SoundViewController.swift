@@ -176,6 +176,8 @@ class SoundViewController: UIViewController {
         playerService.startTimer()
         setupPlayButton()
         setupSound()
+        meditation.sounds[index].countListening += 1
+        FirestoreService.shared.createMeditation(meditation: meditation)
     }
     
     @objc private func updateMusicSlider(){

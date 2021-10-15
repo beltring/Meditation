@@ -11,5 +11,5 @@ struct Meditation: Codable {
     let imageUrl: String
     let description: String
     let type: MeditationType
-    let sounds: [Sound]
+    var sounds: [Sound]
 }

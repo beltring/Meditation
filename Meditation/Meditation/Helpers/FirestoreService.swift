@@ -40,4 +40,15 @@ class FirestoreService {
             }
         }
     }
+    
+    func createMeditation(meditation: Meditation) {
+        let docData = try! FirestoreEncoder().encode(meditation)
+        Firestore.firestore().collection("meditations").document(meditation.type.rawValue).setData(docData) { error in
+            if let error = error {
+                print("Error writing document: \(error)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
 }
