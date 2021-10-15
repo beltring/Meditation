@@ -73,6 +73,11 @@
 		CE79E9532706EEA000E4B0D3 /* Sound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79E9522706EEA000E4B0D3 /* Sound.storyboard */; };
 		CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51BF27032DC6006F290F /* MeditationType.swift */; };
 		CE7A51C227032F42006F290F /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51C127032F42006F290F /* Meditation.swift */; };
+		CE82C59E2716BFDE00E7DF7F /* UserProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */; };
+		CE82C5A02716DAE800E7DF7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C59F2716DAE800E7DF7F /* Constants.swift */; };
+		CE93544727182E150032A11C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93544627182E150032A11C /* StringExtension.swift */; };
+		CE93544927183D730032A11C /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93544827183D730032A11C /* FloatExtension.swift */; };
+		CE93544B27185D8F0032A11C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93544A27185D8F0032A11C /* FirestoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +150,11 @@
 		CE79E9522706EEA000E4B0D3 /* Sound.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sound.storyboard; sourceTree = "<group>"; };
 		CE7A51BF27032DC6006F290F /* MeditationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationType.swift; sourceTree = "<group>"; };
 		CE7A51C127032F42006F290F /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProperties.swift; sourceTree = "<group>"; };
+		CE82C59F2716DAE800E7DF7F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE93544627182E150032A11C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CE93544827183D730032A11C /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		CE93544A27185D8F0032A11C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		FEC49699A0E99983BEBCBA45 /* Pods-Meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation.release.xcconfig"; path = "Target Support Files/Pods-Meditation/Pods-Meditation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,10 +244,11 @@
 		CE65171026F85E7F009B4D6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A51C127032F42006F290F /* Meditation.swift */,
+				CE7A51BF27032DC6006F290F /* MeditationType.swift */,
 				CE73847A26FDF717003EB91F /* Program.swift */,
 				CE6A03882701F2FB00A02ECA /* Sound.swift */,
-				CE7A51BF27032DC6006F290F /* MeditationType.swift */,
-				CE7A51C127032F42006F290F /* Meditation.swift */,
+				CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				CE65171926F86298009B4D6B /* Extensions */,
+				CE82C59F2716DAE800E7DF7F /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +313,8 @@
 				CE73847826FDD976003EB91F /* UITableViewExtension.swift */,
 				CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */,
 				CE65171C26F862EB009B4D6B /* UIViewExtension.swift */,
+				CE93544627182E150032A11C /* StringExtension.swift */,
+				CE93544827183D730032A11C /* FloatExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,9 +483,10 @@
 		CE75E78F26FA3444000F758D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CE93544A27185D8F0032A11C /* FirestoreService.swift */,
+				CE748F1227141E1A0076B571 /* PlayerService.swift */,
 				CE70329D270EC7EA0005F294 /* StorageService.swift */,
 				CE6FF0612710896100E29B77 /* ValidationService.swift */,
-				CE748F1227141E1A0076B571 /* PlayerService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -634,7 +649,10 @@
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
 				CE79E9512706EE9500E4B0D3 /* SoundViewController.swift in Sources */,
+				CE93544B27185D8F0032A11C /* FirestoreService.swift in Sources */,
 				CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */,
+				CE82C59E2716BFDE00E7DF7F /* UserProperties.swift in Sources */,
+				CE82C5A02716DAE800E7DF7F /* Constants.swift in Sources */,
 				CE7A51C227032F42006F290F /* Meditation.swift in Sources */,
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
@@ -648,6 +666,8 @@
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */,
+				CE93544727182E150032A11C /* StringExtension.swift in Sources */,
+				CE93544927183D730032A11C /* FloatExtension.swift in Sources */,
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,
 				CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,

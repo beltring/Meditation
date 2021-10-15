@@ -7,6 +7,7 @@
 
 import AVFoundation
 import CodableFirebase
+import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
 import Kingfisher
@@ -26,6 +27,8 @@ class SoundsViewController: UIViewController {
     
     var meditation: Meditation!
     private let playerService = PlayerService.shared
+    private var userProperties: UserProperties!
+    private let user = Auth.auth().currentUser
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -44,6 +47,7 @@ class SoundsViewController: UIViewController {
         setupBottomView()
         setupPlayButton()
         tableView.reloadData()
+        getProperties()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,6 +87,7 @@ class SoundsViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func tappedPlayNow(_ sender: UIButton) {
+        playerService.stopTimer()
         let vc = SoundViewController.initial()
         vc.meditation = meditation
         navigationController?.pushViewController(vc, animated: false)
@@ -90,8 +95,13 @@ class SoundsViewController: UIViewController {
     @IBAction func tappedPlay(_ sender: UIButton) {
         if playerService.isPlaying {
             playerService.player?.pause()
+            let time = UserDefaults.standard.float(forKey: "meditationTime")
+            userProperties.currentMeditationTime = time
+            FirestoreService.shared.createProperties(properties: userProperties)
+            playerService.stopTimer()
         } else {
             playerService.player?.play()
+            playerService.startTimer()
         }
         playerService.isPlaying.toggle()
         setupPlayButton()
@@ -104,6 +114,7 @@ class SoundsViewController: UIViewController {
     }
     
     @objc func tappedView() {
+        playerService.stopTimer()
         let vc = SoundViewController.initial()
         vc.meditation = meditation
         navigationController?.pushViewController(vc, animated: false)
@@ -122,6 +133,17 @@ class SoundsViewController: UIViewController {
                 guard let self = self else { return }
                 self.meditation = try! FirestoreDecoder().decode(Meditation.self, from: document.data()!)
                 self.setup()
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    private func getProperties() {
+        guard let uid = user?.uid else { return }
+        Firestore.firestore().collection("properties").document(uid).getDocument { [weak self] document, error in
+            if let data = document?.data() {
+                self?.userProperties = try! FirestoreDecoder().decode(UserProperties.self, from: data)
             } else {
                 print("Document does not exist")
             }
@@ -165,6 +187,7 @@ extension SoundsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playerService.stopTimer()
         let vc = SoundViewController.initial()
         vc.meditation = meditation
         playerService.lastSongIndex = indexPath.section
