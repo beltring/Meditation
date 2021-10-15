@@ -7,8 +7,11 @@
 
 import AVFoundation
 import Foundation
+import CodableFirebase
+import FirebaseAuth
+import FirebaseFirestore
 
-class PlayerService: NSObject {
+class PlayerService {
     static let shared = PlayerService()
     
     var player: AVAudioPlayer?
@@ -17,10 +20,9 @@ class PlayerService: NSObject {
     var isShuffle = false
     var lastSongIndex = 0
     var lastSliderValue: Float = 0.0
+    private var timer: Timer?
     
-    private override init() {
-        super.init()
-    }
+    private init() {}
     
     func play(url: URL) {
         player = try? AVAudioPlayer(data: Data(contentsOf: url))
@@ -35,5 +37,19 @@ class PlayerService: NSObject {
         player?.prepareToPlay()
         player?.play()
         isPlaying = true
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    @objc private func updateTime() {
+        var time = UserDefaults.standard.float(forKey: "meditationTime")
+        time += 1
+        UserDefaults.standard.set(time, forKey: "meditationTime")
     }
 }
