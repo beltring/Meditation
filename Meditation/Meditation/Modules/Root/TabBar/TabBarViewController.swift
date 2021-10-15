@@ -55,6 +55,7 @@ class TabBarViewController: UITabBarController {
     
     // MARK: - Actions
     @objc private func tappedEdit() {
+        AnalyticManager.shared.sendEvent(.editScreen)
         present(EditProfileViewController.initial(), animated: true, completion: nil)
     }
     

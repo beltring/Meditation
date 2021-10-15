@@ -83,6 +83,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedLogin(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.loginTapped)
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else  { return }
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
@@ -96,10 +97,12 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func signUpTap() {
+        AnalyticManager.shared.sendEvent(.tappedSignUp)
         navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
     }
     
     @objc private func forgotPasswordTapped() {
+        AnalyticManager.shared.sendEvent(.forgotPasswordTapped)
         let forgotPasswordAlert = UIAlertController(title: "Forgot password?", message: "Enter email address", preferredStyle: .alert)
         forgotPasswordAlert.addTextField { (textField) in
             textField.placeholder = "Enter email address"

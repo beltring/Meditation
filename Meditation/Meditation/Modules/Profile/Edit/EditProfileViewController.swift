@@ -57,6 +57,7 @@ class EditProfileViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func tappedEdit(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.editTapped)
         HUD.show(.progress)
         let storageRef = Storage.storage().reference().child("users/\(user.uid)")
         StorageService.shared.uploadImage(profileImage.image!, at: storageRef) { [weak self] url in

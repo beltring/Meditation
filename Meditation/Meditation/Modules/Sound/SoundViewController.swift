@@ -81,6 +81,7 @@ class SoundViewController: UIViewController {
             let time = UserDefaults.standard.float(forKey: "meditationTime")
             userProperties.currentMeditationTime = time
             FirestoreService.shared.createProperties(properties: userProperties)
+            AnalyticManager.shared.sendEvent(.stopMusic)
         } else {
             playerService.player?.play()
             playerService.startTimer()
@@ -90,6 +91,7 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction private func tappedNext(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.nextMusic)
         var index = playerService.lastSongIndex
         index += 1
         if index == meditation.sounds.count {
@@ -111,6 +113,7 @@ class SoundViewController: UIViewController {
     }
     
     @IBAction private func tappedPrev(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.prevMusic)
         var index = playerService.lastSongIndex
         index -= 1
         if index == -1 {
@@ -135,8 +138,10 @@ class SoundViewController: UIViewController {
         playerService.isRepeating.toggle()
         if playerService.isRepeating {
             repeatButton.tintColor = .white
+            AnalyticManager.shared.sendEvent(.enableRepeatMusic)
         } else {
             repeatButton.tintColor = UIColor(named: "TextColor")
+            AnalyticManager.shared.sendEvent(.disableRepeatMusic)
         }
     }
     
@@ -144,8 +149,10 @@ class SoundViewController: UIViewController {
         playerService.isShuffle.toggle()
         if playerService.isShuffle {
             shuffleButton.tintColor = .white
+            AnalyticManager.shared.sendEvent(.enableShuffleMusic)
         } else {
             shuffleButton.tintColor = UIColor(named: "TextColor")
+            AnalyticManager.shared.sendEvent(.disableShuffleMusic)
         }
     }
     
@@ -166,6 +173,7 @@ class SoundViewController: UIViewController {
     
     // MARK: - Logic
     private func play() {
+        AnalyticManager.shared.sendEvent(.playMusic)
         let index = playerService.lastSongIndex
         let sound = meditation.sounds[index]
         guard let soundUrl = URL(string: sound.url) else { return }

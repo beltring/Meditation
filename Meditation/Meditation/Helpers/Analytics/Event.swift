@@ -13,18 +13,22 @@ enum Event: String {
     case forgotPasswordTapped
     case tappedStartNow
     case choiceTime
-    case choiceCalmMeditation
-    case choiceRelaxMeditation
-    case choiceFocusMeditation
-    case choiceAnxiousMeditation
+    case choiceMeditation
     case playMusic
     case playNow
     case nextMusic
     case prevMusic
-    case repeatMusic
-    case shuffleMusic
+    case enableRepeatMusic
+    case disableRepeatMusic
+    case enableShuffleMusic
+    case disableShuffleMusic
     case stopMusic
     case editScreen
     case editTapped
     case choiceImage
+    case tappedSignUp
+    case addPhoto
+    case watchVideo
+    case likeMusic
+    case signOut
 }

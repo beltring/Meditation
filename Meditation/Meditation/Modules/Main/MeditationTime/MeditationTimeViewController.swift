@@ -48,11 +48,13 @@ class MeditationTimeViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func tappedStartNow(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.tappedStartNow)
         getProperties()
         tabBarController?.viewControllers![0] = GeneralViewController.initial()
     }
     
     @objc private func timeLabelTap() {
+        AnalyticManager.shared.sendEvent(.choiceTime)
         datePicker = UIDatePicker.init()
         datePicker.backgroundColor = UIColor(named: "BackgroundColor")
         

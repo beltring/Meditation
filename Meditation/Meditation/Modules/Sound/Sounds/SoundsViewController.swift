@@ -88,6 +88,7 @@ class SoundsViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func tappedPlayNow(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.playNow)
         playerService.stopTimer()
         let vc = SoundViewController.initial()
         vc.meditation = meditation
@@ -100,6 +101,7 @@ class SoundsViewController: UIViewController {
             userProperties.currentMeditationTime = time
             FirestoreService.shared.createProperties(properties: userProperties)
             playerService.stopTimer()
+            AnalyticManager.shared.sendEvent(.stopMusic)
         } else {
             playerService.player?.play()
             playerService.startTimer()
@@ -109,6 +111,7 @@ class SoundsViewController: UIViewController {
     }
     
     @IBAction func tappedLike(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.likeMusic)
         let config = UIImage.SymbolConfiguration(scale: .large)
         heartButton.setImage(UIImage(systemName: "heart.fill")?.withConfiguration(config), for: .normal)
         heartButton.tintColor = .red

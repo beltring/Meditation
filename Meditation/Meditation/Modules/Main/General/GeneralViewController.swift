@@ -33,7 +33,6 @@ class GeneralViewController: UIViewController {
         setupTableView()
         getUser()
         setupWelcomeLabel()
-        //        dataSource = ProgramConstants.getPrograms()
     }
     
     // MARK: - Setup
@@ -52,6 +51,7 @@ class GeneralViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func tappedWatchNow(sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.watchVideo)
         let url = URL(string: dataSource[sender.tag].videoUrl)
         presentSafariViewController(url: url)
     }
@@ -68,6 +68,7 @@ class GeneralViewController: UIViewController {
         default:
             type = "calm"
         }
+        AnalyticManager.shared.sendEvent(.choiceMeditation, parameters: ["type" : type])
         Firestore.firestore().collection("meditations").document(type).getDocument { [weak self] document, error in
             if let document = document {
                 guard let self = self else { return }

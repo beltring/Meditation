@@ -42,10 +42,12 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func signUpTap() {
+        AnalyticManager.shared.sendEvent(.tappedSignUp)
         navigationController?.pushViewController(SignUpViewController.initial(), animated: false)
     }
     
     @IBAction private func loginTapped(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.loginWithEmailTapped)
         navigationController?.pushViewController(LoginViewController.initial(), animated: false)
     }
 }
