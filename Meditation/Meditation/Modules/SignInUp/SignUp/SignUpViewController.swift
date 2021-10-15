@@ -91,6 +91,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func tappedSignUp(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.tappedSignUp)
         guard let email = emailTextField.text, let password = passwordTextField.text else  { return }
         guard let image = profileImage else {
             presentAlert(title: "Warning", message: "Please add a photo", cancelTitle: "Ok")
@@ -123,6 +124,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func tappedAdd(_ sender: UIButton) {
+        AnalyticManager.shared.sendEvent(.addPhoto)
         let photoPicker = UIImagePickerController()
         photoPicker.delegate = self
         photoPicker.sourceType = .photoLibrary
@@ -130,6 +132,7 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func signInTap() {
+        AnalyticManager.shared.sendEvent(.tappedSignUp)
         navigationController?.pushViewController(LoginViewController.initial(), animated: false)
     }
     

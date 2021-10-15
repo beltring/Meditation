@@ -40,6 +40,7 @@ class ProfileViewController: UIViewController {
     @IBAction private func tappedSignOut(_ sender: UIButton) {
         do
         {
+            AnalyticManager.shared.sendEvent(.signOut)
             try Auth.auth().signOut()
             guard let nav = navigationController as? RootNavigationViewController else { return }
             nav.setRootController()

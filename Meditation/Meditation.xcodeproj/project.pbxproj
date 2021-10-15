@@ -49,6 +49,8 @@
 		CE65176E26F8ACD1009B4D6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65176D26F8ACD1009B4D6B /* Login.storyboard */; };
 		CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65261F26F9C92A00161C8C /* SignUpViewController.swift */; };
 		CE65262226F9C93500161C8C /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65262126F9C93500161C8C /* SignUp.storyboard */; };
+		CE6543082719A58000475BAB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6543072719A58000475BAB /* Event.swift */; };
+		CE65430A2719A91500475BAB /* AnalyticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6543092719A91500475BAB /* AnalyticManager.swift */; };
 		CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D90426FB0DDB004073EA /* MeditationTimeViewController.swift */; };
 		CE69D90726FB0DEE004073EA /* MeditationTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */; };
 		CE69D90B26FB59D6004073EA /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69D90A26FB59D6004073EA /* SoundsViewController.swift */; };
@@ -125,6 +127,8 @@
 		CE65176D26F8ACD1009B4D6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CE65261F26F9C92A00161C8C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE65262126F9C93500161C8C /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		CE6543072719A58000475BAB /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CE6543092719A91500475BAB /* AnalyticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticManager.swift; sourceTree = "<group>"; };
 		CE69D90426FB0DDB004073EA /* MeditationTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimeViewController.swift; sourceTree = "<group>"; };
 		CE69D90626FB0DEE004073EA /* MeditationTime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeditationTime.storyboard; sourceTree = "<group>"; };
 		CE69D90A26FB59D6004073EA /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +396,15 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		CE6543062719A56E00475BAB /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				CE6543072719A58000475BAB /* Event.swift */,
+				CE6543092719A91500475BAB /* AnalyticManager.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		CE69D90226FB0CBF004073EA /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +493,7 @@
 		CE75E78F26FA3444000F758D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CE6543062719A56E00475BAB /* Analytics */,
 				CE93544A27185D8F0032A11C /* FirestoreService.swift */,
 				CE748F1227141E1A0076B571 /* PlayerService.swift */,
 				CE70329D270EC7EA0005F294 /* StorageService.swift */,
@@ -653,6 +667,7 @@
 				CE6ACE4C26FCA2CC00D38FF1 /* GeneralViewController.swift in Sources */,
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
 				CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */,
+				CE65430A2719A91500475BAB /* AnalyticManager.swift in Sources */,
 				CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE748F1327141E1A0076B571 /* PlayerService.swift in Sources */,
@@ -660,6 +675,7 @@
 				CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
+				CE6543082719A58000475BAB /* Event.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
 				CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */,
 				CE93544727182E150032A11C /* StringExtension.swift in Sources */,
