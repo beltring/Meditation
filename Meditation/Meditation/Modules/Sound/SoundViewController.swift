@@ -28,6 +28,7 @@ class SoundViewController: UIViewController {
     private var userProperties: UserProperties!
     private let playerService = PlayerService.shared
     private var timer: Timer!
+    private let service = CoreDataManager.shared
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -186,6 +187,10 @@ class SoundViewController: UIViewController {
         setupSound()
         meditation.sounds[index].countListening += 1
         FirestoreService.shared.createMeditation(meditation: meditation)
+        if !CoreDataManager.shared.checkSong(url: soundUrl.absoluteString) {
+            let data = try? Data(contentsOf: soundUrl)
+            service.addSong(title: sound.title, url: sound.url, data: data)
+        }
     }
     
     @objc private func updateMusicSlider(){

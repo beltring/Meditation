@@ -21,11 +21,18 @@ class PlayerService {
     var lastSongIndex = 0
     var lastSliderValue: Float = 0.0
     private var timer: Timer?
+    private let service = CoreDataManager.shared
     
     private init() {}
     
     func play(url: URL) {
-        player = try? AVAudioPlayer(data: Data(contentsOf: url))
+        if service.checkSong(url: url.absoluteString) {
+            let song = service.getSong(url: url)
+            guard let data = song.data else { return }
+            player = try? AVAudioPlayer(data: data)
+        } else {
+            player = try? AVAudioPlayer(data: Data(contentsOf: url))
+        }
         player?.prepareToPlay()
         player?.play()
         isPlaying = true
@@ -33,7 +40,13 @@ class PlayerService {
     
     func play(stringUrl: String) {
         guard let soundUrl = URL(string: stringUrl) else { return }
-        player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
+        if service.checkSong(url: soundUrl.absoluteString) {
+            let song = service.getSong(url: soundUrl)
+            guard let data = song.data else { return }
+            player = try? AVAudioPlayer(data: data)
+        } else {
+            player = try? AVAudioPlayer(data: Data(contentsOf: soundUrl))
+        }
         player?.prepareToPlay()
         player?.play()
         isPlaying = true
