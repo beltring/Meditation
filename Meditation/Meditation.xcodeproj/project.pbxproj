@@ -71,6 +71,9 @@
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
 		CE73847B26FDF717003EB91F /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847A26FDF717003EB91F /* Program.swift */; };
 		CE748F1327141E1A0076B571 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE748F1227141E1A0076B571 /* PlayerService.swift */; };
+		CE75C9CC271D5F4E00BC850F /* Meditation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE75C9CA271D5F4E00BC850F /* Meditation.xcdatamodeld */; };
+		CE75C9CF271D671A00BC850F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75C9CE271D671A00BC850F /* CoreDataManager.swift */; };
+		CE75C9D3271D69E100BC850F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75C9D1271D69E100BC850F /* Song.swift */; };
 		CE79E9512706EE9500E4B0D3 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79E9502706EE9500E4B0D3 /* SoundViewController.swift */; };
 		CE79E9532706EEA000E4B0D3 /* Sound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79E9522706EEA000E4B0D3 /* Sound.storyboard */; };
 		CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A51BF27032DC6006F290F /* MeditationType.swift */; };
@@ -149,6 +152,9 @@
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		CE73847A26FDF717003EB91F /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		CE748F1227141E1A0076B571 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
+		CE75C9CB271D5F4E00BC850F /* Meditation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Meditation.xcdatamodel; sourceTree = "<group>"; };
+		CE75C9CE271D671A00BC850F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CE75C9D1271D69E100BC850F /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		CE79E9502706EE9500E4B0D3 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		CE79E9522706EEA000E4B0D3 /* Sound.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sound.storyboard; sourceTree = "<group>"; };
 		CE7A51BF27032DC6006F290F /* MeditationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationType.swift; sourceTree = "<group>"; };
@@ -213,6 +219,7 @@
 				CE65170C26F857DC009B4D6B /* GoogleService-Info.plist */,
 				CE65170626F8550D009B4D6B /* Info.plist */,
 				CE65170E26F85E11009B4D6B /* Application */,
+				CE75C9CD271D5F5A00BC850F /* CoreData */,
 				CE75E78F26FA3444000F758D /* Helpers */,
 				CE65171026F85E7F009B4D6B /* Models */,
 				CE65170F26F85E76009B4D6B /* Modules */,
@@ -246,6 +253,7 @@
 		CE65171026F85E7F009B4D6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE75C9D0271D684300BC850F /* CoreData */,
 				CE7A51C127032F42006F290F /* Meditation.swift */,
 				CE7A51BF27032DC6006F290F /* MeditationType.swift */,
 				CE73847A26FDF717003EB91F /* Program.swift */,
@@ -490,6 +498,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CE75C9CD271D5F5A00BC850F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE75C9CA271D5F4E00BC850F /* Meditation.xcdatamodeld */,
+				CE75C9CE271D671A00BC850F /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CE75C9D0271D684300BC850F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE75C9D1271D69E100BC850F /* Song.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		CE75E78F26FA3444000F758D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +683,7 @@
 				CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */,
 				CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */,
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
+				CE75C9CC271D5F4E00BC850F /* Meditation.xcdatamodeld in Sources */,
 				CE65171D26F862EB009B4D6B /* UIViewExtension.swift in Sources */,
 				CE79E9512706EE9500E4B0D3 /* SoundViewController.swift in Sources */,
 				CE93544B27185D8F0032A11C /* FirestoreService.swift in Sources */,
@@ -668,6 +694,7 @@
 				CE73847B26FDF717003EB91F /* Program.swift in Sources */,
 				CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */,
 				CE65430A2719A91500475BAB /* AnalyticManager.swift in Sources */,
+				CE75C9CF271D671A00BC850F /* CoreDataManager.swift in Sources */,
 				CE6FF05E271031F100E29B77 /* EditProfileViewController.swift in Sources */,
 				CE65262026F9C92A00161C8C /* SignUpViewController.swift in Sources */,
 				CE748F1327141E1A0076B571 /* PlayerService.swift in Sources */,
@@ -677,6 +704,7 @@
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
 				CE6543082719A58000475BAB /* Event.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
+				CE75C9D3271D69E100BC850F /* Song.swift in Sources */,
 				CE6ACE4026FC50E500D38FF1 /* ProfileViewController.swift in Sources */,
 				CE93544727182E150032A11C /* StringExtension.swift in Sources */,
 				CE93544927183D730032A11C /* FloatExtension.swift in Sources */,
@@ -904,6 +932,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE75C9CA271D5F4E00BC850F /* Meditation.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE75C9CB271D5F4E00BC850F /* Meditation.xcdatamodel */,
+			);
+			currentVersion = CE75C9CB271D5F4E00BC850F /* Meditation.xcdatamodel */;
+			path = Meditation.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE6516ED26F8550B009B4D6B /* Project object */;
 }
