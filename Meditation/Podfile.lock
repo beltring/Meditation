@@ -352,6 +352,9 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - CodableFirebase (0.2.0)
   - Firebase/Analytics (8.6.0):
     - Firebase/Core
@@ -502,6 +505,7 @@ PODS:
 
 DEPENDENCIES:
   - AppCenter
+  - Charts
   - CodableFirebase (= 0.2.0)
   - Firebase/Analytics (= 8.6.0)
   - Firebase/Auth (= 8.6.0)
@@ -517,6 +521,7 @@ SPEC REPOS:
     - abseil
     - AppCenter
     - BoringSSL-GRPC
+    - Charts
     - CodableFirebase
     - Firebase
     - FirebaseAnalytics
@@ -544,6 +549,7 @@ SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   CodableFirebase: 4b865f58c583a6c0ef8c81c6b12c6bf15ebd9181
   Firebase: 21ac9f28b09a8bdfc005f34c984fca84e7e8786d
   FirebaseAnalytics: 8f32ae54ad42754f503354782575c4ddfc1425c3
@@ -567,6 +573,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: a8bc6940a609a9e6751e58efaffaf016c7e676c4
+PODFILE CHECKSUM: 81fd5c232dd49459ff35255c0b3827d9e258544b
 
 COCOAPODS: 1.11.2

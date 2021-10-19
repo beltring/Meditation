@@ -66,6 +66,7 @@
 		CE6FF060271031FF00E29B77 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */; };
 		CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF0612710896100E29B77 /* ValidationService.swift */; };
 		CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70329D270EC7EA0005F294 /* StorageService.swift */; };
+		CE70CB47271E9ABE0038C5A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB46271E9ABE0038C5A8 /* Constants.swift */; };
 		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
@@ -147,6 +148,7 @@
 		CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		CE6FF0612710896100E29B77 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		CE70329D270EC7EA0005F294 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		CE70CB46271E9ABE0038C5A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				CE65171926F86298009B4D6B /* Extensions */,
+				CE70CB46271E9ABE0038C5A8 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */,
+				CE70CB47271E9ABE0038C5A8 /* Constants.swift in Sources */,
 				CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */,
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE75C9CC271D5F4E00BC850F /* Meditation.xcdatamodeld in Sources */,

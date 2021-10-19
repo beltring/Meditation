@@ -5,6 +5,7 @@
 //  Created by Pavel Boltromyuk on 23.09.21.
 //
 
+import Charts
 import FirebaseAuth
 import Kingfisher
 import UIKit
@@ -14,6 +15,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet private weak var profileImage: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var emailLabel: UILabel!
+    @IBOutlet weak var barChart: BarChartView!
     
     private var user: User!
     
@@ -22,6 +24,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         user = Auth.auth().currentUser
         setupInformation()
+        barChart.delegate = self
+        barChart.noDataText = "No chart data available."
+        setupBarChart()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +39,55 @@ class ProfileViewController: UIViewController {
         profileImage.kf.setImage(with: user.photoURL)
         nameLabel.text = user.displayName
         emailLabel.text = user.email
+    }
+    
+    private func setupBarChart() {
+        let set = BarChartDataSet(entries: Statistic.getEntry())
+        set.setColor(UIColor(named: "StatsColor")!)
+        set.highlightAlpha = 0
+        
+        let data = BarChartData(dataSet: set)
+        data.setDrawValues(true)
+        data.setValueTextColor(.red)
+        //        let barValueFormatter = BarValueFormatter()
+        //        data.setValueFormatter(barValueFormatter)
+        barChart.data = data
+        
+        // remove rightAxis
+        barChart.rightAxis.enabled = false
+        
+        // disable zoom function
+        barChart.pinchZoomEnabled = false
+        barChart.setScaleEnabled(false)
+        barChart.doubleTapToZoomEnabled = false
+        
+        // Bar, Grid Line, Background
+        barChart.drawBarShadowEnabled = false
+        barChart.drawGridBackgroundEnabled = false
+        barChart.drawBordersEnabled = false
+        
+        // Legend
+        barChart.legend.enabled = false
+        
+        // Chart Offset
+        barChart.setExtraOffsets(left: 10, top: 0, right: 20, bottom: 40)
+        
+        // Setup X axis
+        let xAxis = barChart.xAxis
+        xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
+        xAxis.labelPosition = .bottom
+        xAxis.labelTextColor = UIColor(named: "TextColor")!
+        xAxis.drawAxisLineEnabled = true
+        xAxis.drawGridLinesEnabled = false
+        xAxis.granularityEnabled = false
+        
+        // Setup left axis
+        let leftAxis = barChart.leftAxis
+        leftAxis.drawTopYLabelEntryEnabled = true
+        leftAxis.drawAxisLineEnabled = true
+        leftAxis.drawGridLinesEnabled = true
+        leftAxis.granularityEnabled = false
+        leftAxis.labelTextColor = UIColor(named: "TextColor")!
     }
     
     // MARK: - Actions
@@ -50,5 +104,10 @@ class ProfileViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-    
+}
+
+extension ProfileViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry)
+    }
 }

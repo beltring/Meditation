@@ -66,21 +66,30 @@
                                     <constraint firstAttribute="width" constant="300" id="d68-K6-KAu"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifn-sV-ziU" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="452" width="374" height="361"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ifn-sV-ziU" firstAttribute="top" secondItem="BOP-vn-1WP" secondAttribute="bottom" constant="8" symbolic="YES" id="2sC-Bx-0EO"/>
                             <constraint firstItem="q9D-8v-Qhh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="4Y7-Gi-uUQ"/>
                             <constraint firstItem="hsp-Ze-aZ7" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="KIz-44-zFH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ifn-sV-ziU" secondAttribute="trailing" constant="20" id="O0T-1v-uHv"/>
                             <constraint firstItem="BOP-vn-1WP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fe7-yt-2cR"/>
                             <constraint firstItem="q9D-8v-Qhh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fh8-PM-J30"/>
                             <constraint firstItem="hsp-Ze-aZ7" firstAttribute="top" secondItem="q9D-8v-Qhh" secondAttribute="bottom" constant="10" id="i9O-pE-RCO"/>
                             <constraint firstItem="BOP-vn-1WP" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ifn-Hu-v7l"/>
+                            <constraint firstItem="Ifn-sV-ziU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="imC-Ge-wDP"/>
+                            <constraint firstItem="Ifn-sV-ziU" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="qWw-27-pDw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icUser" selectedImage="icUserSelect" id="8Wa-4t-SL5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="barChart" destination="Ifn-sV-ziU" id="W3o-QP-xJ3"/>
                         <outlet property="emailLabel" destination="o7T-ul-buz" id="q0c-Zm-joC"/>
                         <outlet property="nameLabel" destination="K5G-pq-riQ" id="0sD-GS-6do"/>
                         <outlet property="profileImage" destination="q9D-8v-Qhh" id="mBc-Ua-iSP"/>
@@ -88,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="40"/>
+            <point key="canvasLocation" x="18.840579710144929" y="39.508928571428569"/>
         </scene>
     </scenes>
     <resources>
