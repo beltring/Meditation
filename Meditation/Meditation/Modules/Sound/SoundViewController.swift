@@ -141,7 +141,7 @@ class SoundViewController: UIViewController {
             repeatButton.tintColor = .white
             AnalyticManager.shared.sendEvent(.enableRepeatMusic)
         } else {
-            repeatButton.tintColor = UIColor(named: "TextColor")
+            repeatButton.tintColor = .text
             AnalyticManager.shared.sendEvent(.disableRepeatMusic)
         }
     }
@@ -152,7 +152,7 @@ class SoundViewController: UIViewController {
             shuffleButton.tintColor = .white
             AnalyticManager.shared.sendEvent(.enableShuffleMusic)
         } else {
-            shuffleButton.tintColor = UIColor(named: "TextColor")
+            shuffleButton.tintColor = .text
             AnalyticManager.shared.sendEvent(.disableShuffleMusic)
         }
     }

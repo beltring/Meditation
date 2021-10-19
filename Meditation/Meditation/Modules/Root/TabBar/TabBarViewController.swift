@@ -20,13 +20,13 @@ class TabBarViewController: UITabBarController {
     
     // MARK: - Setup
     private func setupTabBar() {
-        tabBar.barTintColor = UIColor(named: "BackgroundColor")
+        tabBar.barTintColor = .background
         tabBar.tintColor = .white
         tabBar.isTranslucent = false
     }
     
     func setupNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(named: "BackgroundColor")
+        navigationController?.navigationBar.barTintColor = .background
         navigationController?.navigationBar.isTranslucent = false
         let logo = UIImage(named: "imgLogo")
         let imageView = UIImageView(image: logo)

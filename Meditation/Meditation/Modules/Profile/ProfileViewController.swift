@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         user = Auth.auth().currentUser
         setupInformation()
-        barChart.delegate = self
         barChart.noDataText = "No chart data available."
         setupBarChart()
     }
@@ -43,14 +42,12 @@ class ProfileViewController: UIViewController {
     
     private func setupBarChart() {
         let set = BarChartDataSet(entries: Statistic.getEntry())
-        set.setColor(UIColor(named: "StatsColor")!)
+        set.setColor(.stats)
         set.highlightAlpha = 0
         
         let data = BarChartData(dataSet: set)
         data.setDrawValues(true)
-        data.setValueTextColor(.red)
-        //        let barValueFormatter = BarValueFormatter()
-        //        data.setValueFormatter(barValueFormatter)
+        data.setValueTextColor(.text)
         barChart.data = data
         
         // remove rightAxis
@@ -76,7 +73,7 @@ class ProfileViewController: UIViewController {
         let xAxis = barChart.xAxis
         xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
         xAxis.labelPosition = .bottom
-        xAxis.labelTextColor = UIColor(named: "TextColor")!
+        xAxis.labelTextColor = .text
         xAxis.drawAxisLineEnabled = true
         xAxis.drawGridLinesEnabled = false
         xAxis.granularityEnabled = false
@@ -87,7 +84,7 @@ class ProfileViewController: UIViewController {
         leftAxis.drawAxisLineEnabled = true
         leftAxis.drawGridLinesEnabled = true
         leftAxis.granularityEnabled = false
-        leftAxis.labelTextColor = UIColor(named: "TextColor")!
+        leftAxis.labelTextColor = .text
     }
     
     // MARK: - Actions
@@ -103,11 +100,5 @@ class ProfileViewController: UIViewController {
         {
             print(error.localizedDescription)
         }
-    }
-}
-
-extension ProfileViewController: ChartViewDelegate {
-    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        print(entry)
     }
 }

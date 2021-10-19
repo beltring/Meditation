@@ -212,7 +212,7 @@ extension SoundsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = UIColor(named: "BackgroundColor")
+        headerView.backgroundColor = .background
         return headerView
     }
     
