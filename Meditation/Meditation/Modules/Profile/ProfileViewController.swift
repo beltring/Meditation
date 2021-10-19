@@ -39,6 +39,7 @@ class ProfileViewController: UIViewController {
     
     // MARK: - Setup
     private func setupInformation() {
+        profileImage.kf.indicatorType = .activity
         profileImage.kf.setImage(with: user.photoURL)
         nameLabel.text = user.displayName
         emailLabel.text = user.email
