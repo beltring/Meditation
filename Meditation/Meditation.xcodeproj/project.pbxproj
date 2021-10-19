@@ -68,6 +68,7 @@
 		CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70329D270EC7EA0005F294 /* StorageService.swift */; };
 		CE70CB47271E9ABE0038C5A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB46271E9ABE0038C5A8 /* Constants.swift */; };
 		CE70CB49271EABB60038C5A8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB48271EABB60038C5A8 /* UIColorExtension.swift */; };
+		CE70CB4C271EB2BC0038C5A8 /* TimeStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB4B271EB2BC0038C5A8 /* TimeStatistic.swift */; };
 		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
@@ -151,6 +152,7 @@
 		CE70329D270EC7EA0005F294 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		CE70CB46271E9ABE0038C5A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE70CB48271EABB60038C5A8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CE70CB4B271EB2BC0038C5A8 /* TimeStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatistic.swift; sourceTree = "<group>"; };
 		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				CE73847A26FDF717003EB91F /* Program.swift */,
 				CE6A03882701F2FB00A02ECA /* Sound.swift */,
 				CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */,
+				CE70CB4B271EB2BC0038C5A8 /* TimeStatistic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,
 				CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,
+				CE70CB4C271EB2BC0038C5A8 /* TimeStatistic.swift in Sources */,
 				CE65172426F86763009B4D6B /* WelcomeViewController.swift in Sources */,
 				CE6A03842701D75000A02ECA /* SoundTableViewCell.swift in Sources */,
 			);

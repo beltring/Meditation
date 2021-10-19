@@ -6,9 +6,12 @@
 //
 
 import Charts
+import CodableFirebase
 import FirebaseAuth
+import FirebaseFirestore
 import Kingfisher
 import UIKit
+import PKHUD
 
 class ProfileViewController: UIViewController {
     
@@ -18,13 +21,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     
     private var user: User!
+    private var statistics = [TimeStatistic]()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         user = Auth.auth().currentUser
+        getStatistics()
         setupInformation()
-        barChart.noDataText = "No chart data available."
         setupBarChart()
     }
     
@@ -41,7 +45,9 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupBarChart() {
-        let set = BarChartDataSet(entries: Statistic.getEntry())
+        barChart.noDataText = "No chart data available."
+        let entries = statistics.map { $0.transformToBarChartDataEntry() }
+        let set = BarChartDataSet(entries: entries)
         set.setColor(.stats)
         set.highlightAlpha = 0
         
@@ -99,6 +105,24 @@ class ProfileViewController: UIViewController {
         catch let error as NSError
         {
             print(error.localizedDescription)
+        }
+    }
+    
+    // MARK: - API calls
+    private func getStatistics() {
+        HUD.show(.progress)
+        Firestore.firestore().collection("statistics").getDocuments { [weak self] query, error in
+            if let querySnapshot = query {
+                guard let self = self else { return }
+                for document in querySnapshot.documents {
+                    let timeStatistic = try! FirestoreDecoder().decode(TimeStatistic.self, from: document.data())
+                    self.statistics.append(timeStatistic)
+                    self.setupBarChart()
+                    HUD.hide()
+                }
+            } else {
+                print("Document does not exist")
+            }
         }
     }
 }
