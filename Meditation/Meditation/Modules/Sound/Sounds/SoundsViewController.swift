@@ -25,7 +25,7 @@ class SoundsViewController: UIViewController {
     @IBOutlet private weak var bottomView: UIView!
     @IBOutlet private weak var durationSlider: UISlider!
     
-    var meditation: Meditation!
+    var meditation: Meditation?
     private let playerService = PlayerService.shared
     private var userProperties: UserProperties!
     private let user = Auth.auth().currentUser
@@ -44,11 +44,16 @@ class SoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        setup()
-        setupBottomView()
-        setupPlayButton()
-        tableView.reloadData()
-        getProperties()
+        if meditation == nil {
+            getMeditation()
+        } else {
+            setup()
+            setupBottomView()
+            setupPlayButton()
+            tableView.reloadData()
+            getProperties()
+        }
+        
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,6 +63,7 @@ class SoundsViewController: UIViewController {
     
     // MARK: - Setup
     func setupBottomView() {
+        guard let meditation = meditation else { return }
         currentSongLabel.text = meditation.sounds[playerService.lastSongIndex].title
         durationSlider.setThumbImage(UIImage(), for: .normal)
         guard let duration = playerService.player?.duration else { return }
@@ -66,6 +72,7 @@ class SoundsViewController: UIViewController {
     }
     
     private func setup() {
+        guard let meditation = meditation else { return }
         guard let url = URL(string: meditation.imageUrl) else { return }
         meditationImage.kf.setImage(with: url)
         titleLabel.text = meditation.type.rawValue.capitalized + " Sounds"
@@ -163,6 +170,10 @@ class SoundsViewController: UIViewController {
                 guard let self = self else { return }
                 self.meditation = try! FirestoreDecoder().decode(Meditation.self, from: document.data()!)
                 self.setup()
+                self.setupBottomView()
+                self.setupPlayButton()
+                self.tableView.reloadData()
+                self.getProperties()
             } else {
                 print("Document does not exist")
             }
@@ -185,7 +196,7 @@ class SoundsViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension SoundsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return meditation.sounds.count
+        return meditation?.sounds.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -194,6 +205,7 @@ extension SoundsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = SoundTableViewCell.dequeueReusableCell(in: tableView, for: indexPath)
+        guard let meditation = meditation else { return cell }
         let sound = meditation.sounds[indexPath.section]
         cell.configure(title: sound.title, imageUrl: sound.imageUrl, count: sound.countListening, duration: sound.duration)
         return cell
@@ -212,7 +224,7 @@ extension SoundsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = UIColor(named: "BackgroundColor")
+        headerView.backgroundColor = .background
         return headerView
     }
     

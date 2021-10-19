@@ -66,6 +66,9 @@
 		CE6FF060271031FF00E29B77 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */; };
 		CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF0612710896100E29B77 /* ValidationService.swift */; };
 		CE70329E270EC7EA0005F294 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70329D270EC7EA0005F294 /* StorageService.swift */; };
+		CE70CB47271E9ABE0038C5A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB46271E9ABE0038C5A8 /* Constants.swift */; };
+		CE70CB49271EABB60038C5A8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB48271EABB60038C5A8 /* UIColorExtension.swift */; };
+		CE70CB4C271EB2BC0038C5A8 /* TimeStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB4B271EB2BC0038C5A8 /* TimeStatistic.swift */; };
 		CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */; };
 		CE73847726FDD577003EB91F /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */; };
 		CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73847826FDD976003EB91F /* UITableViewExtension.swift */; };
@@ -147,6 +150,9 @@
 		CE6FF05F271031FF00E29B77 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		CE6FF0612710896100E29B77 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		CE70329D270EC7EA0005F294 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		CE70CB46271E9ABE0038C5A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE70CB48271EABB60038C5A8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CE70CB4B271EB2BC0038C5A8 /* TimeStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatistic.swift; sourceTree = "<group>"; };
 		CE73847426FDD577003EB91F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		CE73847526FDD577003EB91F /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		CE73847826FDD976003EB91F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -259,6 +265,7 @@
 				CE73847A26FDF717003EB91F /* Program.swift */,
 				CE6A03882701F2FB00A02ECA /* Sound.swift */,
 				CE82C59D2716BFDE00E7DF7F /* UserProperties.swift */,
+				CE70CB4B271EB2BC0038C5A8 /* TimeStatistic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				CE65171926F86298009B4D6B /* Extensions */,
+				CE70CB46271E9ABE0038C5A8 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -319,11 +327,12 @@
 		CE65171926F86298009B4D6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE93544827183D730032A11C /* FloatExtension.swift */,
+				CE93544627182E150032A11C /* StringExtension.swift */,
+				CE70CB48271EABB60038C5A8 /* UIColorExtension.swift */,
 				CE73847826FDD976003EB91F /* UITableViewExtension.swift */,
 				CE65171A26F862D1009B4D6B /* UIViewControllerExtension.swift */,
 				CE65171C26F862EB009B4D6B /* UIViewExtension.swift */,
-				CE93544627182E150032A11C /* StringExtension.swift */,
-				CE93544827183D730032A11C /* FloatExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -681,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE73847626FDD577003EB91F /* ProgramTableViewCell.swift in Sources */,
+				CE70CB47271E9ABE0038C5A8 /* Constants.swift in Sources */,
 				CE7A51C027032DC6006F290F /* MeditationType.swift in Sources */,
 				CE65176C26F8ACC4009B4D6B /* LoginViewController.swift in Sources */,
 				CE75C9CC271D5F4E00BC850F /* Meditation.xcdatamodeld in Sources */,
@@ -701,6 +711,7 @@
 				CE6A03892701F2FB00A02ECA /* Sound.swift in Sources */,
 				CE6FF0622710896100E29B77 /* ValidationService.swift in Sources */,
 				CE65171B26F862D1009B4D6B /* UIViewControllerExtension.swift in Sources */,
+				CE70CB49271EABB60038C5A8 /* UIColorExtension.swift in Sources */,
 				CE73847926FDD976003EB91F /* UITableViewExtension.swift in Sources */,
 				CE6543082719A58000475BAB /* Event.swift in Sources */,
 				CE65171826F86251009B4D6B /* RootNavigationViewController.swift in Sources */,
@@ -711,6 +722,7 @@
 				CE65171F26F863F4009B4D6B /* TabBarViewController.swift in Sources */,
 				CE69D90526FB0DDB004073EA /* MeditationTimeViewController.swift in Sources */,
 				CE6516F926F8550B009B4D6B /* AppDelegate.swift in Sources */,
+				CE70CB4C271EB2BC0038C5A8 /* TimeStatistic.swift in Sources */,
 				CE65172426F86763009B4D6B /* WelcomeViewController.swift in Sources */,
 				CE6A03842701D75000A02ECA /* SoundTableViewCell.swift in Sources */,
 			);

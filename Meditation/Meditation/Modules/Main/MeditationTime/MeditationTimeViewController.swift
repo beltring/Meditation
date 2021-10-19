@@ -56,7 +56,7 @@ class MeditationTimeViewController: UIViewController {
     @objc private func timeLabelTap() {
         AnalyticManager.shared.sendEvent(.choiceTime)
         datePicker = UIDatePicker.init()
-        datePicker.backgroundColor = UIColor(named: "BackgroundColor")
+        datePicker.backgroundColor = .background
         
         datePicker.autoresizingMask = .flexibleWidth
         datePicker.datePickerMode = .countDownTimer
@@ -67,7 +67,7 @@ class MeditationTimeViewController: UIViewController {
         let buttonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.onDoneButtonClick))
         buttonItem.tintColor = .white
         toolBar = UIToolbar(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 50))
-        toolBar.barTintColor = UIColor(named: "BackgroundColor")
+        toolBar.barTintColor = .background
         toolBar.barStyle = .default
         toolBar.items = [UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), buttonItem]
         toolBar.sizeToFit()
